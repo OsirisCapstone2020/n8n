@@ -15,9 +15,9 @@
 			<el-menu default-active="workflow" @select="handleSelect" :collapse="isCollapsed">
 
 				<el-menu-item index="logo" class="logo-item">
-					<a href="https://n8n.io" target="_blank" class="logo">
-						<img :src="basePath + 'n8n-icon-small.png'" class="icon" alt="n8n.io"/>
-						<span class="logo-text" slot="title">n8n.io</span>
+					<a href="https://isis.astrogeology.usgs.gov" target="_blank" class="logo">
+						<img :src="basePath + 'astro-logo.png'" class="icon" alt="astro"/>
+						<span class="logo-text" slot="title">USGS Astrogeology</span>
 					</a>
 				</el-menu-item>
 
@@ -33,6 +33,7 @@
 							<span slot="title" class="item-title">New</span>
 						</template>
 					</el-menu-item>
+					<!--
 					<el-menu-item index="workflow-open">
 						<template slot="title">
 							<font-awesome-icon icon="folder-open"/>&nbsp;
@@ -63,6 +64,7 @@
 							<span slot="title" class="item-title">Delete</span>
 						</template>
 					</el-menu-item>
+					-->
 					<el-menu-item index="workflow-download">
 						<template slot="title">
 							<font-awesome-icon icon="file-download"/>
@@ -81,14 +83,18 @@
 							<span slot="title" class="item-title">Import from File</span>
 						</template>
 					</el-menu-item>
+
+					<!--
 					<el-menu-item index="workflow-settings" :disabled="!currentWorkflow">
 						<template slot="title">
 							<font-awesome-icon icon="cog"/>
 							<span slot="title" class="item-title">Settings</span>
 						</template>
 					</el-menu-item>
+					-->
 				</el-submenu>
 
+				<!--
 				<el-submenu index="credentials" title="Credentials">
 					<template slot="title">
 						<font-awesome-icon icon="key"/>&nbsp;
@@ -108,6 +114,7 @@
 						</template>
 					</el-menu-item>
 				</el-submenu>
+				-->
 
 				<el-menu-item index="executions">
 					<font-awesome-icon icon="tasks"/>&nbsp;
@@ -541,9 +548,9 @@ export default mixins(
 
 		.icon {
 			position: relative;
-			height: 23px;
-			left: -10px;
-			top: -2px;
+			height: 100%;
+			left: -20px;
+			top: -4px;
 		}
 	}
 }
@@ -555,7 +562,6 @@ a.logo {
 .logo-text {
 	position: relative;
 	top: -3px;
-	left: 5px;
 	font-weight: bold;
 	color: #fff;
 	text-decoration: none;
@@ -582,7 +588,7 @@ a.logo {
 	width: 65px;
 
 	&.expanded {
-		width: 200px;
+		width: auto;
 	}
 }
 
