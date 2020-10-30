@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  n8n:
+    image: osiris-n8n
+    build:
+      dockerfile: docker/Dockerfile
+      context: .
+    environment:
+      EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS: "true"
+      EXECUTIONS_DATA_SAVE_ON_ERROR: "all"
+      EXECUTIONS_DATA_SAVE_ON_SUCCESS: "all"
+    container_name: osiris-n8n
+    ports: ["5678:5678"]
+
+  minio:
+    image: minio/minio
+    container_name: osiris-minio
+    environment:
+      MINIO_ACCESS_KEY: 1234
+      MINIO_SECRET_KEY: 567891234
+    command:
+      - server
+      - /data
+    ports: ["9000:9000"]

@@ -1,10 +1,11 @@
 {
   "name": "n8n",
   "private": true,
-  "homepage": "https://n8n.io",
+  "homepage": "https://isis.astrogeology.usgs.gov",
   "scripts": {
     "bootstrap": "lerna bootstrap --hoist --no-ci",
     "build": "lerna exec npm run build",
+    "build:isis": "lerna exec --scope n8n-nodes-isis npm run build",
     "dev": "lerna exec npm run dev --parallel",
     "clean:dist": "lerna exec -- rimraf ./dist",
     "start": "run-script-os",

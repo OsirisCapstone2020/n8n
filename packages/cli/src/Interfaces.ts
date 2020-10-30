@@ -411,3 +411,19 @@ export interface IWorkflowExecutionDataProcessWithExecution extends IWorkflowExe
 	executionId: string;
 	nodeTypeData: ITransferNodeTypes;
 }
+
+export interface NodeJSONProperty {
+	name: string;
+	displayName: string;
+	type: "string" | "number";
+	default: string | number;
+	required: boolean;
+}
+
+export interface NodeJSON {
+	name: string;
+	displayName: string;
+	description: string;
+	properties: NodeJSONProperty[];
+	url: string;
+}

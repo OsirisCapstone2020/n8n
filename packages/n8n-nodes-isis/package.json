@@ -1,0 +1,71 @@
+{
+  "name": "n8n-nodes-isis",
+  "version": "0.1.0",
+  "description": "ISIS command nodes for n8n",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "homepage": "https://isis.astrogeology.usgs.gov",
+  "author": {
+    "name": "Team Osiris"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OsirisCapstone2020/n8n.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run watch",
+    "prebuild": "rimraf dist",
+    "build": "tsc && gulp",
+    "tslint": "tslint -p tsconfig.json -c tslint.json",
+    "watch": "tsc --watch",
+    "test": "jest",
+    "prepare": "npm run build"
+  },
+  "files": [
+    "dist",
+    "nodes/**/*.json"
+  ],
+  "n8n": {
+    "credentials": [],
+    "nodes": [
+      "dist/nodes/UploadFile.node.js",
+      "dist/nodes/SendToStorage.node.js",
+      "nodes/skyrange.json"
+    ]
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/jest": "^26.0.13",
+    "@types/node": "14.0.27",
+    "@types/request-promise-native": "~1.0.15",
+    "gulp": "^4.0.0",
+    "jest": "^26.4.2",
+    "n8n-core": "0.63.0",
+    "n8n-workflow": "0.52.0",
+    "ts-jest": "^26.3.0",
+    "tslint": "^6.1.2",
+    "typescript": "~3.9.7",
+    "rimraf": "^3.0.2"
+  },
+  "peerDependencies": {
+    "n8n-core": "0.63.0",
+    "n8n-workflow": "0.52.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testURL": "http://localhost/",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testPathIgnorePatterns": [
+      "/dist/",
+      "/node_modules/"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  }
+}

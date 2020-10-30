@@ -29,6 +29,7 @@ import {
 } from 'n8n-workflow';
 
 import * as config from '../config';
+import { JsonHttpNode } from './JsonHttpNode';
 
 export class WorkflowRunnerProcess {
 	data: IWorkflowExecutionDataProcessWithExecution | undefined;
@@ -50,12 +51,21 @@ export class WorkflowRunnerProcess {
 			className = this.data.nodeTypeData[nodeTypeName].className;
 
 			filePath = this.data.nodeTypeData[nodeTypeName].sourcePath;
-			const tempModule = require(filePath);
+			if (filePath.endsWith('.json')) {
+				try {
+					tempNode = JsonHttpNode.fromFile(filePath);
+				} catch (error) {
+					throw new Error(`Error loading node "${nodeTypeName}" from: "${filePath}"`);
+				}
+			}
+			else {
+				const tempModule = require(filePath);
 
-			try {
-				tempNode = new tempModule[className]() as INodeType;
-			} catch (error) {
-				throw new Error(`Error loading node "${nodeTypeName}" from: "${filePath}"`);
+				try {
+					tempNode = new tempModule[className]() as INodeType;
+				} catch (error) {
+					throw new Error(`Error loading node "${nodeTypeName}" from: "${filePath}"`);
+				}
 			}
 
 			nodeTypesData[nodeTypeName] = {
@@ -101,7 +111,7 @@ export class WorkflowRunnerProcess {
 			return this.workflowExecute.processRunExecutionData(this.workflow);
 		} else if (this.data.runData === undefined || this.data.startNodes === undefined || this.data.startNodes.length === 0 || this.data.destinationNode === undefined) {
 			// Execute all nodes
-			
+
 			// Can execute without webhook so go on
 			this.workflowExecute = new WorkflowExecute(additionalData, this.data.executionMode);
 			return this.workflowExecute.run(this.workflow, undefined, this.data.destinationNode);
