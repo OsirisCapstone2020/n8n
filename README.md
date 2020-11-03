@@ -14,3 +14,12 @@ Start:
 $ npm run start
 ```
 
+Start in docker with minio S3:
+```
+$ docker-compose up -d --build
+```
+
+Start minio s3 only:
+```
+$ docker-compose up -d minio
+```
