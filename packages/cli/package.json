@@ -29,7 +29,7 @@
         "test": "jest",
         "tslint": "tslint -p tsconfig.json -c tslint.json",
         "tslintfix": "tslint --fix -p tsconfig.json -c tslint.json",
-        "watch": "tsc --watch",
+        "watch": "tsc-watch --onSuccess 'npm run start'",
         "typeorm": "ts-node ./node_modules/typeorm/cli.js"
     },
     "bin": {
@@ -75,6 +75,7 @@
         "run-script-os": "^1.0.7",
         "ts-jest": "^26.3.0",
         "ts-node": "^8.9.1",
+        "tsc-watch": "^4.2.9",
         "tslint": "^6.1.2",
         "typescript": "~3.9.7"
     },
