@@ -1,6 +1,6 @@
 # Fork of n8n for USGS Astro
 **Dependencies:**
-- [NodeJS](https://nodejs.org)
+- [NodeJS](https://nodejs.org) >= 14
 - [Docker](https://docs.docker.com/engine/install)
 - [docker-compose](https://docs.docker.com/compose/install)
 
