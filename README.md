@@ -4,6 +4,8 @@
 - [Docker](https://docs.docker.com/engine/install)
 - [docker-compose](https://docs.docker.com/compose/install)
 
+For windows, node-gyp requires [additional setup](https://meet.google.com/linkredirect?authuser=2&dest=https%3A%2F%2Fgithub.com%2Fnodejs%2Fnode-gyp%23on-windows)
+
 Setup:
 ```console
 $ npm i
