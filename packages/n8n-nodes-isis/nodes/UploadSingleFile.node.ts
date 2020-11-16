@@ -8,7 +8,7 @@ import {
 export class UploadSingleFile implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'File Upload',
-		name: 'uploadSingleFile',
+		name: 'UploadSingleFile',
 		icon: 'fa:file-import',
 		group: ['input'],
 		version: 1,
@@ -19,11 +19,20 @@ export class UploadSingleFile implements INodeType {
 		},
 		inputs: ['main'],
 		outputs: ['main'],
-		properties: [],
+		properties: [
+			{
+				displayName: "File",
+				name: "file",
+				type: 'string',
+				default: "",
+				placeholder: "Upload...",
+				description: "File file to upload"
+			}
+		],
 	};
 
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
-		const item = Object.assign({}, this.getInputData());
+		const item = this.getInputData();
 		return this.prepareOutputData(item);
 	}
 }

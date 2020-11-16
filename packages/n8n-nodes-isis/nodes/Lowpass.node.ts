@@ -5,10 +5,10 @@ import {
 	INodeTypeDescription,
 } from 'n8n-workflow';
 
-export class ISISLowPass implements INodeType {
+export class Lowpass implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Low Pass Filter',
-		name: 'lowpass',
+		name: 'Lowpass',
 		group: ['transform'],
 		version: 1,
 		description: 'Apply lowpass or blurring filter to a cube',
@@ -19,7 +19,7 @@ export class ISISLowPass implements INodeType {
 	};
 
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
-		const item = Object.assign({}, this.getInputData());
+		const item = this.getInputData();
 		return this.prepareOutputData(item);
 	}
 }
