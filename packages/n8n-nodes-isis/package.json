@@ -28,7 +28,8 @@
     "credentials": [],
     "nodes": [
       "dist/nodes/UploadFile.node.js",
-      "dist/nodes/Lowpass.node.js"
+      "dist/nodes/Lowpass.node.js",
+      "dist/nodes/SendToStorage.node.js"
     ]
   },
   "devDependencies": {
