@@ -36,6 +36,10 @@ export class UploadFile implements INodeType {
 	async executeSingle(this: IExecuteSingleFunctions): Promise<INodeExecutionData> {
 		const file = this.getNodeParameter(UploadFile.KEY_INPUT_FILE) as string;
 
+		if (!file.endsWith("cub")) {
+			throw new Error("The specified file type is not allowed");
+		}
+
 		// Use "I00831002RDR.cub" for testing
 		const outputData = Object.assign({}, this.getInputData());
 		if (!outputData.json) {
