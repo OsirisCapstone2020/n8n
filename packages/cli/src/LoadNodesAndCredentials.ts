@@ -161,7 +161,7 @@ class LoadNodesAndCredentialsClass {
 		let tempNode: INodeType;
 		let fullNodeName: string;
 
-		if (filePath.endsWith('json')) {
+		if (filePath.endsWith('.json')) {
 			try {
 				tempNode = JsonHttpNode.fromFile(filePath);
 			}
