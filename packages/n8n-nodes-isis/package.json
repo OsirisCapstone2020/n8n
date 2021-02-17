@@ -19,17 +19,18 @@
     "tslint": "tslint -p tsconfig.json -c tslint.json",
     "watch": "tsc --watch",
     "test": "jest",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
   "files": [
-    "dist"
+    "dist",
+    "nodes/**/*.json"
   ],
   "n8n": {
     "credentials": [],
     "nodes": [
       "dist/nodes/UploadFile.node.js",
-      "dist/nodes/Lowpass.node.js",
-      "dist/nodes/SendToStorage.node.js"
+      "dist/nodes/SendToStorage.node.js",
+      "nodes/skyrange.json"
     ]
   },
   "devDependencies": {
@@ -39,14 +40,16 @@
     "@types/request-promise-native": "~1.0.15",
     "gulp": "^4.0.0",
     "jest": "^26.4.2",
-    "n8n-workflow": "^0.44.0",
+    "n8n-core": "0.63.0",
+    "n8n-workflow": "0.52.0",
     "ts-jest": "^26.3.0",
     "tslint": "^6.1.2",
-    "typescript": "~3.9.7"
-  },
-  "dependencies": {
-    "n8n-core": "~0.51.0",
+    "typescript": "~3.9.7",
     "rimraf": "^3.0.2"
+  },
+  "peerDependencies": {
+    "n8n-core": "0.63.0",
+    "n8n-workflow": "0.52.0"
   },
   "jest": {
     "transform": {

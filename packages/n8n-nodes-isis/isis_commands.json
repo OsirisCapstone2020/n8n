@@ -1,1 +1,8009 @@
-[{"name":"skyrange","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}}]},{"name":"phocube","parameters":[{"FROM":{"default":"","type":"cube"},"SOURCE":{"default":"CAMERA","type":"string"},"TO":{"default":"","type":"cube"}},{"ALBEDORANK":{"default":false,"type":"boolean"},"BODYFIXED":{"default":false,"type":"boolean"},"DETECTORRESOLUTION":{"default":false,"type":"boolean"},"DN":{"default":false,"type":"boolean"},"EMISSION":{"default":true,"type":"boolean"},"INCIDENCE":{"default":true,"type":"boolean"},"LATITUDE":{"default":true,"type":"boolean"},"LINERESOLUTION":{"default":false,"type":"boolean"},"LOCALEMISSION":{"default":false,"type":"boolean"},"LOCALINCIDENCE":{"default":false,"type":"boolean"},"LOCALTIME":{"default":false,"type":"boolean"},"LONGITUDE":{"default":true,"type":"boolean"},"MORPHOLOGYRANK":{"default":false,"type":"boolean"},"NORTHAZIMUTH":{"default":false,"type":"boolean"},"OBLIQUEDETECTORRESOLUTION":{"default":false,"type":"boolean"},"OFFNADIRANGLE":{"default":false,"type":"boolean"},"PHASE":{"default":true,"type":"boolean"},"PIXELRESOLUTION":{"default":false,"type":"boolean"},"RADEC":{"default":false,"type":"boolean"},"SAMPLERESOLUTION":{"default":false,"type":"boolean"},"SPACECRAFTAZIMUTH":{"default":false,"type":"boolean"},"SPECIALPIXELS":{"default":true,"type":"boolean"},"SUBSOLARGROUNDAZIMUTH":{"default":false,"type":"boolean"},"SUBSPACECRAFTGROUNDAZIMUTH":{"default":false,"type":"boolean"},"SUNAZIMUTH":{"default":false,"type":"boolean"}}]},{"name":"histmatch","parameters":[{"FROM":{"default":"","type":"cube"},"MATCH":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"STRETCH":{"default":"CDF","type":"string"}},{"INCREMENT":{"default":1,"type":"integer"},"MAXPER":{"default":99.5,"type":"double"},"MINPER":{"default":0.5,"type":"double"}}]},{"name":"findimageoverlaps","parameters":[{"ERRORS":{"default":"","type":"filename"},"FROMLIST":{"default":"","type":"filename"},"OVERLAPLIST":{"default":"","type":"filename"}},{"DETAILED":{"default":false,"type":"boolean"}}]},{"name":"ringspt","parameters":[{"APPEND":{"default":true,"type":"boolean"},"FORMAT":{"default":"PVL","type":"string"},"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"ALLOWOUTSIDE":{"default":false,"type":"boolean"},"LINE":{"default":"","type":"double"},"RINGLONGITUDE":{"default":"","type":"double"},"RINGRADIUS":{"default":"","type":"double"},"SAMPLE":{"default":"","type":"double"},"TYPE":{"default":"IMAGE","type":"string"}}]},{"name":"flip","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}}]},{"name":"enlarge","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"INTERP":{"default":"CUBICCONVOLUTION","type":"string"},"LSCALE":{"default":1.0,"type":"double"},"MODE":{"default":"SCALE","type":"string"},"ONL":{"default":"","type":"integer"},"ONS":{"default":"","type":"integer"},"SSCALE":{"default":1.0,"type":"double"}}]},{"name":"cam2cam","parameters":[{"FROM":{"default":"","type":"cube"},"MATCH":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"INTERP":{"default":"CUBICCONVOLUTION","type":"string"},"REFBAND":{"default":"","type":"integer"}}]},{"name":"mvstats","parameters":[{"CUBE":{"default":"","type":"cube"},"FLATFILE":{"default":"","type":"filename"},"FROM":{"default":"","type":"cube"}}]},{"name":"rgb2hsv","parameters":[{"BLUE":{"default":"","type":"cube"},"GREEN":{"default":"","type":"cube"},"RED":{"default":"","type":"cube"}},{"HUE":{"default":"","type":"cube"},"SATURATION":{"default":"","type":"cube"},"VALUE":{"default":"","type":"cube"}},{"MODE":{"default":"Automatic","type":"string"}},{"BMAXPER":{"default":99.5,"type":"double"},"BMINPER":{"default":0.5,"type":"double"},"GMAXPER":{"default":99.5,"type":"double"},"GMINPER":{"default":0.5,"type":"double"},"RMAXPER":{"default":99.5,"type":"double"},"RMINPER":{"default":0.5,"type":"double"}},{"BMAX":{"default":"","type":"double"},"BMIN":{"default":"","type":"double"},"GMAX":{"default":"","type":"double"},"GMIN":{"default":"","type":"double"},"RMAX":{"default":"","type":"double"},"RMIN":{"default":"","type":"double"}}]},{"name":"isis2gml","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"LABEL":{"default":"","type":"string"},"LINC":{"default":1,"type":"integer"},"LONGITUDEDOMAIN":{"default":"DEFAULT","type":"string"},"SINC":{"default":1,"type":"integer"}}]},{"name":"mask","parameters":[{"FROM":{"default":"","type":"cube"},"MASK":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"MAXIMUM":{"default":"","type":"double"},"MINIMUM":{"default":"","type":"double"},"PRESERVE":{"default":"INSIDE","type":"string"}},{"SPIXELS":{"default":"NULL","type":"string"}}]},{"name":"pds2isis","parameters":[{"FROM":{"default":"","type":"filename"},"IMAGE":{"default":"","type":"filename"},"TO":{"default":"","type":"cube"}},{"HISMAX":{"default":"","type":"double"},"HISMIN":{"default":"","type":"double"},"HRSMAX":{"default":"","type":"double"},"HRSMIN":{"default":"","type":"double"},"LISMAX":{"default":"","type":"double"},"LISMIN":{"default":"","type":"double"},"LRSMAX":{"default":"","type":"double"},"LRSMIN":{"default":"","type":"double"},"NULLMAX":{"default":"","type":"double"},"NULLMIN":{"default":"","type":"double"},"SETHISRANGE":{"default":false,"type":"boolean"},"SETHRSRANGE":{"default":false,"type":"boolean"},"SETLISRANGE":{"default":false,"type":"boolean"},"SETLRSRANGE":{"default":false,"type":"boolean"},"SETNULLRANGE":{"default":false,"type":"boolean"}}]},{"name":"demprep","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}}]},{"name":"crop","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"NSAMPLES":{"default":"","type":"integer"},"SAMPLE":{"default":1,"type":"integer"},"SINC":{"default":1,"type":"integer"}},{"LINC":{"default":1,"type":"integer"},"LINE":{"default":1,"type":"integer"},"NLINES":{"default":"","type":"integer"}},{"PROPSPICE":{"default":false,"type":"boolean"}}]},{"name":"reduce","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"ALGORITHM":{"default":"AVERAGE","type":"string"},"LSCALE":{"default":1.0,"type":"double"},"MODE":{"default":"SCALE","type":"string"},"ONL":{"default":"","type":"integer"},"ONS":{"default":"","type":"integer"},"SSCALE":{"default":1.0,"type":"double"},"VALIDPER":{"default":50.0,"type":"double"},"VPER_REPLACE":{"default":"NULL","type":"string"}}]},{"name":"pca","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"MODE":{"default":"TRANSFORM","type":"string"}}]},{"name":"specdivfilter","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"BANDS":{"default":"","type":"integer"}},{"HIGH":{"default":"","type":"double"},"LOW":{"default":"","type":"double"}}]},{"name":"butterworth","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"BANDWIDTH":{"default":1.0,"type":"double"},"CUTOFF":{"default":0.0,"type":"double"},"ORDER":{"default":1,"type":"integer"}},{"TYPE":{"default":"LOWPASS","type":"string"}}]},{"name":"center","parameters":[{"FROM":{"default":"","type":"cube"},"INTERP":{"default":"CUBICCONVOLUTION","type":"string"},"MAXIMUM":{"default":"","type":"double"},"MINIMUM":{"default":"","type":"double"},"TO":{"default":"","type":"cube"}}]},{"name":"trimfilter","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"LINES":{"default":"","type":"integer"},"SAMPLES":{"default":"","type":"integer"}},{"HIGH":{"default":"","type":"double"},"LOW":{"default":"","type":"double"},"MINIMUM":{"default":1.0,"type":"double"},"MINOPT":{"default":"COUNT","type":"string"}}]},{"name":"isis2ascii","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"DELIMITER":{"default":null,"type":"string"},"HEADER":{"default":false,"type":"boolean"}},{"HISVALUE":{"default":"HIS","type":"string"},"HRSVALUE":{"default":"HRS","type":"string"},"LISVALUE":{"default":"LIS","type":"string"},"LRSVALUE":{"default":"LRS","type":"string"},"NULLVALUE":{"default":"NULL","type":"string"},"SETPIXELVALUES":{"default":false,"type":"boolean"}}]},{"name":"hist","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"MAXIMUM":{"default":"","type":"double"},"MINIMUM":{"default":"","type":"double"},"NBINS":{"default":"","type":"integer"}},{"FREQAXIS":{"default":"","type":"string"},"PERCENTAXIS":{"default":"","type":"string"},"TITLE":{"default":"","type":"string"},"XAXIS":{"default":"","type":"string"}}]},{"name":"speclowpass","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"BANDS":{"default":"","type":"integer"}},{"HIGH":{"default":"","type":"double"},"LOW":{"default":"","type":"double"}}]},{"name":"fft","parameters":[{"FROM":{"default":"","type":"cube"},"MAGNITUDE":{"default":"","type":"cube"},"PHASE":{"default":"","type":"cube"}},{"REPLACEMENT":{"default":"ZEROES","type":"string"}}]},{"name":"autoregtemplate","parameters":[{"TOPVL":{"default":"","type":"filename"}},{"ALGORITHM":{"default":"","type":"string"},"INTERP":{"default":"CUBICCONVOLUTIONTYPE","type":"string"},"REDUCTIONFACTOR":{"default":"","type":"integer"},"SUBPIXELACCURACY":{"default":true,"type":"boolean"},"TOLERANCE":{"default":"","type":"double"}},{"MINIMUMZSCORE":{"default":"","type":"double"},"PLINE":{"default":"","type":"integer"},"PMAX":{"default":"","type":"integer"},"PMIN":{"default":"","type":"integer"},"PSAMP":{"default":"","type":"integer"},"PVALIDPERCENT":{"default":"","type":"double"}},{"SLINE":{"default":"","type":"integer"},"SMAX":{"default":"","type":"integer"},"SMIN":{"default":"","type":"integer"},"SSAMP":{"default":"","type":"integer"},"SSUBCHIPVALIDPERCENT":{"default":"","type":"double"}},{"DISTANCETOLERANCE":{"default":1.5,"type":"double"},"WINDOWSIZE":{"default":5,"type":"integer"}}]},{"name":"fx","parameters":[{"F1":{"default":"","type":"cube"},"F2":{"default":"","type":"cube"},"F3":{"default":"","type":"cube"},"F4":{"default":"","type":"cube"},"F5":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"FROMLIST":{"default":"","type":"filename"}},{"EQUATION":{"default":"","type":"string"}},{"MODE":{"default":"CUBES","type":"string"}},{"BANDS":{"default":1,"type":"integer"},"LINES":{"default":1,"type":"integer"},"SAMPLES":{"default":1,"type":"integer"}}]},{"name":"csminit","parameters":[{"FROM":{"default":"","type":"cube"},"ISD":{"default":"","type":"filename"}},{"SHAPEMODEL":{"default":"","type":"filename"},"TARGETNAME":{"default":"","type":"string"}},{"MODELNAME":{"default":"","type":"string"},"PLUGINNAME":{"default":"","type":"string"}}]},{"name":"fillgap","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"INTERP":{"default":"CUBIC","type":"string"}},{"DIRECTION":{"default":"SAMPLE","type":"string"}}]},{"name":"hsv2rgb","parameters":[{"HUE":{"default":"","type":"cube"},"SATURATION":{"default":"","type":"cube"},"VALUE":{"default":"","type":"cube"}},{"BLUE":{"default":"","type":"cube"},"GREEN":{"default":"","type":"cube"},"RED":{"default":"","type":"cube"}},{"SCALAR":{"default":1.0,"type":"double"}}]},{"name":"overlapstats","parameters":[{"FROMLIST":{"default":"","type":"filename"},"OVERLAPLIST":{"default":"","type":"filename"}},{"DETAIL":{"default":"BRIEF","type":"string"},"ERRORS":{"default":"","type":"filename"},"SINGLELINE":{"default":true,"type":"boolean"},"TABLETYPE":{"default":"CSV","type":"string"},"TO":{"default":"","type":"filename"}}]},{"name":"ifft","parameters":[{"MAGNITUDE":{"default":"","type":"cube"},"PHASE":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}}]},{"name":"greyscale","parameters":[{"TO":{"default":"","type":"cube"}},{"BEGINDN":{"default":0.0,"type":"double"},"DIRECTION":{"default":" HORIZONTAL ","type":"string"},"ENDDN":{"default":0.0,"type":"double"}},{"LINES":{"default":1,"type":"integer"},"SAMPLES":{"default":1,"type":"integer"}}]},{"name":"shade","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"AZIMUTH":{"default":90.0,"type":"double"},"ZENITH":{"default":45.0,"type":"double"}},{"PIXELRESOL":{"default":"","type":"double"}}]},{"name":"cubeatt","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"PROPTABLES":{"default":false,"type":"boolean"}}]},{"name":"cubeavg","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"BANDBIN":{"default":"DELETE","type":"string"},"CENTER":{"default":"","type":"double"},"WIDTH":{"default":"","type":"double"}}]},{"name":"translate","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"LTRANS":{"default":"","type":"double"},"STRANS":{"default":"","type":"double"}},{"INTERP":{"default":"CUBICCONVOLUTION","type":"string"}}]},{"name":"gauss","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"SIZE":{"default":3,"type":"integer"}},{"STDDEV":{"default":1.0,"type":"double"}}]},{"name":"desmile","parameters":[{"FROM":{"default":"","type":"cube"},"OBJECTIVE":{"default":"","type":"filename"},"SMILEDEF":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}}]},{"name":"fakecube","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"OPTION":{"default":"GRADIENT","type":"string"}},{"SIZE":{"default":"","type":"integer"}}]},{"name":"deriv","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"DIRECTION":{"default":"HORZ","type":"string"}}]},{"name":"lineeq","parameters":[{"CSV":{"default":"","type":"filename"},"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"AVERAGES":{"default":false,"type":"boolean"},"BOXSIZE":{"default":"","type":"integer"},"BOXTYPE":{"default":"NONE","type":"string"}}]},{"name":"makecube","parameters":[{"TO":{"default":"","type":"cube"}},{"PIXELS":{"default":"VALUE","type":"string"},"VALUE":{"default":0.0,"type":"double"}},{"BANDS":{"default":"","type":"integer"},"LINES":{"default":"","type":"integer"},"SAMPLES":{"default":"","type":"integer"}}]},{"name":"caminfo","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"APPEND":{"default":false,"type":"boolean"},"CAMSTATS":{"default":false,"type":"boolean"},"FORMAT":{"default":"PVL","type":"string"},"GEOMETRY":{"default":true,"type":"boolean"},"ISISLABEL":{"default":false,"type":"boolean"},"LINC":{"default":1,"type":"integer"},"ORIGINALLABEL":{"default":false,"type":"boolean"},"SINC":{"default":1,"type":"integer"},"STATISTICS":{"default":false,"type":"boolean"}},{"INCREASEPRECISION":{"default":false,"type":"boolean"},"INCTYPE":{"default":"LINCSINC","type":"string"},"MAXEMISSION":{"default":89.5,"type":"double"},"MAXINCIDENCE":{"default":120.0,"type":"double"},"NUMVERTICES":{"default":40,"type":"integer"},"POLYGON":{"default":false,"type":"boolean"},"POLYLINC":{"default":"","type":"integer"},"POLYSINC":{"default":"","type":"integer"},"USELABEL":{"default":false,"type":"boolean"}},{"SPICE":{"default":false,"type":"boolean"}},{"VCAMERA":{"default":false,"type":"boolean"}}]},{"name":"std2isis","parameters":[{"FROM":{"default":"","type":"filename"},"TO":{"default":"","type":"cube"}},{"MODE":{"default":"AUTO","type":"string"}},{"HRSMAX":{"default":"","type":"double"},"HRSMIN":{"default":"","type":"double"},"LRSMAX":{"default":"","type":"double"},"LRSMIN":{"default":"","type":"double"},"NULLMAX":{"default":"","type":"double"},"NULLMIN":{"default":"","type":"double"},"SETHRSRANGE":{"default":false,"type":"boolean"},"SETLRSRANGE":{"default":false,"type":"boolean"},"SETNULLRANGE":{"default":false,"type":"boolean"}}]},{"name":"shadow","parameters":[{"FROM":{"default":"","type":"cube"},"PCK":{"default":"","type":"filename"},"SPK":{"default":"","type":"filename"},"TO":{"default":"","type":"cube"}},{"SOLARRADIUS":{"default":1.001211,"type":"double"},"SUNEDGE":{"default":true,"type":"boolean"},"SUNPOSITIONSOURCE":{"default":"MATCH","type":"string"}},{"MATCH":{"default":"","type":"cube"},"TIME":{"default":"","type":"string"}},{"BASELIGHTCACHESIZE":{"default":1000000,"type":"integer"},"BASESHADOWCACHESIZE":{"default":1000000,"type":"integer"},"CACHEINTERPOLATEDVALUES":{"default":false,"type":"boolean"},"LIGHTCURTAIN":{"default":true,"type":"boolean"},"LOWERLIGHTCURTAIN":{"default":false,"type":"boolean"},"MAXSKIPOVERSHADOWSTEPS":{"default":5,"type":"integer"},"PRECISION":{"default":1.0,"type":"double"},"PRESET":{"default":"BALANCED","type":"string"},"SHADOWMAP":{"default":true,"type":"boolean"},"SKIPOVERSHADOW":{"default":false,"type":"boolean"}}]},{"name":"copylabel","parameters":[{"FROM":{"default":"","type":"cube"},"SOURCE":{"default":"","type":"cube"}},{"BANDBIN":{"default":true,"type":"boolean"},"BLOBS":{"default":"","type":"string"},"CAMSTATS":{"default":true,"type":"boolean"},"GROUPS":{"default":"","type":"string"},"INSTRUMENT":{"default":true,"type":"boolean"},"KERNELS":{"default":true,"type":"boolean"},"MAPPING":{"default":true,"type":"boolean"},"POLYGON":{"default":true,"type":"boolean"},"RADIOMETRY":{"default":true,"type":"boolean"}}]},{"name":"bandnorm","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"AVERAGE":{"default":"BAND","type":"string"},"METHOD":{"default":"BYNAME","type":"string"},"NAME":{"default":"Average","type":"string"},"NUMBER":{"default":1,"type":"integer"},"SPECTRUM":{"default":"","type":"filename"}}]},{"name":"ringscam2map","parameters":[{"FROM":{"default":"","type":"cube"},"MAP":{"default":"$ISISROOT/appdata/templates/maps/planar.map","type":"filename"},"MATCHMAP":{"default":false,"type":"boolean"},"TO":{"default":"","type":"cube"}},{"PIXRES":{"default":"CAMERA","type":"string"},"RESOLUTION":{"default":"","type":"double"}},{"DEFAULTRANGE":{"default":"MINIMIZE","type":"string"},"MAXRINGLON":{"default":"","type":"double"},"MAXRINGRAD":{"default":"","type":"double"},"MINRINGLON":{"default":"","type":"double"},"MINRINGRAD":{"default":"","type":"double"},"TRIM":{"default":false,"type":"boolean"}},{"RINGLONSEAM":{"default":"AUTO","type":"string"}},{"INTERP":{"default":"CUBICCONVOLUTION","type":"string"},"PATCHSIZE":{"default":"","type":"integer"},"WARPALGORITHM":{"default":"AUTOMATIC","type":"string"}}]},{"name":"appjit","parameters":[{"FROMLIST":{"default":"","type":"filename"},"JITTERFILE":{"default":"","type":"filename"},"MASTER":{"default":"","type":"cube"}},{"DEGREE":{"default":2,"type":"integer"},"PITCHRATE":{"default":"","type":"double"},"YAW":{"default":"","type":"double"}}]},{"name":"maptemplate","parameters":[{"FROMLIST":{"default":"","type":"filename"},"MAP":{"default":"","type":"filename"}},{"PROJECTION":{"default":"SINUSOIDAL","type":"string"}},{"CLAT":{"default":"","type":"double"},"CLON":{"default":"","type":"double"},"DIST":{"default":"","type":"double"},"PAR1":{"default":"","type":"double"},"PAR2":{"default":"","type":"double"},"PLAT":{"default":"","type":"double"},"PLON":{"default":"","type":"double"},"PROT":{"default":"","type":"double"},"SCALEFACTOR":{"default":"","type":"double"}},{"EQRADIUS":{"default":"","type":"double"},"FILE":{"default":"","type":"filename"},"LATTYPE":{"default":"PLANETOCENTRIC","type":"string"},"LONDIR":{"default":"POSITIVEEAST","type":"string"},"LONDOM":{"default":"360","type":"string"},"POLRADIUS":{"default":"","type":"double"},"TARGETNAME":{"default":"","type":"string"},"TARGOPT":{"default":"NONE","type":"string"}},{"MAXLAT":{"default":"","type":"double"},"MAXLON":{"default":"","type":"double"},"MINLAT":{"default":"","type":"double"},"MINLON":{"default":"","type":"double"},"RNGOPT":{"default":"NONE","type":"string"}},{"RESCALCOPT":{"default":"HIGH","type":"string"},"RESOLUTION":{"default":"","type":"double"},"RESOPT":{"default":"NONE","type":"string"}}]},{"name":"pad","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"BOTTOM":{"default":0,"type":"integer"},"LEFT":{"default":0,"type":"integer"},"RIGHT":{"default":0,"type":"integer"},"TOP":{"default":0,"type":"integer"}}]},{"name":"slpmap","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"OUTPUT":{"default":"SLOPE","type":"string"},"UNITS":{"default":"DEGREES","type":"string"}},{"CONVERSION":{"default":1.0,"type":"double"},"PIXRES":{"default":"AUTOMATIC","type":"string"},"RESOLUTION":{"default":"","type":"double"}}]},{"name":"sigmastretch","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"VARIANCE":{"default":40.0,"type":"double"}}]},{"name":"cathist","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"APPEND":{"default":true,"type":"boolean"},"MODE":{"default":"FULL","type":"string"}}]},{"name":"camrange","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"None","type":"filename"}}]},{"name":"svfilter","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"FILTER":{"default":"VARIANCE","type":"string"}},{"LINES":{"default":"","type":"integer"},"SAMPLES":{"default":"","type":"integer"}},{"HIGH":{"default":"","type":"double"},"LOW":{"default":"","type":"double"},"MINIMUM":{"default":1,"type":"integer"}},{"PROPAGATE":{"default":true,"type":"boolean"}}]},{"name":"automos","parameters":[{"FROMLIST":{"default":"","type":"filename"},"MOSAIC":{"default":"","type":"cube"},"PRIORITY":{"default":"ONTOP","type":"string"},"TOLIST":{"default":"","type":"filename"}},{"CRITERIA":{"default":"LESSER","type":"string"},"KEYNAME":{"default":"OriginalBand","type":"string"},"KEYVALUE":{"default":"1","type":"string"},"NUMBER":{"default":1,"type":"integer"},"TYPE":{"default":"\n            BANDNUMBER\n          ","type":"string"}},{"GRANGE":{"default":"AUTO","type":"string"},"MAXLAT":{"default":"","type":"double"},"MAXLON":{"default":"","type":"double"},"MINLAT":{"default":"","type":"double"},"MINLON":{"default":"","type":"double"}},{"HIGHSATURATION":{"default":false,"type":"boolean"},"LOWSATURATION":{"default":false,"type":"boolean"},"MATCHBANDBIN":{"default":true,"type":"boolean"},"MATCHDEM":{"default":false,"type":"boolean"},"NULL":{"default":false,"type":"boolean"},"TRACK":{"default":false,"type":"boolean"}}]},{"name":"stretch","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"HIS":{"default":"","type":"string"},"HRS":{"default":"","type":"string"},"INPUTFILE":{"default":"","type":"filename"},"LIS":{"default":"","type":"string"},"LRS":{"default":"","type":"string"},"NULL":{"default":"","type":"string"},"PAIRS":{"default":"","type":"string"},"READFILE":{"default":false,"type":"boolean"},"USEPERCENTAGES":{"default":false,"type":"boolean"}}]},{"name":"decorstretch","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}}]},{"name":"ckwriter","parameters":[{"COMFILE":{"default":"","type":"filename"},"FROM":{"default":"","type":"filename"},"FROMLIST":{"default":"","type":"filename"},"SUMMARY":{"default":"","type":"filename"},"TO":{"default":"","type":"filename"}},{"CKTYPE":{"default":3,"type":"integer"},"OVERLAP":{"default":"ERROR","type":"string"}}]},{"name":"blend","parameters":[{"FROMLIST":{"default":"","type":"filename"},"TOLIST":{"default":"","type":"filename"}},{"ERROR":{"default":false,"type":"boolean"},"STOP":{"default":100000,"type":"integer"}}]},{"name":"pvldiff","parameters":[{"DIFF":{"default":"","type":"filename"},"FROM":{"default":"","type":"filename"},"FROM2":{"default":"","type":"filename"},"TO":{"default":"","type":"filename"}}]},{"name":"nocam2map","parameters":[{"FROM":{"default":"","type":"cube"},"LATCUBE":{"default":"","type":"cube"},"LATTYPE":{"default":"PLANETOCENTRIC","type":"string"},"LONCUBE":{"default":"","type":"cube"},"LONDIR":{"default":"POSITIVEEAST","type":"string"},"TO":{"default":"","type":"cube"}},{"DEGREE":{"default":3,"type":"integer"},"LINC":{"default":"","type":"integer"},"NOWARP":{"default":false,"type":"boolean"},"RESIDUALS":{"default":"","type":"filename"},"SINC":{"default":"","type":"integer"}},{"EQURADIUS":{"default":"","type":"double"},"MAP":{"default":"$ISISROOT/appdata/templates/maps/sinusoidal.map","type":"filename"},"PIXRES":{"default":"COMPUTE","type":"string"},"POLRADIUS":{"default":"","type":"double"},"RESOLUTION":{"default":"","type":"double"},"TARGET":{"default":"","type":"string"}},{"DEFAULTRANGE":{"default":"COMPUTE","type":"string"},"MAXLAT":{"default":"","type":"double"},"MAXLON":{"default":"","type":"double"},"MINLAT":{"default":"","type":"double"},"MINLON":{"default":"","type":"double"}},{"ITERATIONS":{"default":10,"type":"integer"},"TOLERANCE":{"default":1.0,"type":"double"}},{"INTERP":{"default":"CUBICCONVOLUTION","type":"string"}}]},{"name":"mapmos","parameters":[{"FROM":{"default":"","type":"cube"},"MOSAIC":{"default":"","type":"cube"},"PRIORITY":{"default":"ONTOP","type":"string"}},{"CRITERIA":{"default":"LESSER","type":"string"},"KEYNAME":{"default":"OriginalBand","type":"string"},"KEYVALUE":{"default":"1","type":"string"},"NUMBER":{"default":1,"type":"integer"},"TYPE":{"default":"\n            BANDNUMBER\n          ","type":"string"}},{"CREATE":{"default":false,"type":"boolean"},"MAXLAT":{"default":"","type":"double"},"MAXLON":{"default":"","type":"double"},"MINLAT":{"default":"","type":"double"},"MINLON":{"default":"","type":"double"},"TRACK":{"default":false,"type":"boolean"}},{"HIGHSATURATION":{"default":false,"type":"boolean"},"LOWSATURATION":{"default":false,"type":"boolean"},"MATCHBANDBIN":{"default":true,"type":"boolean"},"MATCHDEM":{"default":false,"type":"boolean"},"NULL":{"default":false,"type":"boolean"}}]},{"name":"spiceinit","parameters":[{"FROM":{"default":"","type":"cube"}},{"ATTACH":{"default":true,"type":"boolean"},"WEB":{"default":false,"type":"boolean"}},{"CKNADIR":{"default":false,"type":"boolean"},"CKPREDICTED":{"default":false,"type":"boolean"},"CKRECON":{"default":true,"type":"boolean"},"CKSMITHED":{"default":false,"type":"boolean"}},{"SPKPREDICTED":{"default":false,"type":"boolean"},"SPKRECON":{"default":true,"type":"boolean"},"SPKSMITHED":{"default":false,"type":"boolean"}},{"CK":{"default":"","type":"filename"},"EXTRA":{"default":"","type":"filename"},"FK":{"default":"","type":"filename"},"IAK":{"default":"","type":"filename"},"IK":{"default":"","type":"filename"},"LS":{"default":"","type":"filename"},"PCK":{"default":"","type":"filename"},"SCLK":{"default":"","type":"filename"},"SPK":{"default":"","type":"filename"},"TSPK":{"default":"","type":"filename"}},{"MODEL":{"default":"","type":"cube"},"SHAPE":{"default":"SYSTEM","type":"string"}},{"ENDPAD":{"default":0.0,"type":"double"},"STARTPAD":{"default":0.0,"type":"double"}},{"PORT":{"default":443,"type":"integer"},"URL":{"default":"https://services.isis.astrogeology.usgs.gov/cgi-bin/spiceinit.cgi","type":"string"}}]},{"name":"mode","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"LINES":{"default":"","type":"integer"},"SAMPLES":{"default":"","type":"integer"}},{"HIGH":{"default":"","type":"double"},"LOW":{"default":"","type":"double"},"MINIMUM":{"default":1.0,"type":"double"},"MINOPT":{"default":"COUNT","type":"string"},"REPLACEMENT":{"default":"CENTER","type":"string"}},{"PIXELS":{"default":"ALL","type":"string"}},{"HIS":{"default":true,"type":"boolean"},"HRS":{"default":true,"type":"boolean"},"LIS":{"default":true,"type":"boolean"},"LRS":{"default":true,"type":"boolean"},"NULL":{"default":true,"type":"boolean"}}]},{"name":"ddd2isis","parameters":[{"FROM":{"default":"","type":"filename"},"TO":{"default":"","type":"cube"}}]},{"name":"gaussstretch","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"GSIGMA":{"default":3.0,"type":"double"}}]},{"name":"isisui","parameters":[{"arg1":{"default":"","type":"string"},"arg2":{"default":"","type":"boolean"},"arg3-n":{"default":"","type":"string"}}]},{"name":"footprintinit","parameters":[{"FROM":{"default":"","type":"cube"}},{"INCREASEPRECISION":{"default":false,"type":"boolean"},"INCTYPE":{"default":"LINCSINC","type":"string"},"LINC":{"default":100,"type":"integer"},"MAXEMISSION":{"default":"","type":"double"},"MAXINCIDENCE":{"default":"","type":"double"},"NUMVERTICES":{"default":40,"type":"integer"},"SINC":{"default":100,"type":"integer"}},{"LIMBTEST":{"default":"ELLIPSOID","type":"string"}},{"MAP":{"default":"$ISISROOT/appdata/templates/maps/sinusoidal.map","type":"filename"},"TESTXY":{"default":false,"type":"boolean"}}]},{"name":"grid","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"BOUNDARY":{"default":false,"type":"boolean"},"EXTENDGRID":{"default":false,"type":"boolean"},"MODE":{"default":"GROUND","type":"string"},"OUTLINE":{"default":false,"type":"boolean"},"TICKS":{"default":false,"type":"boolean"}},{"BASELINE":{"default":1,"type":"integer"},"BASESAMPLE":{"default":1,"type":"integer"},"LINC":{"default":100,"type":"integer"},"SINC":{"default":100,"type":"integer"}},{"BASELAT":{"default":0.0,"type":"double"},"BASELON":{"default":0.0,"type":"double"},"LATINC":{"default":10.0,"type":"double"},"LONINC":{"default":10.0,"type":"double"}},{"MAXLAT":{"default":"","type":"double"},"MAXLON":{"default":"","type":"double"},"MINLAT":{"default":"","type":"double"},"MINLON":{"default":"","type":"double"}},{"DNVALUE":{"default":"","type":"double"},"LINEVALUE":{"default":"HRS","type":"string"},"LINEWIDTH":{"default":1,"type":"integer"}},{"BKGNDDNVALUE":{"default":"","type":"double"},"BKGNDVALUE":{"default":"IMAGE","type":"string"}},{"DIAGONALTICKS":{"default":false,"type":"boolean"},"TICKSIZE":{"default":5,"type":"integer"}}]},{"name":"csv2table","parameters":[{"csv":{"default":"","type":"filename"},"label":{"default":"","type":"filename"},"to":{"default":"","type":"cube"}},{"tablename":{"default":"","type":"string"}}]},{"name":"dsk2isis","parameters":[{"FROM":{"default":"","type":"filename"},"MAP":{"default":"","type":"filename"},"METHOD":{"default":"RAY","type":"string"},"TO":{"default":"","type":"cube"}}]},{"name":"rotate","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"DEGREES":{"default":"","type":"double"},"INTERP":{"default":"CUBICCONVOLUTION","type":"string"}}]},{"name":"ringsautomos","parameters":[{"FROMLIST":{"default":"","type":"filename"},"MOSAIC":{"default":"","type":"cube"},"PRIORITY":{"default":"ONTOP","type":"string"},"TOLIST":{"default":"","type":"filename"}},{"CRITERIA":{"default":"LESSER","type":"string"},"KEYNAME":{"default":"OriginalBand","type":"string"},"KEYVALUE":{"default":"1","type":"string"},"NUMBER":{"default":1,"type":"integer"},"TYPE":{"default":"\n            BANDNUMBER\n          ","type":"string"}},{"GRANGE":{"default":"AUTO","type":"string"},"MAXRINGLON":{"default":"","type":"double"},"MAXRINGRAD":{"default":"","type":"double"},"MINRINGLON":{"default":"","type":"double"},"MINRINGRAD":{"default":"","type":"double"}},{"HIGHSATURATION":{"default":false,"type":"boolean"},"LOWSATURATION":{"default":false,"type":"boolean"},"MATCHBANDBIN":{"default":true,"type":"boolean"},"MATCHDEM":{"default":false,"type":"boolean"},"NULL":{"default":false,"type":"boolean"},"TRACK":{"default":false,"type":"boolean"}}]},{"name":"isis2raw","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"BITTYPE":{"default":"32BIT","type":"string"},"HIS":{"default":false,"type":"boolean"},"HRS":{"default":false,"type":"boolean"},"LIS":{"default":false,"type":"boolean"},"LRS":{"default":false,"type":"boolean"},"NULL":{"default":false,"type":"boolean"},"OMAX":{"default":"","type":"double"},"OMIN":{"default":"","type":"double"}},{"MAXIMUM":{"default":"","type":"double"},"MAXPERCENT":{"default":99.5,"type":"double"},"MINIMUM":{"default":"","type":"double"},"MINPERCENT":{"default":0.5,"type":"double"},"STRETCH":{"default":"LINEAR","type":"string"}},{"ENDIAN":{"default":"LSB","type":"string"},"STORAGEORDER":{"default":"BSQ","type":"string"}}]},{"name":"explode","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}}]},{"name":"raw2isis","parameters":[{"FROM":{"default":"","type":"filename"},"TO":{"default":"","type":"cube"}},{"BANDS":{"default":1,"type":"integer"},"LINES":{"default":"","type":"integer"},"SAMPLES":{"default":"","type":"integer"},"SKIP":{"default":0,"type":"integer"}},{"BITTYPE":{"default":"UNSIGNEDBYTE","type":"string"},"BYTEORDER":{"default":"LSB","type":"string"}},{"HRSMAX":{"default":"","type":"double"},"HRSMIN":{"default":"","type":"double"},"LRSMAX":{"default":"","type":"double"},"LRSMIN":{"default":"","type":"double"},"NULLMAX":{"default":"","type":"double"},"NULLMIN":{"default":"","type":"double"},"SETHRSRANGE":{"default":false,"type":"boolean"},"SETLRSRANGE":{"default":false,"type":"boolean"},"SETNULLRANGE":{"default":false,"type":"boolean"}}]},{"name":"photrim","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"USEDEM":{"default":false,"type":"boolean"}},{"MAXEMISSION":{"default":90.0,"type":"double"},"MAXINCIDENCE":{"default":90.0,"type":"double"},"MAXPHASE":{"default":180.0,"type":"double"},"MINEMISSION":{"default":0.0,"type":"double"},"MININCIDENCE":{"default":0.0,"type":"double"},"MINPHASE":{"default":0.0,"type":"double"}}]},{"name":"makeflat","parameters":[{"EXCLUDE":{"default":"","type":"filename"},"FROMLIST":{"default":"","type":"filename"},"TO":{"default":"","type":"cube"}},{"STDEVTOL":{"default":"","type":"double"}},{"IMAGETYPE":{"default":"LINESCAN","type":"string"}},{"NUMLINES":{"default":"","type":"integer"}},{"FRAMELETHEIGHT":{"default":"","type":"integer"}}]},{"name":"smtk","parameters":[{"FROM":{"default":"","type":"cube"},"MATCH":{"default":"","type":"cube"},"REGDEF":{"default":"$ISISROOT/appdata/templates/autoreg/coreg.adaptgruen.p1515s3030.def","type":"filename"}},{"CNET":{"default":"","type":"filename"},"NSEED":{"default":0.0,"type":"double"},"SEEDSAMPLE":{"default":0.0,"type":"double"},"SPACE":{"default":3,"type":"integer"},"SUBCBOX":{"default":5,"type":"integer"}},{"BOXSIZE":{"default":3,"type":"integer"},"PLOTDIST":{"default":5.0,"type":"double"},"TO":{"default":"","type":"cube"}},{"ONET":{"default":"","type":"filename"},"OSEEDNET":{"default":"","type":"filename"}}]},{"name":"spkwriter","parameters":[{"FROM":{"default":"","type":"filename"},"FROMLIST":{"default":"","type":"filename"}},{"COMFILE":{"default":"","type":"filename"},"OVERLAP":{"default":"ERROR","type":"string"},"SUMMARY":{"default":"","type":"filename"},"TO":{"default":"","type":"filename"},"TYPE":{"default":13,"type":"integer"}}]},{"name":"trackextract","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}}]},{"name":"poly","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"ADD":{"default":0.0,"type":"double"},"MULT1":{"default":1.0,"type":"double"},"MULT2":{"default":0.0,"type":"double"},"MULT3":{"default":0.0,"type":"double"},"MULT4":{"default":0.0,"type":"double"},"MULT5":{"default":0.0,"type":"double"},"MULT6":{"default":0.0,"type":"double"},"MULT7":{"default":0.0,"type":"double"},"MULT8":{"default":0.0,"type":"double"}}]},{"name":"histeq","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"INCREMENT":{"default":1,"type":"integer"},"MAXPER":{"default":99.5,"type":"double"},"MINPER":{"default":0.5,"type":"double"}}]},{"name":"isisminer","parameters":[{"CONFIG":{"default":"","type":"filename"},"GLOBALS":{"default":"None","type":"filename"},"PARAMETERS":{"default":"None","type":"string"}}]},{"name":"noisefilter","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"FLATTOL":{"default":0.0,"type":"double"},"REPLACE":{"default":"AVERAGE","type":"string"},"TOLDEF":{"default":"DN","type":"string"},"TOLMAX":{"default":20.0,"type":"double"},"TOLMIN":{"default":20.0,"type":"double"}},{"LINES":{"default":"","type":"integer"},"SAMPLES":{"default":"","type":"integer"}},{"HIGH":{"default":"","type":"double"},"LOW":{"default":"","type":"double"},"MINIMUM":{"default":1,"type":"integer"}},{"HISISNOISE":{"default":false,"type":"boolean"},"HRSISNOISE":{"default":false,"type":"boolean"},"LISISNOISE":{"default":false,"type":"boolean"},"LRSISNOISE":{"default":false,"type":"boolean"},"NULLISNOISE":{"default":false,"type":"boolean"}}]},{"name":"fits2isis","parameters":[{"FROM":{"default":"","type":"filename"},"TO":{"default":"","type":"cube"}},{"IMAGENUMBER":{"default":0,"type":"integer"}},{"ORGANIZATION":{"default":"BSQ","type":"string"}}]},{"name":"median","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"LINES":{"default":"","type":"integer"},"SAMPLES":{"default":"","type":"integer"}},{"HIGH":{"default":"","type":"double"},"LOW":{"default":"","type":"double"},"MINIMUM":{"default":1.0,"type":"double"},"MINOPT":{"default":"COUNT","type":"string"},"REPLACEMENT":{"default":"CENTER","type":"string"}},{"FILTER":{"default":"ALL","type":"string"}},{"HIS":{"default":true,"type":"boolean"},"HRS":{"default":true,"type":"boolean"},"LIS":{"default":true,"type":"boolean"},"LRS":{"default":true,"type":"boolean"},"NULL":{"default":true,"type":"boolean"}}]},{"name":"barscale","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"BACKGROUND":{"default":"WHITE","type":"string"},"BARHEIGHT":{"default":50,"type":"integer"},"CORNERLINE":{"default":"","type":"integer"},"CORNERSAMPLE":{"default":"","type":"integer"},"LEFTLIMIT":{"default":0,"type":"integer"},"LEFTSEGS":{"default":"","type":"integer"},"LINE":{"default":"","type":"double"},"PADIMAGE":{"default":false,"type":"boolean"},"PIXRES":{"default":"CENTER","type":"string"},"PLACEMENT":{"default":"LEFT","type":"string"},"RIGHTLIMIT":{"default":1,"type":"integer"},"RIGHTSEGS":{"default":1,"type":"integer"},"SAMPLE":{"default":"","type":"double"},"TEXTHEIGHT":{"default":50,"type":"integer"},"TEXTLOC":{"default":"ABOVE","type":"string"},"UNITS":{"default":"KILOMETER","type":"string"}}]},{"name":"spiceserver","parameters":[{"FROM":{"default":"","type":"filename"},"TO":{"default":"","type":"filename"}},{"CHECKVERSION":{"default":false,"type":"boolean"},"TEMPFILE":{"default":"/tmp/spice_web_service/inputLabels.cub","type":"filename"}}]},{"name":"mappt","parameters":[{"APPEND":{"default":true,"type":"boolean"},"FORMAT":{"default":"PVL","type":"string"},"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"ALLOWOUTSIDE":{"default":false,"type":"boolean"},"COORDLIST":{"default":"","type":"filename"},"LATITUDE":{"default":"","type":"double"},"LINE":{"default":"","type":"double"},"LONGITUDE":{"default":"","type":"double"},"SAMPLE":{"default":"","type":"double"},"TYPE":{"default":"IMAGE","type":"string"},"USECOORDLIST":{"default":false,"type":"boolean"},"X":{"default":"","type":"double"},"Y":{"default":"","type":"double"}},{"COORDSYS":{"default":"INPUTFILESYS","type":"string"},"LATTYPE":{"default":"PLANETOCENTRIC","type":"string"},"LONDIR":{"default":"POSITIVEEAST","type":"string"},"LONDOM":{"default":"360","type":"string"},"MAP":{"default":"","type":"filename"}}]},{"name":"mapsize","parameters":[{"MAP":{"default":"","type":"filename"},"TO":{"default":"","type":"filename"}},{"HEIGHT":{"default":"","type":"double"},"OPTION":{"default":"SCALE","type":"string"},"SCALE":{"default":"","type":"double"},"WIDTH":{"default":"","type":"double"}}]},{"name":"bandtrim","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}}]},{"name":"ringsmappt","parameters":[{"APPEND":{"default":true,"type":"boolean"},"FORMAT":{"default":"PVL","type":"string"},"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"LINE":{"default":"","type":"double"},"RINGLONGITUDE":{"default":"","type":"double"},"RINGRADIUS":{"default":"","type":"double"},"SAMPLE":{"default":"","type":"double"},"TYPE":{"default":"IMAGE","type":"string"},"X":{"default":"","type":"double"},"Y":{"default":"","type":"double"}},{"COORDSYS":{"default":"INPUTFILESYS","type":"string"},"MAP":{"default":"","type":"filename"},"RINGLONDIR":{"default":"COUNTERCLOCKWISE","type":"string"},"RINGLONDOM":{"default":"360","type":"string"}}]},{"name":"getsn","parameters":[{"APPEND":{"default":true,"type":"boolean"},"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"DEFAULT":{"default":false,"type":"boolean"}},{"FILE":{"default":false,"type":"boolean"},"OBSERVATION":{"default":false,"type":"boolean"},"SN":{"default":false,"type":"boolean"}},{"FORMAT":{"default":"PVL","type":"string"}}]},{"name":"cam2map","parameters":[{"FROM":{"default":"","type":"cube"},"MAP":{"default":"$ISISROOT/appdata/templates/maps/sinusoidal.map","type":"filename"},"MATCHMAP":{"default":false,"type":"boolean"},"TO":{"default":"","type":"cube"}},{"PIXRES":{"default":"CAMERA","type":"string"},"RESOLUTION":{"default":"","type":"double"}},{"DEFAULTRANGE":{"default":"MINIMIZE","type":"string"},"MAXLAT":{"default":"","type":"double"},"MAXLON":{"default":"","type":"double"},"MINLAT":{"default":"","type":"double"},"MINLON":{"default":"","type":"double"},"TRIM":{"default":false,"type":"boolean"}},{"LONSEAM":{"default":"AUTO","type":"string"}},{"INTERP":{"default":"CUBICCONVOLUTION","type":"string"},"OCCLUSION":{"default":false,"type":"boolean"},"PATCHSIZE":{"default":"","type":"integer"},"WARPALGORITHM":{"default":"AUTOMATIC","type":"string"}}]},{"name":"noseam","parameters":[{"FROMLIST":{"default":"","type":"filename"},"TO":{"default":"","type":"cube"}},{"LINES":{"default":"","type":"integer"},"SAMPLES":{"default":"","type":"integer"}},{"MATCHBANDBIN":{"default":true,"type":"boolean"}},{"REMOVETEMP ":{"default":true,"type":"boolean"}}]},{"name":"sharpen","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"LINES":{"default":3,"type":"integer"},"SAMPLES":{"default":3,"type":"integer"}},{"HIGH":{"default":"","type":"double"},"LOW":{"default":"","type":"double"},"MINIMUM":{"default":1,"type":"integer"}},{"PROPAGATE":{"default":true,"type":"boolean"}}]},{"name":"edrget","parameters":[{"TOPATH":{"default":"","type":"string"},"URL":{"default":"","type":"string"}},{"TIMEOUT":{"default":"","type":"integer"}}]},{"name":"cubefunc","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"FUNCTION":{"default":"COS","type":"string"}},{"Y":{"default":"","type":"double"}}]},{"name":"findgaps","parameters":[{"FROM":{"default":"","type":"cube"},"LOG":{"default":"none","type":"filename"},"TO":{"default":"none","type":"cube"}},{"CORTOL":{"default":0.0,"type":"double"}},{"ABOVE":{"default":7,"type":"integer"},"BELOW":{"default":7,"type":"integer"}}]},{"name":"camtrim","parameters":[{"FROM":{"default":"","type":"cube"},"MAP":{"default":"None","type":"filename"},"TO":{"default":"","type":"cube"}},{"MAXLAT":{"default":"","type":"double"},"MAXLON":{"default":"","type":"double"},"MINLAT":{"default":"","type":"double"},"MINLON":{"default":"","type":"double"}}]},{"name":"skypt","parameters":[{"APPEND":{"default":true,"type":"boolean"},"FORMAT":{"default":"PVL","type":"string"},"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"DEC":{"default":"","type":"double"},"LINE":{"default":"","type":"double"},"RA":{"default":"","type":"double"},"SAMPLE":{"default":"","type":"double"},"TYPE":{"default":"IMAGE","type":"string"}}]},{"name":"tabledump","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"CUSTOM":{"default":"","type":"string"},"DELIMIT":{"default":"COMMA","type":"string"},"NAME":{"default":"","type":"string"}}]},{"name":"uncrop","parameters":[{"FROM":{"default":"","type":"cube"},"PARENT":{"default":"","type":"cube"}},{"COMBINE":{"default":"CROP","type":"string"}}]},{"name":"specadd","parameters":[{"FROM":{"default":"","type":"cube"},"MATCH":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}}]},{"name":"vicar2isis","parameters":[{"FROM":{"default":"","type":"filename"},"TO":{"default":"","type":"cube"}},{"HRSMAX":{"default":"","type":"double"},"HRSMIN":{"default":"","type":"double"},"LRSMAX":{"default":"","type":"double"},"LRSMIN":{"default":"","type":"double"},"NULLMAX":{"default":"","type":"double"},"NULLMIN":{"default":"","type":"double"},"SETHRSRANGE":{"default":false,"type":"boolean"},"SETLRSRANGE":{"default":false,"type":"boolean"},"SETNULLRANGE":{"default":false,"type":"boolean"}}]},{"name":"campt","parameters":[{"ALLOWOUTSIDE":{"default":true,"type":"boolean"},"APPEND":{"default":true,"type":"boolean"},"COORDLIST":{"default":"","type":"filename"},"COORDTYPE":{"default":"","type":"string"},"FORMAT":{"default":"PVL","type":"string"},"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"},"USECOORDLIST":{"default":false,"type":"boolean"}},{"LATITUDE":{"default":"","type":"double"},"LINE":{"default":"","type":"double"},"LONGITUDE":{"default":"","type":"double"},"SAMPLE":{"default":"","type":"double"},"TYPE":{"default":"IMAGE","type":"string"}}]},{"name":"maplab","parameters":[{"FROM":{"default":"","type":"cube"},"MAP":{"default":"","type":"filename"}},{"COORDINATES":{"default":"XY","type":"string"},"LAT":{"default":"","type":"double"},"LINE":{"default":"","type":"double"},"LON":{"default":"","type":"double"},"SAMPLE":{"default":"","type":"double"},"X":{"default":"","type":"double"},"Y":{"default":"","type":"double"}}]},{"name":"equalizer","parameters":[{"FROMLIST":{"default":"","type":"filename"},"HOLDLIST":{"default":"","type":"filename"},"INSTATS":{"default":"","type":"filename"},"OUTSTATS":{"default":"","type":"filename"},"TOLIST":{"default":"","type":"filename"}},{"PROCESS":{"default":"BOTH","type":"string"},"SOLVEMETHOD":{"default":"SPARSE","type":"string"}},{"ADJUST":{"default":"BOTH","type":"string"},"MINCOUNT":{"default":1000,"type":"integer"},"PERCENT":{"default":100.0,"type":"double"},"WEIGHT":{"default":false,"type":"boolean"}}]},{"name":"ascii2isis","parameters":[{"FROM":{"default":"","type":"filename"},"TO":{"default":"","type":"cube"}},{"BANDS":{"default":1,"type":"integer"},"LINES":{"default":"","type":"integer"},"ORDER":{"default":"BSQ","type":"string"},"SAMPLES":{"default":"","type":"integer"},"SKIP":{"default":0,"type":"integer"}},{"HRSMAX":{"default":"","type":"double"},"HRSMIN":{"default":"","type":"double"},"LRSMAX":{"default":"","type":"double"},"LRSMIN":{"default":"","type":"double"},"NULLMAX":{"default":"","type":"double"},"NULLMIN":{"default":"","type":"double"},"SETHRSRANGE":{"default":false,"type":"boolean"},"SETLRSRANGE":{"default":false,"type":"boolean"},"SETNULLRANGE":{"default":false,"type":"boolean"}}]},{"name":"editlab","parameters":[{"FROM":{"default":"","type":"filename"}},{"OPTIONS":{"default":"SETKEY","type":"string"}},{"COMMENT":{"default":"","type":"string"},"GRPNAME":{"default":"","type":"string"},"KEYWORD":{"default":"","type":"string"},"TEMPFILE":{"default":"","type":"filename"},"UNITS":{"default":"","type":"string"},"VALUE":{"default":"","type":"string"}}]},{"name":"catlab","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"APPEND":{"default":true,"type":"boolean"}}]},{"name":"isis2pds","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"PDSVERSION":{"default":"PDS3","type":"string"}},{"BITTYPE":{"default":"32BIT","type":"string"},"CHECKSUM":{"default":false,"type":"boolean"},"HIS":{"default":false,"type":"boolean"},"HRS":{"default":false,"type":"boolean"},"LABTYPE":{"default":"STREAM","type":"string"},"LIS":{"default":false,"type":"boolean"},"LRS":{"default":false,"type":"boolean"},"NULL":{"default":false,"type":"boolean"}},{"MAXIMUM":{"default":"","type":"double"},"MAXPERCENT":{"default":99.5,"type":"double"},"MINIMUM":{"default":"","type":"double"},"MINPERCENT":{"default":0.5,"type":"double"},"STRETCH":{"default":"NONE","type":"string"}},{"ENDIAN":{"default":"LSB","type":"string"}}]},{"name":"circle","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"DEFINITION":{"default":"CENTERRAD","type":"string"}},{"LINE":{"default":"","type":"double"},"RADIUS":{"default":"","type":"double"},"SAMPLE":{"default":"","type":"double"}},{"LINE1":{"default":0.0,"type":"double"},"LINE2":{"default":0.0,"type":"double"},"LINE3":{"default":0.0,"type":"double"},"SAMP1":{"default":0.0,"type":"double"},"SAMP2":{"default":0.0,"type":"double"},"SAMP3":{"default":0.0,"type":"double"}}]},{"name":"phoemplocal","parameters":[{"APPEND":{"default":false,"type":"boolean"},"TO":{"default":"","type":"filename"}},{"NOTE":{"default":"","type":"string"}},{"B0":{"default":"","type":"double"},"BH":{"default":"","type":"double"},"CH":{"default":"","type":"double"},"HG1":{"default":"","type":"double"},"HG2":{"default":"","type":"double"},"HH":{"default":"","type":"double"},"PHTNAME":{"default":"HAPKEHEN","type":"combo"},"THETA":{"default":"","type":"double"},"WH":{"default":"","type":"double"}},{"MODEL":{"default":"","type":"combo"}},{"ADDOFFSET":{"default":false,"type":"boolean"},"ATMNAME":{"default":"NONE","type":"combo"},"BHA":{"default":"","type":"double"},"HGA":{"default":"","type":"double"},"HNORM":{"default":"","type":"double"},"TAU":{"default":"","type":"double"},"WHA":{"default":"","type":"double"}},{"EMISSION":{"default":"","type":"double"},"INCIDENCE":{"default":"","type":"double"},"PHASE":{"default":"","type":"double"},"RMS_SLOPE":{"default":"","type":"double"}},{"SEED":{"default":false,"type":"boolean"},"SEED_NUMBER":{"default":"","type":"integer"}}]},{"name":"desmear","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"DURATION":{"default":"","type":"double"},"TRANSFER":{"default":"","type":"double"}}]},{"name":"kernfilter","parameters":[{"FROM":{"default":"","type":"cube"},"KERNEL":{"default":"","type":"filename"},"TO":{"default":"","type":"cube"}}]},{"name":"percent","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"PERCENTAGE":{"default":"","type":"string"}}]},{"name":"phoempglobal","parameters":[{"TO":{"default":"","type":"filename"}},{"NOTE":{"default":"","type":"string"}},{"B0":{"default":"","type":"double"},"BH":{"default":"","type":"double"},"CH":{"default":"","type":"double"},"HG1":{"default":"","type":"double"},"HG2":{"default":"","type":"double"},"HH":{"default":"","type":"double"},"PHTNAME":{"default":"HAPKEHEN","type":"combo"},"THETA":{"default":"","type":"double"},"WH":{"default":"","type":"double"}},{"MODEL":{"default":"","type":"combo"}},{"ADDOFFSET":{"default":false,"type":"boolean"},"ATMNAME":{"default":"NONE","type":"combo"},"BHA":{"default":"","type":"double"},"HGA":{"default":"","type":"double"},"HNORM":{"default":"","type":"double"},"TAU":{"default":"","type":"double"},"WHA":{"default":"","type":"double"}},{"EMAMAX":{"default":90.0,"type":"double"},"EMAMAX_PCOEFF":{"default":"","type":"double"},"EMAMIN":{"default":0.0,"type":"double"},"INCMAX":{"default":90.0,"type":"double"},"INCMIN":{"default":0.0,"type":"double"},"NPH":{"default":20,"type":"integer"},"PHMAX":{"default":180.0,"type":"double"},"PHMIN":{"default":0.0,"type":"double"}}]},{"name":"phohillier","parameters":[{"FROM":{"default":"","type":"cube"},"PHOPAR":{"default":"","type":"filename"},"TO":{"default":"","type":"cube"}}]},{"name":"catoriglab","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"APPEND":{"default":true,"type":"boolean"}}]},{"name":"mirror","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}}]},{"name":"cubenorm","parameters":[{"FORMAT":{"default":"TABLE","type":"string"},"FROM":{"default":"","type":"cube"},"STATS":{"default":"","type":"filename"},"TO":{"default":"","type":"cube"}},{"FROMSTATS":{"default":"","type":"filename"},"STATSOURCE":{"default":"CUBE","type":"string"}},{"DIRECTION":{"default":"COLUMN","type":"string"},"MODE":{"default":"DIVIDE","type":"string"},"NORMALIZER":{"default":"MEDIAN","type":"string"},"PRESERVE":{"default":true,"type":"boolean"}}]},{"name":"photomet","parameters":[{"FROM":{"default":"","type":"cube"},"FROMPVL":{"default":"","type":"filename"},"TO":{"default":"","type":"cube"}},{"CHNGPAR":{"default":"None","type":"string"}},{"MAXEMISSION":{"default":90.0,"type":"double"},"MAXINCIDENCE":{"default":90.0,"type":"double"},"USEDEM":{"default":false,"type":"boolean"}},{"ANGLESOURCE":{"default":"ELLIPSOID","type":"combo"},"EMISSION_ANGLE":{"default":0.0,"type":"double"},"EMISSION_ANGLE_FILE":{"default":"","type":"cube"},"INCIDENCE_ANGLE":{"default":0.0,"type":"double"},"INCIDENCE_ANGLE_FILE":{"default":"","type":"cube"},"PHASE_ANGLE":{"default":0.0,"type":"double"},"PHASE_ANGLE_FILE":{"default":"","type":"cube"}},{"B0":{"default":"None Specified","type":"string"},"BH":{"default":"None Specified","type":"string"},"CH":{"default":"None Specified","type":"string"},"HG1":{"default":"None Specified","type":"string"},"HG2":{"default":"None Specified","type":"string"},"HH":{"default":"None Specified","type":"string"},"K":{"default":"None Specified","type":"string"},"KLIST":{"default":"No List","type":"string"},"L":{"default":"None Specified","type":"string"},"LLIST":{"default":"No List","type":"string"},"PHASECURVELIST":{"default":"No List","type":"string"},"PHASELIST":{"default":"No List","type":"string"},"PHTNAME":{"default":"FROMPVL","type":"combo"},"THETA":{"default":"None Specified","type":"string"},"WH":{"default":"None Specified","type":"string"},"ZEROB0STANDARD":{"default":"READFROMPVL","type":"string"}},{"ATMNAME":{"default":"NONE","type":"combo"},"BHA":{"default":"None Specified","type":"string"},"HGA":{"default":"None Specified","type":"string"},"HNORM":{"default":"None Specified","type":"string"},"NULNEG":{"default":"READFROMPVL","type":"string"},"TAU":{"default":"None Specified","type":"string"},"TAUREF":{"default":"None Specified","type":"string"},"WHA":{"default":"None Specified","type":"string"}},{"ALBEDO":{"default":"None Specified","type":"string"},"BSH1":{"default":"None Specified","type":"string"},"D":{"default":"None Specified","type":"string"},"E":{"default":"None Specified","type":"string"},"F":{"default":"None Specified","type":"string"},"G2":{"default":"None Specified","type":"string"},"H":{"default":"None Specified","type":"string"},"INCMAT":{"default":"None Specified","type":"string"},"INCREF":{"default":"None Specified","type":"string"},"NORMNAME":{"default":"FROMPVL","type":"combo"},"THRESH":{"default":"None Specified","type":"string"},"WL":{"default":"None Specified","type":"string"},"XB1":{"default":"None Specified","type":"string"},"XB2":{"default":"None Specified","type":"string"},"XMUL":{"default":"None Specified","type":"string"}}]},{"name":"highpass","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"LINES":{"default":"","type":"integer"},"MINIMUM":{"default":1.0,"type":"double"},"MINOPT":{"default":"COUNT","type":"string"},"SAMPLES":{"default":"","type":"integer"}},{"ADDBACK":{"default":0.0,"type":"double"},"HIGH":{"default":"","type":"double"},"LOW":{"default":"","type":"double"},"PROPAGATE":{"default":true,"type":"boolean"}}]},{"name":"isis2fits","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"BITTYPE":{"default":"32BIT","type":"string"}},{"MAXIMUM":{"default":"","type":"double"},"MAXPERCENT":{"default":99.5,"type":"double"},"MINIMUM":{"default":"","type":"double"},"MINPERCENT":{"default":0.5,"type":"double"},"STRETCH":{"default":"LINEAR","type":"string"}},{"INFO":{"default":"NOMINAL","type":"string"}}]},{"name":"pixel2map","parameters":[{"FROM":{"default":"","type":"cube"},"FROMLIST":{"default":"","type":"filename"},"FROMTYPE":{"default":"FROM","type":"string"},"MAP":{"default":"$ISISROOT/appdata/templates/maps/sinusoidal.map","type":"filename"},"TO":{"default":"","type":"cube"}},{"METHOD":{"default":"CENTER","type":"string"}},{"PIXRES":{"default":"CAMERA","type":"string"},"RESOLUTION":{"default":"","type":"double"}},{"DEFAULTRANGE":{"default":"MINIMIZE","type":"string"},"FOVRANGE":{"default":"INSTANTANEOUS","type":"string"},"MAXLAT":{"default":"","type":"double"},"MAXLON":{"default":"","type":"double"},"MINLAT":{"default":"","type":"double"},"MINLON":{"default":"","type":"double"},"NUMIFOV":{"default":3,"type":"integer"},"TRIM":{"default":false,"type":"boolean"}},{"LONSEAM":{"default":"AUTO","type":"string"}}]},{"name":"outline","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"BOUNDARY":{"default":"","type":"double"},"CLEAR":{"default":true,"type":"boolean"},"EDGES":{"default":true,"type":"boolean"}}]},{"name":"noproj","parameters":[{"FROM":{"default":"","type":"cube"},"MATCH":{"default":"","type":"cube"},"SPECS":{"default":"","type":"filename"},"TO":{"default":"","type":"cube"}},{"SOURCE":{"default":"FROMMATCH","type":"string"},"SUMMINGMODE":{"default":"","type":"double"}},{"INTERP":{"default":"CUBICCONVOLUTION","type":"string"},"LINEEXP":{"default":0.0,"type":"double"},"SAMPEXP":{"default":0.0,"type":"double"}}]},{"name":"mosrange","parameters":[{"FROMLIST":{"default":"","type":"filename"},"LOG":{"default":"","type":"filename"},"MAP":{"default":"","type":"filename"},"TO":{"default":"","type":"filename"}},{"LATTYPE":{"default":"PLANETOCENTRIC","type":"string"},"LONDIR":{"default":"POSITIVEEAST","type":"string"},"LONDOM":{"default":"360","type":"string"},"PRECISION":{"default":12,"type":"integer"},"PROJECTION":{"default":"None","type":"string"}}]},{"name":"minmax","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"LINES":{"default":3,"type":"integer"},"SAMPLES":{"default":3,"type":"integer"}},{"FILTER":{"default":"MIN","type":"string"}}]},{"name":"bit2bit","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"BITTYPE":{"default":"32BIT","type":"string"}},{"CLIP":{"default":"PERCENT","type":"string"}},{"MAXPER":{"default":99.5,"type":"double"},"MAXVAL":{"default":255.0,"type":"double"},"MINPER":{"default":0.5,"type":"double"},"MINVAL":{"default":0.0,"type":"double"}},{"STATS":{"default":false,"type":"boolean"}}]},{"name":"topds4","parameters":[{"FROM":{"default":"","type":"cube"},"TEMPLATE":{"default":"","type":"filename"},"TO":{"default":"","type":"filename"}},{"DATA":{"default":"","type":"filename"},"EXTRAJSON":{"default":"","type":"filename"},"EXTRAPVL":{"default":"","type":"filename"},"EXTRAXML":{"default":"","type":"filename"}}]},{"name":"findrx","parameters":[{"FROM":{"default":"","type":"cube"},"REGDEF":{"default":"","type":"filename"}},{"MARK":{"default":false,"type":"boolean"}}]},{"name":"map2map","parameters":[{"FROM":{"default":"","type":"cube"},"MAP":{"default":"$ISISROOT/appdata/templates/maps/sinusoidal.map","type":"filename"},"MATCHMAP":{"default":false,"type":"boolean"},"TO":{"default":"","type":"cube"}},{"PIXRES":{"default":"FROM","type":"string"},"RESOLUTION":{"default":"","type":"double"}},{"DEFAULTRANGE":{"default":"FROM","type":"string"},"MAXLAT":{"default":"","type":"double"},"MAXLON":{"default":"","type":"double"},"MINLAT":{"default":"","type":"double"},"MINLON":{"default":"","type":"double"},"TRIM":{"default":false,"type":"boolean"}},{"INTERP":{"default":"CUBICCONVOLUTION","type":"string"}}]},{"name":"tonematch","parameters":[{"FROM":{"default":"","type":"cube"},"MATCH":{"default":"","type":"cube"},"OUTSTATS":{"default":"","type":"filename"},"TO":{"default":"","type":"cube"}},{"MINCOUNT":{"default":1000,"type":"integer"},"POVERLAP":{"default":false,"type":"boolean"}}]},{"name":"maptrim","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"MODE":{"default":"TRIM","type":"string"}},{"MAXLAT":{"default":"","type":"double"},"MAXLON":{"default":"","type":"double"},"MINLAT":{"default":"","type":"double"},"MINLON":{"default":"","type":"double"}}]},{"name":"dstripe","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"MODE":{"default":"VERTICAL","type":"string"}},{"VHNL":{"default":1,"type":"integer"},"VHNS":{"default":"","type":"integer"},"VLNL":{"default":"","type":"integer"},"VLNS":{"default":1,"type":"integer"}},{"HHNL":{"default":"","type":"integer"},"HHNS":{"default":1,"type":"integer"},"HLNL":{"default":1,"type":"integer"},"HLNS":{"default":"","type":"integer"}},{"DELETENOISE":{"default":true,"type":"boolean"},"LPFNOISE":{"default":"lowpass.noise.cub","type":"cube"},"NOISE":{"default":"dstripe.noise.cub","type":"cube"}}]},{"name":"skymap","parameters":[{"FROM":{"default":"","type":"cube"},"MAP":{"default":"$ISISROOT/appdata/templates/maps/simplecylindrical.map","type":"filename"},"TO":{"default":"","type":"cube"}},{"DEFAULTSCALE":{"default":"CAMERA","type":"string"},"SCALE":{"default":"","type":"double"}},{"DEFAULTRANGE":{"default":"CAMERA","type":"string"},"EDEC":{"default":"","type":"double"},"ERA":{"default":"","type":"double"},"SDEC":{"default":"","type":"double"},"SRA":{"default":"","type":"double"},"TRIM":{"default":false,"type":"boolean"}},{"INTERP":{"default":"CUBICCONVOLUTION","type":"string"}}]},{"name":"algebra","parameters":[{"FROM":{"default":"","type":"cube"},"FROM2":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"A":{"default":1.0,"type":"double"},"B":{"default":1.0,"type":"double"},"C":{"default":0.0,"type":"double"},"D":{"default":0.0,"type":"double"},"E":{"default":0.0,"type":"double"},"OPERATOR":{"default":"SUBTRACT","type":"string"}}]},{"name":"cubeit","parameters":[{"FROMLIST":{"default":"","type":"filename"},"TO":{"default":"","type":"cube"}},{"PROPLAB":{"default":"","type":"cube"}}]},{"name":"cosi","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"MAXINC":{"default":90.0,"type":"double"}}]},{"name":"divfilter","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"LINES":{"default":"","type":"integer"},"SAMPLES":{"default":"","type":"integer"}},{"HIGH":{"default":"","type":"double"},"LOW":{"default":"","type":"double"},"MINIMUM":{"default":1,"type":"integer"},"MINOPT":{"default":"COUNT","type":"string"}},{"PROPAGATE":{"default":true,"type":"boolean"}}]},{"name":"shadowtau","parameters":[{"FROM":{"default":"","type":"filename"},"TO":{"default":"","type":"filename"}},{"B0":{"default":"None Specified","type":"string"},"BH":{"default":"None Specified","type":"string"},"CH":{"default":"None Specified","type":"string"},"HG1":{"default":"None Specified","type":"string"},"HG2":{"default":"None Specified","type":"string"},"HH":{"default":"None Specified","type":"string"},"K":{"default":"None Specified","type":"string"},"L":{"default":"None Specified","type":"string"},"PHTNAME":{"default":"HAPKEHEN","type":"combo"},"THETA":{"default":"None Specified","type":"string"},"WH":{"default":"None Specified","type":"string"},"ZEROB0STANDARD":{"default":"TRUE","type":"string"}},{"ATMNAME":{"default":"HAPKEATM1","type":"combo"},"BHA":{"default":"None Specified","type":"string"},"HGA":{"default":"None Specified","type":"string"},"HNORM":{"default":"None Specified","type":"string"},"WHA":{"default":"None Specified","type":"string"}}]},{"name":"gradient","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"GRADTYPE":{"default":"SOBEL","type":"string"},"METHOD":{"default":"APPROXIMATE","type":"string"}}]},{"name":"camstats","parameters":[{"APPEND":{"default":false,"type":"boolean"},"ATTACH":{"default":false,"type":"boolean"},"FORMAT":{"default":"PVL","type":"string"},"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"LINC":{"default":1,"type":"integer"},"SINC":{"default":1,"type":"integer"}}]},{"name":"errors","parameters":[{"FROM":{"default":"\n                      print.prt\n                    ","type":"filename"},"TO":{"default":"\n                        errors.prt\n                    ","type":"filename"}},{"APPEND":{"default":false,"type":"boolean"}}]},{"name":"photemplate","parameters":[{"FROMPVL":{"default":"","type":"filename"},"TOPVL":{"default":"","type":"filename"}},{"B0":{"default":"None Specified","type":"string"},"BH":{"default":"None Specified","type":"string"},"CH":{"default":"None Specified","type":"string"},"HG1":{"default":"None Specified","type":"string"},"HG2":{"default":"None Specified","type":"string"},"HH":{"default":"None Specified","type":"string"},"K":{"default":"None Specified","type":"string"},"KLIST":{"default":"No List","type":"string"},"L":{"default":"None Specified","type":"string"},"LLIST":{"default":"No List","type":"string"},"PHASECURVELIST":{"default":"No List","type":"string"},"PHASELIST":{"default":"No List","type":"string"},"PHTNAME":{"default":"FROMPVL","type":"combo"},"THETA":{"default":"None Specified","type":"string"},"WH":{"default":"None Specified","type":"string"},"ZEROB0STANDARD":{"default":"TRUE","type":"string"}},{"ATMNAME":{"default":"NONE","type":"combo"},"BHA":{"default":"None Specified","type":"string"},"HGA":{"default":"None Specified","type":"string"},"HNORM":{"default":"None Specified","type":"string"},"NULNEG":{"default":"READFROMPVL","type":"string"},"TAU":{"default":"None Specified","type":"string"},"TAUREF":{"default":"None Specified","type":"string"},"WHA":{"default":"None Specified","type":"string"}}]},{"name":"mapgrid","parameters":[{"MAPFILE":{"default":"","type":"filename"},"TO":{"default":"","type":"filename"}},{"BOUNDED":{"default":true,"type":"boolean"},"ENDLAT":{"default":"","type":"double"},"ENDLON":{"default":"","type":"double"},"LATINCREMENT":{"default":0.01,"type":"double"},"LATSPACING":{"default":10.0,"type":"double"},"LONINCREMENT":{"default":0.01,"type":"double"},"LONSPACING":{"default":10.0,"type":"double"},"STARTLAT":{"default":"","type":"double"},"STARTLON":{"default":"","type":"double"}}]},{"name":"handmos","parameters":[{"FROM":{"default":"","type":"cube"},"MOSAIC":{"default":"","type":"cube"},"PRIORITY":{"default":"ONTOP","type":"string"}},{"CRITERIA":{"default":"LESSER","type":"string"},"KEYNAME":{"default":"OriginalBand","type":"string"},"KEYVALUE":{"default":"1","type":"string"},"NUMBER":{"default":1,"type":"integer"},"TYPE":{"default":"\n            BANDNUM\n          ","type":"string"}},{"INBAND":{"default":1,"type":"integer"},"INLINE":{"default":1,"type":"integer"},"INSAMPLE":{"default":1,"type":"integer"},"OUTBAND":{"default":1,"type":"integer"},"OUTLINE":{"default":1,"type":"integer"},"OUTSAMPLE":{"default":1,"type":"integer"}},{"HIGHSATURATION":{"default":false,"type":"boolean"},"LOWSATURATION":{"default":false,"type":"boolean"},"MATCHBANDBIN":{"default":false,"type":"boolean"},"MATCHDEM":{"default":false,"type":"boolean"},"NULL":{"default":false,"type":"boolean"}},{"CREATE":{"default":"NO","type":"string"},"NBANDS":{"default":"","type":"integer"},"NLINES":{"default":"","type":"integer"},"NSAMPLES":{"default":"","type":"integer"},"PROPAGATE":{"default":true,"type":"boolean"},"TRACK":{"default":false,"type":"boolean"}}]},{"name":"getkey","parameters":[{"FROM":{"default":"","type":"filename"}},{"GRPNAME":{"default":"","type":"string"},"KEYINDEX":{"default":"","type":"integer"},"KEYWORD":{"default":"","type":"string"},"OBJNAME":{"default":"","type":"string"}},{"RECURSIVE":{"default":false,"type":"boolean"},"UPPER":{"default":false,"type":"boolean"}}]},{"name":"lowpass","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"LINES":{"default":"","type":"integer"},"SAMPLES":{"default":"","type":"integer"}},{"HIGH":{"default":"","type":"double"},"LOW":{"default":"","type":"double"},"MINIMUM":{"default":1.0,"type":"double"},"MINOPT":{"default":"COUNT","type":"string"},"REPLACEMENT":{"default":"CENTER","type":"string"}},{"FILTER":{"default":"ALL","type":"string"}},{"HIS":{"default":true,"type":"boolean"},"HRS":{"default":true,"type":"boolean"},"LIS":{"default":true,"type":"boolean"},"LRS":{"default":true,"type":"boolean"},"NULL":{"default":true,"type":"boolean"}}]},{"name":"trim","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"BOTTOM":{"default":0,"type":"integer"},"LEFT":{"default":0,"type":"integer"},"RIGHT":{"default":0,"type":"integer"},"TOP":{"default":0,"type":"integer"}}]},{"name":"remrx","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"LDIM":{"default":9,"type":"integer"},"SDIM":{"default":9,"type":"integer"}},{"ACTION":{"default":"BILINEAR","type":"string"},"RESVALID":{"default":false,"type":"boolean"}}]},{"name":"cropspecial","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"HIS":{"default":false,"type":"boolean"},"HRS":{"default":false,"type":"boolean"},"LIS":{"default":false,"type":"boolean"},"LRS":{"default":false,"type":"boolean"},"NULL":{"default":true,"type":"boolean"}}]},{"name":"table2cube","parameters":[{"FROM":{"default":"","type":"filename"},"TO":{"default":"","type":"cube"}},{"FIELD":{"default":"","type":"string"},"NUMELEM":{"default":"","type":"integer"},"NUMREC":{"default":"","type":"integer"},"STARTELEM":{"default":1,"type":"integer"},"STARTREC":{"default":1,"type":"integer"},"TABLENAME":{"default":"","type":"string"}}]},{"name":"stats","parameters":[{"APPEND":{"default":true,"type":"boolean"},"FORMAT":{"default":"PVL","type":"string"},"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"VALIDMAX":{"default":"","type":"double"},"VALIDMIN":{"default":"","type":"double"}}]},{"name":"spechighpass","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"BANDS":{"default":"","type":"integer"}},{"HIGH":{"default":"","type":"double"},"LOW":{"default":"","type":"double"}}]},{"name":"spicefit","parameters":[{"FROM":{"default":"","type":"cube"}}]},{"name":"interestcube","parameters":[{"FROM":{"default":"","type":"cube"},"PVL":{"default":"","type":"filename"},"TO":{"default":"","type":"cube"}}]},{"name":"segment","parameters":[{"FROM":{"default":"","type":"cube"}},{"NL":{"default":"","type":"integer"},"OVERLAP":{"default":"","type":"integer"}}]},{"name":"cubediff","parameters":[{"FROM":{"default":"","type":"cube"},"FROM2":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"TOLERANCE":{"default":"","type":"double"}},{"COUNT":{"default":100,"type":"integer"},"OUTPUTDIFFS":{"default":false,"type":"boolean"},"PRECISION":{"default":3,"type":"integer"}}]},{"name":"footprintmerge","parameters":[{"FROMLIST":{"default":"","type":"filename"},"MODE":{"default":"BRIEF","type":"string"},"TO":{"default":"","type":"filename"}}]},{"name":"kuwahara","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"LINES":{"default":5,"type":"integer"},"SAMPLES":{"default":5,"type":"integer"}}]},{"name":"ratio","parameters":[{"DENOMINATOR":{"default":"","type":"cube"},"NUMERATOR":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}}]},{"name":"specpix","parameters":[{"FROM":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"HISMAX":{"default":"","type":"double"},"HISMIN":{"default":"","type":"double"},"HRSMAX":{"default":"","type":"double"},"HRSMIN":{"default":"","type":"double"},"LISMAX":{"default":"","type":"double"},"LISMIN":{"default":"","type":"double"},"LRSMAX":{"default":"","type":"double"},"LRSMIN":{"default":"","type":"double"},"NULLMAX":{"default":"","type":"double"},"NULLMIN":{"default":"","type":"double"}}]},{"name":"map2cam","parameters":[{"FROM":{"default":"","type":"cube"},"MATCH":{"default":"","type":"cube"},"TO":{"default":"","type":"cube"}},{"INTERP":{"default":"CUBICCONVOLUTION","type":"string"}}]},{"name":"isis2std","parameters":[{"ALPHA":{"default":"","type":"cube"},"BLUE":{"default":"","type":"cube"},"FROM":{"default":"","type":"cube"},"GREEN":{"default":"","type":"cube"},"MODE":{"default":"GRAYSCALE","type":"string"},"RED":{"default":"","type":"cube"},"TO":{"default":"","type":"filename"}},{"BITTYPE":{"default":"8BIT","type":"string"},"COMPRESSION":{"default":"NONE","type":"string"},"FORMAT":{"default":"PNG","type":"string"},"QUALITY":{"default":100,"type":"integer"}},{"AMAX":{"default":"","type":"double"},"AMIN":{"default":"","type":"double"},"BMAX":{"default":"","type":"double"},"BMIN":{"default":"","type":"double"},"GMAX":{"default":"","type":"double"},"GMIN":{"default":"","type":"double"},"MAXIMUM":{"default":"","type":"double"},"MAXPERCENT":{"default":99.5,"type":"double"},"MINIMUM":{"default":"","type":"double"},"MINPERCENT":{"default":0.5,"type":"double"},"RMAX":{"default":"","type":"double"},"RMIN":{"default":"","type":"double"},"STRETCH":{"default":"LINEAR","type":"string"}}]}]
+[
+	{
+		"name": "skyrange",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			}
+		]
+	},
+	{
+		"name": "phocube",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"SOURCE": {
+					"default": "CAMERA",
+					"type": "string"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"ALBEDORANK": {
+					"default": false,
+					"type": "boolean"
+				},
+				"BODYFIXED": {
+					"default": false,
+					"type": "boolean"
+				},
+				"DETECTORRESOLUTION": {
+					"default": false,
+					"type": "boolean"
+				},
+				"DN": {
+					"default": false,
+					"type": "boolean"
+				},
+				"EMISSION": {
+					"default": true,
+					"type": "boolean"
+				},
+				"INCIDENCE": {
+					"default": true,
+					"type": "boolean"
+				},
+				"LATITUDE": {
+					"default": true,
+					"type": "boolean"
+				},
+				"LINERESOLUTION": {
+					"default": false,
+					"type": "boolean"
+				},
+				"LOCALEMISSION": {
+					"default": false,
+					"type": "boolean"
+				},
+				"LOCALINCIDENCE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"LOCALTIME": {
+					"default": false,
+					"type": "boolean"
+				},
+				"LONGITUDE": {
+					"default": true,
+					"type": "boolean"
+				},
+				"MORPHOLOGYRANK": {
+					"default": false,
+					"type": "boolean"
+				},
+				"NORTHAZIMUTH": {
+					"default": false,
+					"type": "boolean"
+				},
+				"OBLIQUEDETECTORRESOLUTION": {
+					"default": false,
+					"type": "boolean"
+				},
+				"OFFNADIRANGLE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"PHASE": {
+					"default": true,
+					"type": "boolean"
+				},
+				"PIXELRESOLUTION": {
+					"default": false,
+					"type": "boolean"
+				},
+				"RADEC": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SAMPLERESOLUTION": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SPACECRAFTAZIMUTH": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SPECIALPIXELS": {
+					"default": true,
+					"type": "boolean"
+				},
+				"SUBSOLARGROUNDAZIMUTH": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SUBSPACECRAFTGROUNDAZIMUTH": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SUNAZIMUTH": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "histmatch",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"MATCH": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"STRETCH": {
+					"default": "CDF",
+					"type": "string"
+				}
+			},
+			{
+				"INCREMENT": {
+					"default": 1,
+					"type": "integer"
+				},
+				"MAXPER": {
+					"default": 99.5,
+					"type": "double"
+				},
+				"MINPER": {
+					"default": 0.5,
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "findimageoverlaps",
+		"parameters": [
+			{
+				"ERRORS": {
+					"default": "",
+					"type": "filename"
+				},
+				"FROMLIST": {
+					"default": "",
+					"type": "filename"
+				},
+				"OVERLAPLIST": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"DETAILED": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "ringspt",
+		"parameters": [
+			{
+				"APPEND": {
+					"default": true,
+					"type": "boolean"
+				},
+				"FORMAT": {
+					"default": "PVL",
+					"type": "string"
+				},
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"ALLOWOUTSIDE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"LINE": {
+					"default": "",
+					"type": "double"
+				},
+				"RINGLONGITUDE": {
+					"default": "",
+					"type": "double"
+				},
+				"RINGRADIUS": {
+					"default": "",
+					"type": "double"
+				},
+				"SAMPLE": {
+					"default": "",
+					"type": "double"
+				},
+				"TYPE": {
+					"default": "IMAGE",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "flip",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "enlarge",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"INTERP": {
+					"default": "CUBICCONVOLUTION",
+					"type": "string"
+				},
+				"LSCALE": {
+					"default": 1.0,
+					"type": "double"
+				},
+				"MODE": {
+					"default": "SCALE",
+					"type": "string"
+				},
+				"ONL": {
+					"default": "",
+					"type": "integer"
+				},
+				"ONS": {
+					"default": "",
+					"type": "integer"
+				},
+				"SSCALE": {
+					"default": 1.0,
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "cam2cam",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"MATCH": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"INTERP": {
+					"default": "CUBICCONVOLUTION",
+					"type": "string"
+				},
+				"REFBAND": {
+					"default": "",
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "mvstats",
+		"parameters": [
+			{
+				"CUBE": {
+					"default": "",
+					"type": "cube"
+				},
+				"FLATFILE": {
+					"default": "",
+					"type": "filename"
+				},
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "rgb2hsv",
+		"parameters": [
+			{
+				"BLUE": {
+					"default": "",
+					"type": "cube"
+				},
+				"GREEN": {
+					"default": "",
+					"type": "cube"
+				},
+				"RED": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"HUE": {
+					"default": "",
+					"type": "cube"
+				},
+				"SATURATION": {
+					"default": "",
+					"type": "cube"
+				},
+				"VALUE": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"MODE": {
+					"default": "Automatic",
+					"type": "string"
+				}
+			},
+			{
+				"BMAXPER": {
+					"default": 99.5,
+					"type": "double"
+				},
+				"BMINPER": {
+					"default": 0.5,
+					"type": "double"
+				},
+				"GMAXPER": {
+					"default": 99.5,
+					"type": "double"
+				},
+				"GMINPER": {
+					"default": 0.5,
+					"type": "double"
+				},
+				"RMAXPER": {
+					"default": 99.5,
+					"type": "double"
+				},
+				"RMINPER": {
+					"default": 0.5,
+					"type": "double"
+				}
+			},
+			{
+				"BMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"BMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"GMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"GMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"RMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"RMIN": {
+					"default": "",
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "isis2gml",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"LABEL": {
+					"default": "",
+					"type": "string"
+				},
+				"LINC": {
+					"default": 1,
+					"type": "integer"
+				},
+				"LONGITUDEDOMAIN": {
+					"default": "DEFAULT",
+					"type": "string"
+				},
+				"SINC": {
+					"default": 1,
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "mask",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"MASK": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"MAXIMUM": {
+					"default": "",
+					"type": "double"
+				},
+				"MINIMUM": {
+					"default": "",
+					"type": "double"
+				},
+				"PRESERVE": {
+					"default": "INSIDE",
+					"type": "string"
+				}
+			},
+			{
+				"SPIXELS": {
+					"default": "NULL",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "pds2isis",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "filename"
+				},
+				"IMAGE": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"HISMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"HISMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"HRSMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"HRSMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"LISMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"LISMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"LRSMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"LRSMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"NULLMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"NULLMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"SETHISRANGE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SETHRSRANGE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SETLISRANGE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SETLRSRANGE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SETNULLRANGE": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "demprep",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "crop",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"NSAMPLES": {
+					"default": "",
+					"type": "integer"
+				},
+				"SAMPLE": {
+					"default": 1,
+					"type": "integer"
+				},
+				"SINC": {
+					"default": 1,
+					"type": "integer"
+				}
+			},
+			{
+				"LINC": {
+					"default": 1,
+					"type": "integer"
+				},
+				"LINE": {
+					"default": 1,
+					"type": "integer"
+				},
+				"NLINES": {
+					"default": "",
+					"type": "integer"
+				}
+			},
+			{
+				"PROPSPICE": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "reduce",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"ALGORITHM": {
+					"default": "AVERAGE",
+					"type": "string"
+				},
+				"LSCALE": {
+					"default": 1.0,
+					"type": "double"
+				},
+				"MODE": {
+					"default": "SCALE",
+					"type": "string"
+				},
+				"ONL": {
+					"default": "",
+					"type": "integer"
+				},
+				"ONS": {
+					"default": "",
+					"type": "integer"
+				},
+				"SSCALE": {
+					"default": 1.0,
+					"type": "double"
+				},
+				"VALIDPER": {
+					"default": 50.0,
+					"type": "double"
+				},
+				"VPER_REPLACE": {
+					"default": "NULL",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "pca",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"MODE": {
+					"default": "TRANSFORM",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "specdivfilter",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"BANDS": {
+					"default": "",
+					"type": "integer"
+				}
+			},
+			{
+				"HIGH": {
+					"default": "",
+					"type": "double"
+				},
+				"LOW": {
+					"default": "",
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "butterworth",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"BANDWIDTH": {
+					"default": 1.0,
+					"type": "double"
+				},
+				"CUTOFF": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"ORDER": {
+					"default": 1,
+					"type": "integer"
+				}
+			},
+			{
+				"TYPE": {
+					"default": "LOWPASS",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "center",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"INTERP": {
+					"default": "CUBICCONVOLUTION",
+					"type": "string"
+				},
+				"MAXIMUM": {
+					"default": "",
+					"type": "double"
+				},
+				"MINIMUM": {
+					"default": "",
+					"type": "double"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "trimfilter",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"LINES": {
+					"default": "",
+					"type": "integer"
+				},
+				"SAMPLES": {
+					"default": "",
+					"type": "integer"
+				}
+			},
+			{
+				"HIGH": {
+					"default": "",
+					"type": "double"
+				},
+				"LOW": {
+					"default": "",
+					"type": "double"
+				},
+				"MINIMUM": {
+					"default": 1.0,
+					"type": "double"
+				},
+				"MINOPT": {
+					"default": "COUNT",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "isis2ascii",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"DELIMITER": {
+					"default": null,
+					"type": "string"
+				},
+				"HEADER": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"HISVALUE": {
+					"default": "HIS",
+					"type": "string"
+				},
+				"HRSVALUE": {
+					"default": "HRS",
+					"type": "string"
+				},
+				"LISVALUE": {
+					"default": "LIS",
+					"type": "string"
+				},
+				"LRSVALUE": {
+					"default": "LRS",
+					"type": "string"
+				},
+				"NULLVALUE": {
+					"default": "NULL",
+					"type": "string"
+				},
+				"SETPIXELVALUES": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "hist",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"MAXIMUM": {
+					"default": "",
+					"type": "double"
+				},
+				"MINIMUM": {
+					"default": "",
+					"type": "double"
+				},
+				"NBINS": {
+					"default": "",
+					"type": "integer"
+				}
+			},
+			{
+				"FREQAXIS": {
+					"default": "",
+					"type": "string"
+				},
+				"PERCENTAXIS": {
+					"default": "",
+					"type": "string"
+				},
+				"TITLE": {
+					"default": "",
+					"type": "string"
+				},
+				"XAXIS": {
+					"default": "",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "speclowpass",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"BANDS": {
+					"default": "",
+					"type": "integer"
+				}
+			},
+			{
+				"HIGH": {
+					"default": "",
+					"type": "double"
+				},
+				"LOW": {
+					"default": "",
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "fft",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"MAGNITUDE": {
+					"default": "",
+					"type": "cube"
+				},
+				"PHASE": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"REPLACEMENT": {
+					"default": "ZEROES",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "autoregtemplate",
+		"parameters": [
+			{
+				"TOPVL": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"ALGORITHM": {
+					"default": "",
+					"type": "string"
+				},
+				"INTERP": {
+					"default": "CUBICCONVOLUTIONTYPE",
+					"type": "string"
+				},
+				"REDUCTIONFACTOR": {
+					"default": "",
+					"type": "integer"
+				},
+				"SUBPIXELACCURACY": {
+					"default": true,
+					"type": "boolean"
+				},
+				"TOLERANCE": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"MINIMUMZSCORE": {
+					"default": "",
+					"type": "double"
+				},
+				"PLINE": {
+					"default": "",
+					"type": "integer"
+				},
+				"PMAX": {
+					"default": "",
+					"type": "integer"
+				},
+				"PMIN": {
+					"default": "",
+					"type": "integer"
+				},
+				"PSAMP": {
+					"default": "",
+					"type": "integer"
+				},
+				"PVALIDPERCENT": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"SLINE": {
+					"default": "",
+					"type": "integer"
+				},
+				"SMAX": {
+					"default": "",
+					"type": "integer"
+				},
+				"SMIN": {
+					"default": "",
+					"type": "integer"
+				},
+				"SSAMP": {
+					"default": "",
+					"type": "integer"
+				},
+				"SSUBCHIPVALIDPERCENT": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"DISTANCETOLERANCE": {
+					"default": 1.5,
+					"type": "double"
+				},
+				"WINDOWSIZE": {
+					"default": 5,
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "fx",
+		"parameters": [
+			{
+				"F1": {
+					"default": "",
+					"type": "cube"
+				},
+				"F2": {
+					"default": "",
+					"type": "cube"
+				},
+				"F3": {
+					"default": "",
+					"type": "cube"
+				},
+				"F4": {
+					"default": "",
+					"type": "cube"
+				},
+				"F5": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"FROMLIST": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"EQUATION": {
+					"default": "",
+					"type": "string"
+				}
+			},
+			{
+				"MODE": {
+					"default": "CUBES",
+					"type": "string"
+				}
+			},
+			{
+				"BANDS": {
+					"default": 1,
+					"type": "integer"
+				},
+				"LINES": {
+					"default": 1,
+					"type": "integer"
+				},
+				"SAMPLES": {
+					"default": 1,
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "csminit",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"ISD": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"SHAPEMODEL": {
+					"default": "",
+					"type": "filename"
+				},
+				"TARGETNAME": {
+					"default": "",
+					"type": "string"
+				}
+			},
+			{
+				"MODELNAME": {
+					"default": "",
+					"type": "string"
+				},
+				"PLUGINNAME": {
+					"default": "",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "fillgap",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"INTERP": {
+					"default": "CUBIC",
+					"type": "string"
+				}
+			},
+			{
+				"DIRECTION": {
+					"default": "SAMPLE",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "hsv2rgb",
+		"parameters": [
+			{
+				"HUE": {
+					"default": "",
+					"type": "cube"
+				},
+				"SATURATION": {
+					"default": "",
+					"type": "cube"
+				},
+				"VALUE": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"BLUE": {
+					"default": "",
+					"type": "cube"
+				},
+				"GREEN": {
+					"default": "",
+					"type": "cube"
+				},
+				"RED": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"SCALAR": {
+					"default": 1.0,
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "overlapstats",
+		"parameters": [
+			{
+				"FROMLIST": {
+					"default": "",
+					"type": "filename"
+				},
+				"OVERLAPLIST": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"DETAIL": {
+					"default": "BRIEF",
+					"type": "string"
+				},
+				"ERRORS": {
+					"default": "",
+					"type": "filename"
+				},
+				"SINGLELINE": {
+					"default": true,
+					"type": "boolean"
+				},
+				"TABLETYPE": {
+					"default": "CSV",
+					"type": "string"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			}
+		]
+	},
+	{
+		"name": "ifft",
+		"parameters": [
+			{
+				"MAGNITUDE": {
+					"default": "",
+					"type": "cube"
+				},
+				"PHASE": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "greyscale",
+		"parameters": [
+			{
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"BEGINDN": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"DIRECTION": {
+					"default": " HORIZONTAL ",
+					"type": "string"
+				},
+				"ENDDN": {
+					"default": 0.0,
+					"type": "double"
+				}
+			},
+			{
+				"LINES": {
+					"default": 1,
+					"type": "integer"
+				},
+				"SAMPLES": {
+					"default": 1,
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "shade",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"AZIMUTH": {
+					"default": 90.0,
+					"type": "double"
+				},
+				"ZENITH": {
+					"default": 45.0,
+					"type": "double"
+				}
+			},
+			{
+				"PIXELRESOL": {
+					"default": "",
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "cubeatt",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"PROPTABLES": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "cubeavg",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"BANDBIN": {
+					"default": "DELETE",
+					"type": "string"
+				},
+				"CENTER": {
+					"default": "",
+					"type": "double"
+				},
+				"WIDTH": {
+					"default": "",
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "translate",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"LTRANS": {
+					"default": "",
+					"type": "double"
+				},
+				"STRANS": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"INTERP": {
+					"default": "CUBICCONVOLUTION",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "gauss",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"SIZE": {
+					"default": 3,
+					"type": "integer"
+				}
+			},
+			{
+				"STDDEV": {
+					"default": 1.0,
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "desmile",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"OBJECTIVE": {
+					"default": "",
+					"type": "filename"
+				},
+				"SMILEDEF": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "fakecube",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"OPTION": {
+					"default": "GRADIENT",
+					"type": "string"
+				}
+			},
+			{
+				"SIZE": {
+					"default": "",
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "deriv",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"DIRECTION": {
+					"default": "HORZ",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "lineeq",
+		"parameters": [
+			{
+				"CSV": {
+					"default": "",
+					"type": "filename"
+				},
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"AVERAGES": {
+					"default": false,
+					"type": "boolean"
+				},
+				"BOXSIZE": {
+					"default": "",
+					"type": "integer"
+				},
+				"BOXTYPE": {
+					"default": "NONE",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "makecube",
+		"parameters": [
+			{
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"PIXELS": {
+					"default": "VALUE",
+					"type": "string"
+				},
+				"VALUE": {
+					"default": 0.0,
+					"type": "double"
+				}
+			},
+			{
+				"BANDS": {
+					"default": "",
+					"type": "integer"
+				},
+				"LINES": {
+					"default": "",
+					"type": "integer"
+				},
+				"SAMPLES": {
+					"default": "",
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "caminfo",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"APPEND": {
+					"default": false,
+					"type": "boolean"
+				},
+				"CAMSTATS": {
+					"default": false,
+					"type": "boolean"
+				},
+				"FORMAT": {
+					"default": "PVL",
+					"type": "string"
+				},
+				"GEOMETRY": {
+					"default": true,
+					"type": "boolean"
+				},
+				"ISISLABEL": {
+					"default": false,
+					"type": "boolean"
+				},
+				"LINC": {
+					"default": 1,
+					"type": "integer"
+				},
+				"ORIGINALLABEL": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SINC": {
+					"default": 1,
+					"type": "integer"
+				},
+				"STATISTICS": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"INCREASEPRECISION": {
+					"default": false,
+					"type": "boolean"
+				},
+				"INCTYPE": {
+					"default": "LINCSINC",
+					"type": "string"
+				},
+				"MAXEMISSION": {
+					"default": 89.5,
+					"type": "double"
+				},
+				"MAXINCIDENCE": {
+					"default": 120.0,
+					"type": "double"
+				},
+				"NUMVERTICES": {
+					"default": 40,
+					"type": "integer"
+				},
+				"POLYGON": {
+					"default": false,
+					"type": "boolean"
+				},
+				"POLYLINC": {
+					"default": "",
+					"type": "integer"
+				},
+				"POLYSINC": {
+					"default": "",
+					"type": "integer"
+				},
+				"USELABEL": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"SPICE": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"VCAMERA": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "std2isis",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"MODE": {
+					"default": "AUTO",
+					"type": "string"
+				}
+			},
+			{
+				"HRSMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"HRSMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"LRSMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"LRSMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"NULLMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"NULLMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"SETHRSRANGE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SETLRSRANGE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SETNULLRANGE": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "shadow",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"PCK": {
+					"default": "",
+					"type": "filename"
+				},
+				"SPK": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"SOLARRADIUS": {
+					"default": 1.001211,
+					"type": "double"
+				},
+				"SUNEDGE": {
+					"default": true,
+					"type": "boolean"
+				},
+				"SUNPOSITIONSOURCE": {
+					"default": "MATCH",
+					"type": "string"
+				}
+			},
+			{
+				"MATCH": {
+					"default": "",
+					"type": "cube"
+				},
+				"TIME": {
+					"default": "",
+					"type": "string"
+				}
+			},
+			{
+				"BASELIGHTCACHESIZE": {
+					"default": 1000000,
+					"type": "integer"
+				},
+				"BASESHADOWCACHESIZE": {
+					"default": 1000000,
+					"type": "integer"
+				},
+				"CACHEINTERPOLATEDVALUES": {
+					"default": false,
+					"type": "boolean"
+				},
+				"LIGHTCURTAIN": {
+					"default": true,
+					"type": "boolean"
+				},
+				"LOWERLIGHTCURTAIN": {
+					"default": false,
+					"type": "boolean"
+				},
+				"MAXSKIPOVERSHADOWSTEPS": {
+					"default": 5,
+					"type": "integer"
+				},
+				"PRECISION": {
+					"default": 1.0,
+					"type": "double"
+				},
+				"PRESET": {
+					"default": "BALANCED",
+					"type": "string"
+				},
+				"SHADOWMAP": {
+					"default": true,
+					"type": "boolean"
+				},
+				"SKIPOVERSHADOW": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "copylabel",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"SOURCE": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"BANDBIN": {
+					"default": true,
+					"type": "boolean"
+				},
+				"BLOBS": {
+					"default": "",
+					"type": "string"
+				},
+				"CAMSTATS": {
+					"default": true,
+					"type": "boolean"
+				},
+				"GROUPS": {
+					"default": "",
+					"type": "string"
+				},
+				"INSTRUMENT": {
+					"default": true,
+					"type": "boolean"
+				},
+				"KERNELS": {
+					"default": true,
+					"type": "boolean"
+				},
+				"MAPPING": {
+					"default": true,
+					"type": "boolean"
+				},
+				"POLYGON": {
+					"default": true,
+					"type": "boolean"
+				},
+				"RADIOMETRY": {
+					"default": true,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "bandnorm",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"AVERAGE": {
+					"default": "BAND",
+					"type": "string"
+				},
+				"METHOD": {
+					"default": "BYNAME",
+					"type": "string"
+				},
+				"NAME": {
+					"default": "Average",
+					"type": "string"
+				},
+				"NUMBER": {
+					"default": 1,
+					"type": "integer"
+				},
+				"SPECTRUM": {
+					"default": "",
+					"type": "filename"
+				}
+			}
+		]
+	},
+	{
+		"name": "ringscam2map",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"MAP": {
+					"default": "$ISISROOT/appdata/templates/maps/planar.map",
+					"type": "filename"
+				},
+				"MATCHMAP": {
+					"default": false,
+					"type": "boolean"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"PIXRES": {
+					"default": "CAMERA",
+					"type": "string"
+				},
+				"RESOLUTION": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"DEFAULTRANGE": {
+					"default": "MINIMIZE",
+					"type": "string"
+				},
+				"MAXRINGLON": {
+					"default": "",
+					"type": "double"
+				},
+				"MAXRINGRAD": {
+					"default": "",
+					"type": "double"
+				},
+				"MINRINGLON": {
+					"default": "",
+					"type": "double"
+				},
+				"MINRINGRAD": {
+					"default": "",
+					"type": "double"
+				},
+				"TRIM": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"RINGLONSEAM": {
+					"default": "AUTO",
+					"type": "string"
+				}
+			},
+			{
+				"INTERP": {
+					"default": "CUBICCONVOLUTION",
+					"type": "string"
+				},
+				"PATCHSIZE": {
+					"default": "",
+					"type": "integer"
+				},
+				"WARPALGORITHM": {
+					"default": "AUTOMATIC",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "appjit",
+		"parameters": [
+			{
+				"FROMLIST": {
+					"default": "",
+					"type": "filename"
+				},
+				"JITTERFILE": {
+					"default": "",
+					"type": "filename"
+				},
+				"MASTER": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"DEGREE": {
+					"default": 2,
+					"type": "integer"
+				},
+				"PITCHRATE": {
+					"default": "",
+					"type": "double"
+				},
+				"YAW": {
+					"default": "",
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "maptemplate",
+		"parameters": [
+			{
+				"FROMLIST": {
+					"default": "",
+					"type": "filename"
+				},
+				"MAP": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"PROJECTION": {
+					"default": "SINUSOIDAL",
+					"type": "string"
+				}
+			},
+			{
+				"CLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"CLON": {
+					"default": "",
+					"type": "double"
+				},
+				"DIST": {
+					"default": "",
+					"type": "double"
+				},
+				"PAR1": {
+					"default": "",
+					"type": "double"
+				},
+				"PAR2": {
+					"default": "",
+					"type": "double"
+				},
+				"PLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"PLON": {
+					"default": "",
+					"type": "double"
+				},
+				"PROT": {
+					"default": "",
+					"type": "double"
+				},
+				"SCALEFACTOR": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"EQRADIUS": {
+					"default": "",
+					"type": "double"
+				},
+				"FILE": {
+					"default": "",
+					"type": "filename"
+				},
+				"LATTYPE": {
+					"default": "PLANETOCENTRIC",
+					"type": "string"
+				},
+				"LONDIR": {
+					"default": "POSITIVEEAST",
+					"type": "string"
+				},
+				"LONDOM": {
+					"default": "360",
+					"type": "string"
+				},
+				"POLRADIUS": {
+					"default": "",
+					"type": "double"
+				},
+				"TARGETNAME": {
+					"default": "",
+					"type": "string"
+				},
+				"TARGOPT": {
+					"default": "NONE",
+					"type": "string"
+				}
+			},
+			{
+				"MAXLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MAXLON": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLON": {
+					"default": "",
+					"type": "double"
+				},
+				"RNGOPT": {
+					"default": "NONE",
+					"type": "string"
+				}
+			},
+			{
+				"RESCALCOPT": {
+					"default": "HIGH",
+					"type": "string"
+				},
+				"RESOLUTION": {
+					"default": "",
+					"type": "double"
+				},
+				"RESOPT": {
+					"default": "NONE",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "pad",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"BOTTOM": {
+					"default": 0,
+					"type": "integer"
+				},
+				"LEFT": {
+					"default": 0,
+					"type": "integer"
+				},
+				"RIGHT": {
+					"default": 0,
+					"type": "integer"
+				},
+				"TOP": {
+					"default": 0,
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "slpmap",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"OUTPUT": {
+					"default": "SLOPE",
+					"type": "string"
+				},
+				"UNITS": {
+					"default": "DEGREES",
+					"type": "string"
+				}
+			},
+			{
+				"CONVERSION": {
+					"default": 1.0,
+					"type": "double"
+				},
+				"PIXRES": {
+					"default": "AUTOMATIC",
+					"type": "string"
+				},
+				"RESOLUTION": {
+					"default": "",
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "sigmastretch",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"VARIANCE": {
+					"default": 40.0,
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "cathist",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"APPEND": {
+					"default": true,
+					"type": "boolean"
+				},
+				"MODE": {
+					"default": "FULL",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "camrange",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "None",
+					"type": "filename"
+				}
+			}
+		]
+	},
+	{
+		"name": "svfilter",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"FILTER": {
+					"default": "VARIANCE",
+					"type": "string"
+				}
+			},
+			{
+				"LINES": {
+					"default": "",
+					"type": "integer"
+				},
+				"SAMPLES": {
+					"default": "",
+					"type": "integer"
+				}
+			},
+			{
+				"HIGH": {
+					"default": "",
+					"type": "double"
+				},
+				"LOW": {
+					"default": "",
+					"type": "double"
+				},
+				"MINIMUM": {
+					"default": 1,
+					"type": "integer"
+				}
+			},
+			{
+				"PROPAGATE": {
+					"default": true,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "automos",
+		"parameters": [
+			{
+				"FROMLIST": {
+					"default": "",
+					"type": "filename"
+				},
+				"MOSAIC": {
+					"default": "",
+					"type": "cube"
+				},
+				"PRIORITY": {
+					"default": "ONTOP",
+					"type": "string"
+				},
+				"TOLIST": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"CRITERIA": {
+					"default": "LESSER",
+					"type": "string"
+				},
+				"KEYNAME": {
+					"default": "OriginalBand",
+					"type": "string"
+				},
+				"KEYVALUE": {
+					"default": "1",
+					"type": "string"
+				},
+				"NUMBER": {
+					"default": 1,
+					"type": "integer"
+				},
+				"TYPE": {
+					"default": "\n            BANDNUMBER\n          ",
+					"type": "string"
+				}
+			},
+			{
+				"GRANGE": {
+					"default": "AUTO",
+					"type": "string"
+				},
+				"MAXLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MAXLON": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLON": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"HIGHSATURATION": {
+					"default": false,
+					"type": "boolean"
+				},
+				"LOWSATURATION": {
+					"default": false,
+					"type": "boolean"
+				},
+				"MATCHBANDBIN": {
+					"default": true,
+					"type": "boolean"
+				},
+				"MATCHDEM": {
+					"default": false,
+					"type": "boolean"
+				},
+				"NULL": {
+					"default": false,
+					"type": "boolean"
+				},
+				"TRACK": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "stretch",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"HIS": {
+					"default": "",
+					"type": "string"
+				},
+				"HRS": {
+					"default": "",
+					"type": "string"
+				},
+				"INPUTFILE": {
+					"default": "",
+					"type": "filename"
+				},
+				"LIS": {
+					"default": "",
+					"type": "string"
+				},
+				"LRS": {
+					"default": "",
+					"type": "string"
+				},
+				"NULL": {
+					"default": "",
+					"type": "string"
+				},
+				"PAIRS": {
+					"default": "",
+					"type": "string"
+				},
+				"READFILE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"USEPERCENTAGES": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "decorstretch",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "ckwriter",
+		"parameters": [
+			{
+				"COMFILE": {
+					"default": "",
+					"type": "filename"
+				},
+				"FROM": {
+					"default": "",
+					"type": "filename"
+				},
+				"FROMLIST": {
+					"default": "",
+					"type": "filename"
+				},
+				"SUMMARY": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"CKTYPE": {
+					"default": 3,
+					"type": "integer"
+				},
+				"OVERLAP": {
+					"default": "ERROR",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "blend",
+		"parameters": [
+			{
+				"FROMLIST": {
+					"default": "",
+					"type": "filename"
+				},
+				"TOLIST": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"ERROR": {
+					"default": false,
+					"type": "boolean"
+				},
+				"STOP": {
+					"default": 100000,
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "pvldiff",
+		"parameters": [
+			{
+				"DIFF": {
+					"default": "",
+					"type": "filename"
+				},
+				"FROM": {
+					"default": "",
+					"type": "filename"
+				},
+				"FROM2": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			}
+		]
+	},
+	{
+		"name": "nocam2map",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"LATCUBE": {
+					"default": "",
+					"type": "cube"
+				},
+				"LATTYPE": {
+					"default": "PLANETOCENTRIC",
+					"type": "string"
+				},
+				"LONCUBE": {
+					"default": "",
+					"type": "cube"
+				},
+				"LONDIR": {
+					"default": "POSITIVEEAST",
+					"type": "string"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"DEGREE": {
+					"default": 3,
+					"type": "integer"
+				},
+				"LINC": {
+					"default": "",
+					"type": "integer"
+				},
+				"NOWARP": {
+					"default": false,
+					"type": "boolean"
+				},
+				"RESIDUALS": {
+					"default": "",
+					"type": "filename"
+				},
+				"SINC": {
+					"default": "",
+					"type": "integer"
+				}
+			},
+			{
+				"EQURADIUS": {
+					"default": "",
+					"type": "double"
+				},
+				"MAP": {
+					"default": "$ISISROOT/appdata/templates/maps/sinusoidal.map",
+					"type": "filename"
+				},
+				"PIXRES": {
+					"default": "COMPUTE",
+					"type": "string"
+				},
+				"POLRADIUS": {
+					"default": "",
+					"type": "double"
+				},
+				"RESOLUTION": {
+					"default": "",
+					"type": "double"
+				},
+				"TARGET": {
+					"default": "",
+					"type": "string"
+				}
+			},
+			{
+				"DEFAULTRANGE": {
+					"default": "COMPUTE",
+					"type": "string"
+				},
+				"MAXLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MAXLON": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLON": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"ITERATIONS": {
+					"default": 10,
+					"type": "integer"
+				},
+				"TOLERANCE": {
+					"default": 1.0,
+					"type": "double"
+				}
+			},
+			{
+				"INTERP": {
+					"default": "CUBICCONVOLUTION",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "mapmos",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"MOSAIC": {
+					"default": "",
+					"type": "cube"
+				},
+				"PRIORITY": {
+					"default": "ONTOP",
+					"type": "string"
+				}
+			},
+			{
+				"CRITERIA": {
+					"default": "LESSER",
+					"type": "string"
+				},
+				"KEYNAME": {
+					"default": "OriginalBand",
+					"type": "string"
+				},
+				"KEYVALUE": {
+					"default": "1",
+					"type": "string"
+				},
+				"NUMBER": {
+					"default": 1,
+					"type": "integer"
+				},
+				"TYPE": {
+					"default": "\n            BANDNUMBER\n          ",
+					"type": "string"
+				}
+			},
+			{
+				"CREATE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"MAXLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MAXLON": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLON": {
+					"default": "",
+					"type": "double"
+				},
+				"TRACK": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"HIGHSATURATION": {
+					"default": false,
+					"type": "boolean"
+				},
+				"LOWSATURATION": {
+					"default": false,
+					"type": "boolean"
+				},
+				"MATCHBANDBIN": {
+					"default": true,
+					"type": "boolean"
+				},
+				"MATCHDEM": {
+					"default": false,
+					"type": "boolean"
+				},
+				"NULL": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "spiceinit",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"ATTACH": {
+					"default": true,
+					"type": "boolean"
+				},
+				"WEB": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"CKNADIR": {
+					"default": false,
+					"type": "boolean"
+				},
+				"CKPREDICTED": {
+					"default": false,
+					"type": "boolean"
+				},
+				"CKRECON": {
+					"default": true,
+					"type": "boolean"
+				},
+				"CKSMITHED": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"SPKPREDICTED": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SPKRECON": {
+					"default": true,
+					"type": "boolean"
+				},
+				"SPKSMITHED": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"CK": {
+					"default": "",
+					"type": "filename"
+				},
+				"EXTRA": {
+					"default": "",
+					"type": "filename"
+				},
+				"FK": {
+					"default": "",
+					"type": "filename"
+				},
+				"IAK": {
+					"default": "",
+					"type": "filename"
+				},
+				"IK": {
+					"default": "",
+					"type": "filename"
+				},
+				"LS": {
+					"default": "",
+					"type": "filename"
+				},
+				"PCK": {
+					"default": "",
+					"type": "filename"
+				},
+				"SCLK": {
+					"default": "",
+					"type": "filename"
+				},
+				"SPK": {
+					"default": "",
+					"type": "filename"
+				},
+				"TSPK": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"MODEL": {
+					"default": "",
+					"type": "cube"
+				},
+				"SHAPE": {
+					"default": "SYSTEM",
+					"type": "string"
+				}
+			},
+			{
+				"ENDPAD": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"STARTPAD": {
+					"default": 0.0,
+					"type": "double"
+				}
+			},
+			{
+				"PORT": {
+					"default": 443,
+					"type": "integer"
+				},
+				"URL": {
+					"default": "https://services.isis.astrogeology.usgs.gov/cgi-bin/spiceinit.cgi",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "mode",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"LINES": {
+					"default": "",
+					"type": "integer"
+				},
+				"SAMPLES": {
+					"default": "",
+					"type": "integer"
+				}
+			},
+			{
+				"HIGH": {
+					"default": "",
+					"type": "double"
+				},
+				"LOW": {
+					"default": "",
+					"type": "double"
+				},
+				"MINIMUM": {
+					"default": 1.0,
+					"type": "double"
+				},
+				"MINOPT": {
+					"default": "COUNT",
+					"type": "string"
+				},
+				"REPLACEMENT": {
+					"default": "CENTER",
+					"type": "string"
+				}
+			},
+			{
+				"PIXELS": {
+					"default": "ALL",
+					"type": "string"
+				}
+			},
+			{
+				"HIS": {
+					"default": true,
+					"type": "boolean"
+				},
+				"HRS": {
+					"default": true,
+					"type": "boolean"
+				},
+				"LIS": {
+					"default": true,
+					"type": "boolean"
+				},
+				"LRS": {
+					"default": true,
+					"type": "boolean"
+				},
+				"NULL": {
+					"default": true,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "ddd2isis",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "gaussstretch",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"GSIGMA": {
+					"default": 3.0,
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "isisui",
+		"parameters": [
+			{
+				"arg1": {
+					"default": "",
+					"type": "string"
+				},
+				"arg2": {
+					"default": "",
+					"type": "boolean"
+				},
+				"arg3-n": {
+					"default": "",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "footprintinit",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"INCREASEPRECISION": {
+					"default": false,
+					"type": "boolean"
+				},
+				"INCTYPE": {
+					"default": "LINCSINC",
+					"type": "string"
+				},
+				"LINC": {
+					"default": 100,
+					"type": "integer"
+				},
+				"MAXEMISSION": {
+					"default": "",
+					"type": "double"
+				},
+				"MAXINCIDENCE": {
+					"default": "",
+					"type": "double"
+				},
+				"NUMVERTICES": {
+					"default": 40,
+					"type": "integer"
+				},
+				"SINC": {
+					"default": 100,
+					"type": "integer"
+				}
+			},
+			{
+				"LIMBTEST": {
+					"default": "ELLIPSOID",
+					"type": "string"
+				}
+			},
+			{
+				"MAP": {
+					"default": "$ISISROOT/appdata/templates/maps/sinusoidal.map",
+					"type": "filename"
+				},
+				"TESTXY": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "grid",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"BOUNDARY": {
+					"default": false,
+					"type": "boolean"
+				},
+				"EXTENDGRID": {
+					"default": false,
+					"type": "boolean"
+				},
+				"MODE": {
+					"default": "GROUND",
+					"type": "string"
+				},
+				"OUTLINE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"TICKS": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"BASELINE": {
+					"default": 1,
+					"type": "integer"
+				},
+				"BASESAMPLE": {
+					"default": 1,
+					"type": "integer"
+				},
+				"LINC": {
+					"default": 100,
+					"type": "integer"
+				},
+				"SINC": {
+					"default": 100,
+					"type": "integer"
+				}
+			},
+			{
+				"BASELAT": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"BASELON": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"LATINC": {
+					"default": 10.0,
+					"type": "double"
+				},
+				"LONINC": {
+					"default": 10.0,
+					"type": "double"
+				}
+			},
+			{
+				"MAXLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MAXLON": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLON": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"DNVALUE": {
+					"default": "",
+					"type": "double"
+				},
+				"LINEVALUE": {
+					"default": "HRS",
+					"type": "string"
+				},
+				"LINEWIDTH": {
+					"default": 1,
+					"type": "integer"
+				}
+			},
+			{
+				"BKGNDDNVALUE": {
+					"default": "",
+					"type": "double"
+				},
+				"BKGNDVALUE": {
+					"default": "IMAGE",
+					"type": "string"
+				}
+			},
+			{
+				"DIAGONALTICKS": {
+					"default": false,
+					"type": "boolean"
+				},
+				"TICKSIZE": {
+					"default": 5,
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "csv2table",
+		"parameters": [
+			{
+				"csv": {
+					"default": "",
+					"type": "filename"
+				},
+				"label": {
+					"default": "",
+					"type": "filename"
+				},
+				"to": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"tablename": {
+					"default": "",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "dsk2isis",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "filename"
+				},
+				"MAP": {
+					"default": "",
+					"type": "filename"
+				},
+				"METHOD": {
+					"default": "RAY",
+					"type": "string"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "rotate",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"DEGREES": {
+					"default": "",
+					"type": "double"
+				},
+				"INTERP": {
+					"default": "CUBICCONVOLUTION",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "ringsautomos",
+		"parameters": [
+			{
+				"FROMLIST": {
+					"default": "",
+					"type": "filename"
+				},
+				"MOSAIC": {
+					"default": "",
+					"type": "cube"
+				},
+				"PRIORITY": {
+					"default": "ONTOP",
+					"type": "string"
+				},
+				"TOLIST": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"CRITERIA": {
+					"default": "LESSER",
+					"type": "string"
+				},
+				"KEYNAME": {
+					"default": "OriginalBand",
+					"type": "string"
+				},
+				"KEYVALUE": {
+					"default": "1",
+					"type": "string"
+				},
+				"NUMBER": {
+					"default": 1,
+					"type": "integer"
+				},
+				"TYPE": {
+					"default": "\n            BANDNUMBER\n          ",
+					"type": "string"
+				}
+			},
+			{
+				"GRANGE": {
+					"default": "AUTO",
+					"type": "string"
+				},
+				"MAXRINGLON": {
+					"default": "",
+					"type": "double"
+				},
+				"MAXRINGRAD": {
+					"default": "",
+					"type": "double"
+				},
+				"MINRINGLON": {
+					"default": "",
+					"type": "double"
+				},
+				"MINRINGRAD": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"HIGHSATURATION": {
+					"default": false,
+					"type": "boolean"
+				},
+				"LOWSATURATION": {
+					"default": false,
+					"type": "boolean"
+				},
+				"MATCHBANDBIN": {
+					"default": true,
+					"type": "boolean"
+				},
+				"MATCHDEM": {
+					"default": false,
+					"type": "boolean"
+				},
+				"NULL": {
+					"default": false,
+					"type": "boolean"
+				},
+				"TRACK": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "isis2raw",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"BITTYPE": {
+					"default": "32BIT",
+					"type": "string"
+				},
+				"HIS": {
+					"default": false,
+					"type": "boolean"
+				},
+				"HRS": {
+					"default": false,
+					"type": "boolean"
+				},
+				"LIS": {
+					"default": false,
+					"type": "boolean"
+				},
+				"LRS": {
+					"default": false,
+					"type": "boolean"
+				},
+				"NULL": {
+					"default": false,
+					"type": "boolean"
+				},
+				"OMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"OMIN": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"MAXIMUM": {
+					"default": "",
+					"type": "double"
+				},
+				"MAXPERCENT": {
+					"default": 99.5,
+					"type": "double"
+				},
+				"MINIMUM": {
+					"default": "",
+					"type": "double"
+				},
+				"MINPERCENT": {
+					"default": 0.5,
+					"type": "double"
+				},
+				"STRETCH": {
+					"default": "LINEAR",
+					"type": "string"
+				}
+			},
+			{
+				"ENDIAN": {
+					"default": "LSB",
+					"type": "string"
+				},
+				"STORAGEORDER": {
+					"default": "BSQ",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "explode",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "raw2isis",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"BANDS": {
+					"default": 1,
+					"type": "integer"
+				},
+				"LINES": {
+					"default": "",
+					"type": "integer"
+				},
+				"SAMPLES": {
+					"default": "",
+					"type": "integer"
+				},
+				"SKIP": {
+					"default": 0,
+					"type": "integer"
+				}
+			},
+			{
+				"BITTYPE": {
+					"default": "UNSIGNEDBYTE",
+					"type": "string"
+				},
+				"BYTEORDER": {
+					"default": "LSB",
+					"type": "string"
+				}
+			},
+			{
+				"HRSMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"HRSMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"LRSMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"LRSMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"NULLMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"NULLMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"SETHRSRANGE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SETLRSRANGE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SETNULLRANGE": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "photrim",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"USEDEM": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"MAXEMISSION": {
+					"default": 90.0,
+					"type": "double"
+				},
+				"MAXINCIDENCE": {
+					"default": 90.0,
+					"type": "double"
+				},
+				"MAXPHASE": {
+					"default": 180.0,
+					"type": "double"
+				},
+				"MINEMISSION": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"MININCIDENCE": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"MINPHASE": {
+					"default": 0.0,
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "makeflat",
+		"parameters": [
+			{
+				"EXCLUDE": {
+					"default": "",
+					"type": "filename"
+				},
+				"FROMLIST": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"STDEVTOL": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"IMAGETYPE": {
+					"default": "LINESCAN",
+					"type": "string"
+				}
+			},
+			{
+				"NUMLINES": {
+					"default": "",
+					"type": "integer"
+				}
+			},
+			{
+				"FRAMELETHEIGHT": {
+					"default": "",
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "smtk",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"MATCH": {
+					"default": "",
+					"type": "cube"
+				},
+				"REGDEF": {
+					"default": "$ISISROOT/appdata/templates/autoreg/coreg.adaptgruen.p1515s3030.def",
+					"type": "filename"
+				}
+			},
+			{
+				"CNET": {
+					"default": "",
+					"type": "filename"
+				},
+				"NSEED": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"SEEDSAMPLE": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"SPACE": {
+					"default": 3,
+					"type": "integer"
+				},
+				"SUBCBOX": {
+					"default": 5,
+					"type": "integer"
+				}
+			},
+			{
+				"BOXSIZE": {
+					"default": 3,
+					"type": "integer"
+				},
+				"PLOTDIST": {
+					"default": 5.0,
+					"type": "double"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"ONET": {
+					"default": "",
+					"type": "filename"
+				},
+				"OSEEDNET": {
+					"default": "",
+					"type": "filename"
+				}
+			}
+		]
+	},
+	{
+		"name": "spkwriter",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "filename"
+				},
+				"FROMLIST": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"COMFILE": {
+					"default": "",
+					"type": "filename"
+				},
+				"OVERLAP": {
+					"default": "ERROR",
+					"type": "string"
+				},
+				"SUMMARY": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				},
+				"TYPE": {
+					"default": 13,
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "trackextract",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "poly",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"ADD": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"MULT1": {
+					"default": 1.0,
+					"type": "double"
+				},
+				"MULT2": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"MULT3": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"MULT4": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"MULT5": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"MULT6": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"MULT7": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"MULT8": {
+					"default": 0.0,
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "histeq",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"INCREMENT": {
+					"default": 1,
+					"type": "integer"
+				},
+				"MAXPER": {
+					"default": 99.5,
+					"type": "double"
+				},
+				"MINPER": {
+					"default": 0.5,
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "isisminer",
+		"parameters": [
+			{
+				"CONFIG": {
+					"default": "",
+					"type": "filename"
+				},
+				"GLOBALS": {
+					"default": "None",
+					"type": "filename"
+				},
+				"PARAMETERS": {
+					"default": "None",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "noisefilter",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"FLATTOL": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"REPLACE": {
+					"default": "AVERAGE",
+					"type": "string"
+				},
+				"TOLDEF": {
+					"default": "DN",
+					"type": "string"
+				},
+				"TOLMAX": {
+					"default": 20.0,
+					"type": "double"
+				},
+				"TOLMIN": {
+					"default": 20.0,
+					"type": "double"
+				}
+			},
+			{
+				"LINES": {
+					"default": "",
+					"type": "integer"
+				},
+				"SAMPLES": {
+					"default": "",
+					"type": "integer"
+				}
+			},
+			{
+				"HIGH": {
+					"default": "",
+					"type": "double"
+				},
+				"LOW": {
+					"default": "",
+					"type": "double"
+				},
+				"MINIMUM": {
+					"default": 1,
+					"type": "integer"
+				}
+			},
+			{
+				"HISISNOISE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"HRSISNOISE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"LISISNOISE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"LRSISNOISE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"NULLISNOISE": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "fits2isis",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"IMAGENUMBER": {
+					"default": 0,
+					"type": "integer"
+				}
+			},
+			{
+				"ORGANIZATION": {
+					"default": "BSQ",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "median",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"LINES": {
+					"default": "",
+					"type": "integer"
+				},
+				"SAMPLES": {
+					"default": "",
+					"type": "integer"
+				}
+			},
+			{
+				"HIGH": {
+					"default": "",
+					"type": "double"
+				},
+				"LOW": {
+					"default": "",
+					"type": "double"
+				},
+				"MINIMUM": {
+					"default": 1.0,
+					"type": "double"
+				},
+				"MINOPT": {
+					"default": "COUNT",
+					"type": "string"
+				},
+				"REPLACEMENT": {
+					"default": "CENTER",
+					"type": "string"
+				}
+			},
+			{
+				"FILTER": {
+					"default": "ALL",
+					"type": "string"
+				}
+			},
+			{
+				"HIS": {
+					"default": true,
+					"type": "boolean"
+				},
+				"HRS": {
+					"default": true,
+					"type": "boolean"
+				},
+				"LIS": {
+					"default": true,
+					"type": "boolean"
+				},
+				"LRS": {
+					"default": true,
+					"type": "boolean"
+				},
+				"NULL": {
+					"default": true,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "barscale",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"BACKGROUND": {
+					"default": "WHITE",
+					"type": "string"
+				},
+				"BARHEIGHT": {
+					"default": 50,
+					"type": "integer"
+				},
+				"CORNERLINE": {
+					"default": "",
+					"type": "integer"
+				},
+				"CORNERSAMPLE": {
+					"default": "",
+					"type": "integer"
+				},
+				"LEFTLIMIT": {
+					"default": 0,
+					"type": "integer"
+				},
+				"LEFTSEGS": {
+					"default": "",
+					"type": "integer"
+				},
+				"LINE": {
+					"default": "",
+					"type": "double"
+				},
+				"PADIMAGE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"PIXRES": {
+					"default": "CENTER",
+					"type": "string"
+				},
+				"PLACEMENT": {
+					"default": "LEFT",
+					"type": "string"
+				},
+				"RIGHTLIMIT": {
+					"default": 1,
+					"type": "integer"
+				},
+				"RIGHTSEGS": {
+					"default": 1,
+					"type": "integer"
+				},
+				"SAMPLE": {
+					"default": "",
+					"type": "double"
+				},
+				"TEXTHEIGHT": {
+					"default": 50,
+					"type": "integer"
+				},
+				"TEXTLOC": {
+					"default": "ABOVE",
+					"type": "string"
+				},
+				"UNITS": {
+					"default": "KILOMETER",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "spiceserver",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"CHECKVERSION": {
+					"default": false,
+					"type": "boolean"
+				},
+				"TEMPFILE": {
+					"default": "/tmp/spice_web_service/inputLabels.cub",
+					"type": "filename"
+				}
+			}
+		]
+	},
+	{
+		"name": "mappt",
+		"parameters": [
+			{
+				"APPEND": {
+					"default": true,
+					"type": "boolean"
+				},
+				"FORMAT": {
+					"default": "PVL",
+					"type": "string"
+				},
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"ALLOWOUTSIDE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"COORDLIST": {
+					"default": "",
+					"type": "filename"
+				},
+				"LATITUDE": {
+					"default": "",
+					"type": "double"
+				},
+				"LINE": {
+					"default": "",
+					"type": "double"
+				},
+				"LONGITUDE": {
+					"default": "",
+					"type": "double"
+				},
+				"SAMPLE": {
+					"default": "",
+					"type": "double"
+				},
+				"TYPE": {
+					"default": "IMAGE",
+					"type": "string"
+				},
+				"USECOORDLIST": {
+					"default": false,
+					"type": "boolean"
+				},
+				"X": {
+					"default": "",
+					"type": "double"
+				},
+				"Y": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"COORDSYS": {
+					"default": "INPUTFILESYS",
+					"type": "string"
+				},
+				"LATTYPE": {
+					"default": "PLANETOCENTRIC",
+					"type": "string"
+				},
+				"LONDIR": {
+					"default": "POSITIVEEAST",
+					"type": "string"
+				},
+				"LONDOM": {
+					"default": "360",
+					"type": "string"
+				},
+				"MAP": {
+					"default": "",
+					"type": "filename"
+				}
+			}
+		]
+	},
+	{
+		"name": "mapsize",
+		"parameters": [
+			{
+				"MAP": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"HEIGHT": {
+					"default": "",
+					"type": "double"
+				},
+				"OPTION": {
+					"default": "SCALE",
+					"type": "string"
+				},
+				"SCALE": {
+					"default": "",
+					"type": "double"
+				},
+				"WIDTH": {
+					"default": "",
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "bandtrim",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "ringsmappt",
+		"parameters": [
+			{
+				"APPEND": {
+					"default": true,
+					"type": "boolean"
+				},
+				"FORMAT": {
+					"default": "PVL",
+					"type": "string"
+				},
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"LINE": {
+					"default": "",
+					"type": "double"
+				},
+				"RINGLONGITUDE": {
+					"default": "",
+					"type": "double"
+				},
+				"RINGRADIUS": {
+					"default": "",
+					"type": "double"
+				},
+				"SAMPLE": {
+					"default": "",
+					"type": "double"
+				},
+				"TYPE": {
+					"default": "IMAGE",
+					"type": "string"
+				},
+				"X": {
+					"default": "",
+					"type": "double"
+				},
+				"Y": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"COORDSYS": {
+					"default": "INPUTFILESYS",
+					"type": "string"
+				},
+				"MAP": {
+					"default": "",
+					"type": "filename"
+				},
+				"RINGLONDIR": {
+					"default": "COUNTERCLOCKWISE",
+					"type": "string"
+				},
+				"RINGLONDOM": {
+					"default": "360",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "getsn",
+		"parameters": [
+			{
+				"APPEND": {
+					"default": true,
+					"type": "boolean"
+				},
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"DEFAULT": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"FILE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"OBSERVATION": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SN": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"FORMAT": {
+					"default": "PVL",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "cam2map",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"MAP": {
+					"default": "$ISISROOT/appdata/templates/maps/sinusoidal.map",
+					"type": "filename"
+				},
+				"MATCHMAP": {
+					"default": false,
+					"type": "boolean"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"PIXRES": {
+					"default": "CAMERA",
+					"type": "string"
+				},
+				"RESOLUTION": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"DEFAULTRANGE": {
+					"default": "MINIMIZE",
+					"type": "string"
+				},
+				"MAXLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MAXLON": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLON": {
+					"default": "",
+					"type": "double"
+				},
+				"TRIM": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"LONSEAM": {
+					"default": "AUTO",
+					"type": "string"
+				}
+			},
+			{
+				"INTERP": {
+					"default": "CUBICCONVOLUTION",
+					"type": "string"
+				},
+				"OCCLUSION": {
+					"default": false,
+					"type": "boolean"
+				},
+				"PATCHSIZE": {
+					"default": "",
+					"type": "integer"
+				},
+				"WARPALGORITHM": {
+					"default": "AUTOMATIC",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "noseam",
+		"parameters": [
+			{
+				"FROMLIST": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"LINES": {
+					"default": "",
+					"type": "integer"
+				},
+				"SAMPLES": {
+					"default": "",
+					"type": "integer"
+				}
+			},
+			{
+				"MATCHBANDBIN": {
+					"default": true,
+					"type": "boolean"
+				}
+			},
+			{
+				"REMOVETEMP ": {
+					"default": true,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "sharpen",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"LINES": {
+					"default": 3,
+					"type": "integer"
+				},
+				"SAMPLES": {
+					"default": 3,
+					"type": "integer"
+				}
+			},
+			{
+				"HIGH": {
+					"default": "",
+					"type": "double"
+				},
+				"LOW": {
+					"default": "",
+					"type": "double"
+				},
+				"MINIMUM": {
+					"default": 1,
+					"type": "integer"
+				}
+			},
+			{
+				"PROPAGATE": {
+					"default": true,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "edrget",
+		"parameters": [
+			{
+				"TOPATH": {
+					"default": "",
+					"type": "string"
+				},
+				"URL": {
+					"default": "",
+					"type": "string"
+				}
+			},
+			{
+				"TIMEOUT": {
+					"default": "",
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "cubefunc",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"FUNCTION": {
+					"default": "COS",
+					"type": "string"
+				}
+			},
+			{
+				"Y": {
+					"default": "",
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "findgaps",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"LOG": {
+					"default": "none",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "none",
+					"type": "cube"
+				}
+			},
+			{
+				"CORTOL": {
+					"default": 0.0,
+					"type": "double"
+				}
+			},
+			{
+				"ABOVE": {
+					"default": 7,
+					"type": "integer"
+				},
+				"BELOW": {
+					"default": 7,
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "camtrim",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"MAP": {
+					"default": "None",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"MAXLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MAXLON": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLON": {
+					"default": "",
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "skypt",
+		"parameters": [
+			{
+				"APPEND": {
+					"default": true,
+					"type": "boolean"
+				},
+				"FORMAT": {
+					"default": "PVL",
+					"type": "string"
+				},
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"DEC": {
+					"default": "",
+					"type": "double"
+				},
+				"LINE": {
+					"default": "",
+					"type": "double"
+				},
+				"RA": {
+					"default": "",
+					"type": "double"
+				},
+				"SAMPLE": {
+					"default": "",
+					"type": "double"
+				},
+				"TYPE": {
+					"default": "IMAGE",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "tabledump",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"CUSTOM": {
+					"default": "",
+					"type": "string"
+				},
+				"DELIMIT": {
+					"default": "COMMA",
+					"type": "string"
+				},
+				"NAME": {
+					"default": "",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "uncrop",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"PARENT": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"COMBINE": {
+					"default": "CROP",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "specadd",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"MATCH": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "vicar2isis",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"HRSMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"HRSMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"LRSMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"LRSMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"NULLMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"NULLMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"SETHRSRANGE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SETLRSRANGE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SETNULLRANGE": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "campt",
+		"parameters": [
+			{
+				"ALLOWOUTSIDE": {
+					"default": true,
+					"type": "boolean"
+				},
+				"APPEND": {
+					"default": true,
+					"type": "boolean"
+				},
+				"COORDLIST": {
+					"default": "",
+					"type": "filename"
+				},
+				"COORDTYPE": {
+					"default": "",
+					"type": "string"
+				},
+				"FORMAT": {
+					"default": "PVL",
+					"type": "string"
+				},
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				},
+				"USECOORDLIST": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"LATITUDE": {
+					"default": "",
+					"type": "double"
+				},
+				"LINE": {
+					"default": "",
+					"type": "double"
+				},
+				"LONGITUDE": {
+					"default": "",
+					"type": "double"
+				},
+				"SAMPLE": {
+					"default": "",
+					"type": "double"
+				},
+				"TYPE": {
+					"default": "IMAGE",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "maplab",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"MAP": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"COORDINATES": {
+					"default": "XY",
+					"type": "string"
+				},
+				"LAT": {
+					"default": "",
+					"type": "double"
+				},
+				"LINE": {
+					"default": "",
+					"type": "double"
+				},
+				"LON": {
+					"default": "",
+					"type": "double"
+				},
+				"SAMPLE": {
+					"default": "",
+					"type": "double"
+				},
+				"X": {
+					"default": "",
+					"type": "double"
+				},
+				"Y": {
+					"default": "",
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "equalizer",
+		"parameters": [
+			{
+				"FROMLIST": {
+					"default": "",
+					"type": "filename"
+				},
+				"HOLDLIST": {
+					"default": "",
+					"type": "filename"
+				},
+				"INSTATS": {
+					"default": "",
+					"type": "filename"
+				},
+				"OUTSTATS": {
+					"default": "",
+					"type": "filename"
+				},
+				"TOLIST": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"PROCESS": {
+					"default": "BOTH",
+					"type": "string"
+				},
+				"SOLVEMETHOD": {
+					"default": "SPARSE",
+					"type": "string"
+				}
+			},
+			{
+				"ADJUST": {
+					"default": "BOTH",
+					"type": "string"
+				},
+				"MINCOUNT": {
+					"default": 1000,
+					"type": "integer"
+				},
+				"PERCENT": {
+					"default": 100.0,
+					"type": "double"
+				},
+				"WEIGHT": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "ascii2isis",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"BANDS": {
+					"default": 1,
+					"type": "integer"
+				},
+				"LINES": {
+					"default": "",
+					"type": "integer"
+				},
+				"ORDER": {
+					"default": "BSQ",
+					"type": "string"
+				},
+				"SAMPLES": {
+					"default": "",
+					"type": "integer"
+				},
+				"SKIP": {
+					"default": 0,
+					"type": "integer"
+				}
+			},
+			{
+				"HRSMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"HRSMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"LRSMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"LRSMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"NULLMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"NULLMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"SETHRSRANGE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SETLRSRANGE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SETNULLRANGE": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "editlab",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"OPTIONS": {
+					"default": "SETKEY",
+					"type": "string"
+				}
+			},
+			{
+				"COMMENT": {
+					"default": "",
+					"type": "string"
+				},
+				"GRPNAME": {
+					"default": "",
+					"type": "string"
+				},
+				"KEYWORD": {
+					"default": "",
+					"type": "string"
+				},
+				"TEMPFILE": {
+					"default": "",
+					"type": "filename"
+				},
+				"UNITS": {
+					"default": "",
+					"type": "string"
+				},
+				"VALUE": {
+					"default": "",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "catlab",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"APPEND": {
+					"default": true,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "isis2pds",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"PDSVERSION": {
+					"default": "PDS3",
+					"type": "string"
+				}
+			},
+			{
+				"BITTYPE": {
+					"default": "32BIT",
+					"type": "string"
+				},
+				"CHECKSUM": {
+					"default": false,
+					"type": "boolean"
+				},
+				"HIS": {
+					"default": false,
+					"type": "boolean"
+				},
+				"HRS": {
+					"default": false,
+					"type": "boolean"
+				},
+				"LABTYPE": {
+					"default": "STREAM",
+					"type": "string"
+				},
+				"LIS": {
+					"default": false,
+					"type": "boolean"
+				},
+				"LRS": {
+					"default": false,
+					"type": "boolean"
+				},
+				"NULL": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"MAXIMUM": {
+					"default": "",
+					"type": "double"
+				},
+				"MAXPERCENT": {
+					"default": 99.5,
+					"type": "double"
+				},
+				"MINIMUM": {
+					"default": "",
+					"type": "double"
+				},
+				"MINPERCENT": {
+					"default": 0.5,
+					"type": "double"
+				},
+				"STRETCH": {
+					"default": "NONE",
+					"type": "string"
+				}
+			},
+			{
+				"ENDIAN": {
+					"default": "LSB",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "circle",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"DEFINITION": {
+					"default": "CENTERRAD",
+					"type": "string"
+				}
+			},
+			{
+				"LINE": {
+					"default": "",
+					"type": "double"
+				},
+				"RADIUS": {
+					"default": "",
+					"type": "double"
+				},
+				"SAMPLE": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"LINE1": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"LINE2": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"LINE3": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"SAMP1": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"SAMP2": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"SAMP3": {
+					"default": 0.0,
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "phoemplocal",
+		"parameters": [
+			{
+				"APPEND": {
+					"default": false,
+					"type": "boolean"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"NOTE": {
+					"default": "",
+					"type": "string"
+				}
+			},
+			{
+				"B0": {
+					"default": "",
+					"type": "double"
+				},
+				"BH": {
+					"default": "",
+					"type": "double"
+				},
+				"CH": {
+					"default": "",
+					"type": "double"
+				},
+				"HG1": {
+					"default": "",
+					"type": "double"
+				},
+				"HG2": {
+					"default": "",
+					"type": "double"
+				},
+				"HH": {
+					"default": "",
+					"type": "double"
+				},
+				"PHTNAME": {
+					"default": "HAPKEHEN",
+					"type": "combo"
+				},
+				"THETA": {
+					"default": "",
+					"type": "double"
+				},
+				"WH": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"MODEL": {
+					"default": "",
+					"type": "combo"
+				}
+			},
+			{
+				"ADDOFFSET": {
+					"default": false,
+					"type": "boolean"
+				},
+				"ATMNAME": {
+					"default": "NONE",
+					"type": "combo"
+				},
+				"BHA": {
+					"default": "",
+					"type": "double"
+				},
+				"HGA": {
+					"default": "",
+					"type": "double"
+				},
+				"HNORM": {
+					"default": "",
+					"type": "double"
+				},
+				"TAU": {
+					"default": "",
+					"type": "double"
+				},
+				"WHA": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"EMISSION": {
+					"default": "",
+					"type": "double"
+				},
+				"INCIDENCE": {
+					"default": "",
+					"type": "double"
+				},
+				"PHASE": {
+					"default": "",
+					"type": "double"
+				},
+				"RMS_SLOPE": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"SEED": {
+					"default": false,
+					"type": "boolean"
+				},
+				"SEED_NUMBER": {
+					"default": "",
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "desmear",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"DURATION": {
+					"default": "",
+					"type": "double"
+				},
+				"TRANSFER": {
+					"default": "",
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "kernfilter",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"KERNEL": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "percent",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"PERCENTAGE": {
+					"default": "",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "phoempglobal",
+		"parameters": [
+			{
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"NOTE": {
+					"default": "",
+					"type": "string"
+				}
+			},
+			{
+				"B0": {
+					"default": "",
+					"type": "double"
+				},
+				"BH": {
+					"default": "",
+					"type": "double"
+				},
+				"CH": {
+					"default": "",
+					"type": "double"
+				},
+				"HG1": {
+					"default": "",
+					"type": "double"
+				},
+				"HG2": {
+					"default": "",
+					"type": "double"
+				},
+				"HH": {
+					"default": "",
+					"type": "double"
+				},
+				"PHTNAME": {
+					"default": "HAPKEHEN",
+					"type": "combo"
+				},
+				"THETA": {
+					"default": "",
+					"type": "double"
+				},
+				"WH": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"MODEL": {
+					"default": "",
+					"type": "combo"
+				}
+			},
+			{
+				"ADDOFFSET": {
+					"default": false,
+					"type": "boolean"
+				},
+				"ATMNAME": {
+					"default": "NONE",
+					"type": "combo"
+				},
+				"BHA": {
+					"default": "",
+					"type": "double"
+				},
+				"HGA": {
+					"default": "",
+					"type": "double"
+				},
+				"HNORM": {
+					"default": "",
+					"type": "double"
+				},
+				"TAU": {
+					"default": "",
+					"type": "double"
+				},
+				"WHA": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"EMAMAX": {
+					"default": 90.0,
+					"type": "double"
+				},
+				"EMAMAX_PCOEFF": {
+					"default": "",
+					"type": "double"
+				},
+				"EMAMIN": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"INCMAX": {
+					"default": 90.0,
+					"type": "double"
+				},
+				"INCMIN": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"NPH": {
+					"default": 20,
+					"type": "integer"
+				},
+				"PHMAX": {
+					"default": 180.0,
+					"type": "double"
+				},
+				"PHMIN": {
+					"default": 0.0,
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "phohillier",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"PHOPAR": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "catoriglab",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"APPEND": {
+					"default": true,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "mirror",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "cubenorm",
+		"parameters": [
+			{
+				"FORMAT": {
+					"default": "TABLE",
+					"type": "string"
+				},
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"STATS": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"FROMSTATS": {
+					"default": "",
+					"type": "filename"
+				},
+				"STATSOURCE": {
+					"default": "CUBE",
+					"type": "string"
+				}
+			},
+			{
+				"DIRECTION": {
+					"default": "COLUMN",
+					"type": "string"
+				},
+				"MODE": {
+					"default": "DIVIDE",
+					"type": "string"
+				},
+				"NORMALIZER": {
+					"default": "MEDIAN",
+					"type": "string"
+				},
+				"PRESERVE": {
+					"default": true,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "photomet",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"FROMPVL": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"CHNGPAR": {
+					"default": "None",
+					"type": "string"
+				}
+			},
+			{
+				"MAXEMISSION": {
+					"default": 90.0,
+					"type": "double"
+				},
+				"MAXINCIDENCE": {
+					"default": 90.0,
+					"type": "double"
+				},
+				"USEDEM": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"ANGLESOURCE": {
+					"default": "ELLIPSOID",
+					"type": "combo"
+				},
+				"EMISSION_ANGLE": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"EMISSION_ANGLE_FILE": {
+					"default": "",
+					"type": "cube"
+				},
+				"INCIDENCE_ANGLE": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"INCIDENCE_ANGLE_FILE": {
+					"default": "",
+					"type": "cube"
+				},
+				"PHASE_ANGLE": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"PHASE_ANGLE_FILE": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"B0": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"BH": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"CH": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"HG1": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"HG2": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"HH": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"K": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"KLIST": {
+					"default": "No List",
+					"type": "string"
+				},
+				"L": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"LLIST": {
+					"default": "No List",
+					"type": "string"
+				},
+				"PHASECURVELIST": {
+					"default": "No List",
+					"type": "string"
+				},
+				"PHASELIST": {
+					"default": "No List",
+					"type": "string"
+				},
+				"PHTNAME": {
+					"default": "FROMPVL",
+					"type": "combo"
+				},
+				"THETA": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"WH": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"ZEROB0STANDARD": {
+					"default": "READFROMPVL",
+					"type": "string"
+				}
+			},
+			{
+				"ATMNAME": {
+					"default": "NONE",
+					"type": "combo"
+				},
+				"BHA": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"HGA": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"HNORM": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"NULNEG": {
+					"default": "READFROMPVL",
+					"type": "string"
+				},
+				"TAU": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"TAUREF": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"WHA": {
+					"default": "None Specified",
+					"type": "string"
+				}
+			},
+			{
+				"ALBEDO": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"BSH1": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"D": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"E": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"F": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"G2": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"H": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"INCMAT": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"INCREF": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"NORMNAME": {
+					"default": "FROMPVL",
+					"type": "combo"
+				},
+				"THRESH": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"WL": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"XB1": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"XB2": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"XMUL": {
+					"default": "None Specified",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "highpass",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"LINES": {
+					"default": "",
+					"type": "integer"
+				},
+				"MINIMUM": {
+					"default": 1.0,
+					"type": "double"
+				},
+				"MINOPT": {
+					"default": "COUNT",
+					"type": "string"
+				},
+				"SAMPLES": {
+					"default": "",
+					"type": "integer"
+				}
+			},
+			{
+				"ADDBACK": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"HIGH": {
+					"default": "",
+					"type": "double"
+				},
+				"LOW": {
+					"default": "",
+					"type": "double"
+				},
+				"PROPAGATE": {
+					"default": true,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "isis2fits",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"BITTYPE": {
+					"default": "32BIT",
+					"type": "string"
+				}
+			},
+			{
+				"MAXIMUM": {
+					"default": "",
+					"type": "double"
+				},
+				"MAXPERCENT": {
+					"default": 99.5,
+					"type": "double"
+				},
+				"MINIMUM": {
+					"default": "",
+					"type": "double"
+				},
+				"MINPERCENT": {
+					"default": 0.5,
+					"type": "double"
+				},
+				"STRETCH": {
+					"default": "LINEAR",
+					"type": "string"
+				}
+			},
+			{
+				"INFO": {
+					"default": "NOMINAL",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "pixel2map",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"FROMLIST": {
+					"default": "",
+					"type": "filename"
+				},
+				"FROMTYPE": {
+					"default": "FROM",
+					"type": "string"
+				},
+				"MAP": {
+					"default": "$ISISROOT/appdata/templates/maps/sinusoidal.map",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"METHOD": {
+					"default": "CENTER",
+					"type": "string"
+				}
+			},
+			{
+				"PIXRES": {
+					"default": "CAMERA",
+					"type": "string"
+				},
+				"RESOLUTION": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"DEFAULTRANGE": {
+					"default": "MINIMIZE",
+					"type": "string"
+				},
+				"FOVRANGE": {
+					"default": "INSTANTANEOUS",
+					"type": "string"
+				},
+				"MAXLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MAXLON": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLON": {
+					"default": "",
+					"type": "double"
+				},
+				"NUMIFOV": {
+					"default": 3,
+					"type": "integer"
+				},
+				"TRIM": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"LONSEAM": {
+					"default": "AUTO",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "outline",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"BOUNDARY": {
+					"default": "",
+					"type": "double"
+				},
+				"CLEAR": {
+					"default": true,
+					"type": "boolean"
+				},
+				"EDGES": {
+					"default": true,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "noproj",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"MATCH": {
+					"default": "",
+					"type": "cube"
+				},
+				"SPECS": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"SOURCE": {
+					"default": "FROMMATCH",
+					"type": "string"
+				},
+				"SUMMINGMODE": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"INTERP": {
+					"default": "CUBICCONVOLUTION",
+					"type": "string"
+				},
+				"LINEEXP": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"SAMPEXP": {
+					"default": 0.0,
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "mosrange",
+		"parameters": [
+			{
+				"FROMLIST": {
+					"default": "",
+					"type": "filename"
+				},
+				"LOG": {
+					"default": "",
+					"type": "filename"
+				},
+				"MAP": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"LATTYPE": {
+					"default": "PLANETOCENTRIC",
+					"type": "string"
+				},
+				"LONDIR": {
+					"default": "POSITIVEEAST",
+					"type": "string"
+				},
+				"LONDOM": {
+					"default": "360",
+					"type": "string"
+				},
+				"PRECISION": {
+					"default": 12,
+					"type": "integer"
+				},
+				"PROJECTION": {
+					"default": "None",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "minmax",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"LINES": {
+					"default": 3,
+					"type": "integer"
+				},
+				"SAMPLES": {
+					"default": 3,
+					"type": "integer"
+				}
+			},
+			{
+				"FILTER": {
+					"default": "MIN",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "bit2bit",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"BITTYPE": {
+					"default": "32BIT",
+					"type": "string"
+				}
+			},
+			{
+				"CLIP": {
+					"default": "PERCENT",
+					"type": "string"
+				}
+			},
+			{
+				"MAXPER": {
+					"default": 99.5,
+					"type": "double"
+				},
+				"MAXVAL": {
+					"default": 255.0,
+					"type": "double"
+				},
+				"MINPER": {
+					"default": 0.5,
+					"type": "double"
+				},
+				"MINVAL": {
+					"default": 0.0,
+					"type": "double"
+				}
+			},
+			{
+				"STATS": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "topds4",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TEMPLATE": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"DATA": {
+					"default": "",
+					"type": "filename"
+				},
+				"EXTRAJSON": {
+					"default": "",
+					"type": "filename"
+				},
+				"EXTRAPVL": {
+					"default": "",
+					"type": "filename"
+				},
+				"EXTRAXML": {
+					"default": "",
+					"type": "filename"
+				}
+			}
+		]
+	},
+	{
+		"name": "findrx",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"REGDEF": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"MARK": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "map2map",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"MAP": {
+					"default": "$ISISROOT/appdata/templates/maps/sinusoidal.map",
+					"type": "filename"
+				},
+				"MATCHMAP": {
+					"default": false,
+					"type": "boolean"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"PIXRES": {
+					"default": "FROM",
+					"type": "string"
+				},
+				"RESOLUTION": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"DEFAULTRANGE": {
+					"default": "FROM",
+					"type": "string"
+				},
+				"MAXLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MAXLON": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLON": {
+					"default": "",
+					"type": "double"
+				},
+				"TRIM": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"INTERP": {
+					"default": "CUBICCONVOLUTION",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "tonematch",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"MATCH": {
+					"default": "",
+					"type": "cube"
+				},
+				"OUTSTATS": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"MINCOUNT": {
+					"default": 1000,
+					"type": "integer"
+				},
+				"POVERLAP": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "maptrim",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"MODE": {
+					"default": "TRIM",
+					"type": "string"
+				}
+			},
+			{
+				"MAXLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MAXLON": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"MINLON": {
+					"default": "",
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "dstripe",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"MODE": {
+					"default": "VERTICAL",
+					"type": "string"
+				}
+			},
+			{
+				"VHNL": {
+					"default": 1,
+					"type": "integer"
+				},
+				"VHNS": {
+					"default": "",
+					"type": "integer"
+				},
+				"VLNL": {
+					"default": "",
+					"type": "integer"
+				},
+				"VLNS": {
+					"default": 1,
+					"type": "integer"
+				}
+			},
+			{
+				"HHNL": {
+					"default": "",
+					"type": "integer"
+				},
+				"HHNS": {
+					"default": 1,
+					"type": "integer"
+				},
+				"HLNL": {
+					"default": 1,
+					"type": "integer"
+				},
+				"HLNS": {
+					"default": "",
+					"type": "integer"
+				}
+			},
+			{
+				"DELETENOISE": {
+					"default": true,
+					"type": "boolean"
+				},
+				"LPFNOISE": {
+					"default": "lowpass.noise.cub",
+					"type": "cube"
+				},
+				"NOISE": {
+					"default": "dstripe.noise.cub",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "skymap",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"MAP": {
+					"default": "$ISISROOT/appdata/templates/maps/simplecylindrical.map",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"DEFAULTSCALE": {
+					"default": "CAMERA",
+					"type": "string"
+				},
+				"SCALE": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"DEFAULTRANGE": {
+					"default": "CAMERA",
+					"type": "string"
+				},
+				"EDEC": {
+					"default": "",
+					"type": "double"
+				},
+				"ERA": {
+					"default": "",
+					"type": "double"
+				},
+				"SDEC": {
+					"default": "",
+					"type": "double"
+				},
+				"SRA": {
+					"default": "",
+					"type": "double"
+				},
+				"TRIM": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"INTERP": {
+					"default": "CUBICCONVOLUTION",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "algebra",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"FROM2": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"A": {
+					"default": 1.0,
+					"type": "double"
+				},
+				"B": {
+					"default": 1.0,
+					"type": "double"
+				},
+				"C": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"D": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"E": {
+					"default": 0.0,
+					"type": "double"
+				},
+				"OPERATOR": {
+					"default": "SUBTRACT",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "cubeit",
+		"parameters": [
+			{
+				"FROMLIST": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"PROPLAB": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "cosi",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"MAXINC": {
+					"default": 90.0,
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "divfilter",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"LINES": {
+					"default": "",
+					"type": "integer"
+				},
+				"SAMPLES": {
+					"default": "",
+					"type": "integer"
+				}
+			},
+			{
+				"HIGH": {
+					"default": "",
+					"type": "double"
+				},
+				"LOW": {
+					"default": "",
+					"type": "double"
+				},
+				"MINIMUM": {
+					"default": 1,
+					"type": "integer"
+				},
+				"MINOPT": {
+					"default": "COUNT",
+					"type": "string"
+				}
+			},
+			{
+				"PROPAGATE": {
+					"default": true,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "shadowtau",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"B0": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"BH": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"CH": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"HG1": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"HG2": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"HH": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"K": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"L": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"PHTNAME": {
+					"default": "HAPKEHEN",
+					"type": "combo"
+				},
+				"THETA": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"WH": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"ZEROB0STANDARD": {
+					"default": "TRUE",
+					"type": "string"
+				}
+			},
+			{
+				"ATMNAME": {
+					"default": "HAPKEATM1",
+					"type": "combo"
+				},
+				"BHA": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"HGA": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"HNORM": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"WHA": {
+					"default": "None Specified",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "gradient",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"GRADTYPE": {
+					"default": "SOBEL",
+					"type": "string"
+				},
+				"METHOD": {
+					"default": "APPROXIMATE",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "camstats",
+		"parameters": [
+			{
+				"APPEND": {
+					"default": false,
+					"type": "boolean"
+				},
+				"ATTACH": {
+					"default": false,
+					"type": "boolean"
+				},
+				"FORMAT": {
+					"default": "PVL",
+					"type": "string"
+				},
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"LINC": {
+					"default": 1,
+					"type": "integer"
+				},
+				"SINC": {
+					"default": 1,
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "errors",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "\n                      print.prt\n                    ",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "\n                        errors.prt\n                    ",
+					"type": "filename"
+				}
+			},
+			{
+				"APPEND": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "photemplate",
+		"parameters": [
+			{
+				"FROMPVL": {
+					"default": "",
+					"type": "filename"
+				},
+				"TOPVL": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"B0": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"BH": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"CH": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"HG1": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"HG2": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"HH": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"K": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"KLIST": {
+					"default": "No List",
+					"type": "string"
+				},
+				"L": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"LLIST": {
+					"default": "No List",
+					"type": "string"
+				},
+				"PHASECURVELIST": {
+					"default": "No List",
+					"type": "string"
+				},
+				"PHASELIST": {
+					"default": "No List",
+					"type": "string"
+				},
+				"PHTNAME": {
+					"default": "FROMPVL",
+					"type": "combo"
+				},
+				"THETA": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"WH": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"ZEROB0STANDARD": {
+					"default": "TRUE",
+					"type": "string"
+				}
+			},
+			{
+				"ATMNAME": {
+					"default": "NONE",
+					"type": "combo"
+				},
+				"BHA": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"HGA": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"HNORM": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"NULNEG": {
+					"default": "READFROMPVL",
+					"type": "string"
+				},
+				"TAU": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"TAUREF": {
+					"default": "None Specified",
+					"type": "string"
+				},
+				"WHA": {
+					"default": "None Specified",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "mapgrid",
+		"parameters": [
+			{
+				"MAPFILE": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"BOUNDED": {
+					"default": true,
+					"type": "boolean"
+				},
+				"ENDLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"ENDLON": {
+					"default": "",
+					"type": "double"
+				},
+				"LATINCREMENT": {
+					"default": 0.01,
+					"type": "double"
+				},
+				"LATSPACING": {
+					"default": 10.0,
+					"type": "double"
+				},
+				"LONINCREMENT": {
+					"default": 0.01,
+					"type": "double"
+				},
+				"LONSPACING": {
+					"default": 10.0,
+					"type": "double"
+				},
+				"STARTLAT": {
+					"default": "",
+					"type": "double"
+				},
+				"STARTLON": {
+					"default": "",
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "handmos",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"MOSAIC": {
+					"default": "",
+					"type": "cube"
+				},
+				"PRIORITY": {
+					"default": "ONTOP",
+					"type": "string"
+				}
+			},
+			{
+				"CRITERIA": {
+					"default": "LESSER",
+					"type": "string"
+				},
+				"KEYNAME": {
+					"default": "OriginalBand",
+					"type": "string"
+				},
+				"KEYVALUE": {
+					"default": "1",
+					"type": "string"
+				},
+				"NUMBER": {
+					"default": 1,
+					"type": "integer"
+				},
+				"TYPE": {
+					"default": "\n            BANDNUM\n          ",
+					"type": "string"
+				}
+			},
+			{
+				"INBAND": {
+					"default": 1,
+					"type": "integer"
+				},
+				"INLINE": {
+					"default": 1,
+					"type": "integer"
+				},
+				"INSAMPLE": {
+					"default": 1,
+					"type": "integer"
+				},
+				"OUTBAND": {
+					"default": 1,
+					"type": "integer"
+				},
+				"OUTLINE": {
+					"default": 1,
+					"type": "integer"
+				},
+				"OUTSAMPLE": {
+					"default": 1,
+					"type": "integer"
+				}
+			},
+			{
+				"HIGHSATURATION": {
+					"default": false,
+					"type": "boolean"
+				},
+				"LOWSATURATION": {
+					"default": false,
+					"type": "boolean"
+				},
+				"MATCHBANDBIN": {
+					"default": false,
+					"type": "boolean"
+				},
+				"MATCHDEM": {
+					"default": false,
+					"type": "boolean"
+				},
+				"NULL": {
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			{
+				"CREATE": {
+					"default": "NO",
+					"type": "string"
+				},
+				"NBANDS": {
+					"default": "",
+					"type": "integer"
+				},
+				"NLINES": {
+					"default": "",
+					"type": "integer"
+				},
+				"NSAMPLES": {
+					"default": "",
+					"type": "integer"
+				},
+				"PROPAGATE": {
+					"default": true,
+					"type": "boolean"
+				},
+				"TRACK": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "getkey",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"GRPNAME": {
+					"default": "",
+					"type": "string"
+				},
+				"KEYINDEX": {
+					"default": "",
+					"type": "integer"
+				},
+				"KEYWORD": {
+					"default": "",
+					"type": "string"
+				},
+				"OBJNAME": {
+					"default": "",
+					"type": "string"
+				}
+			},
+			{
+				"RECURSIVE": {
+					"default": false,
+					"type": "boolean"
+				},
+				"UPPER": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "lowpass",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"LINES": {
+					"default": "",
+					"type": "integer"
+				},
+				"SAMPLES": {
+					"default": "",
+					"type": "integer"
+				}
+			},
+			{
+				"HIGH": {
+					"default": "",
+					"type": "double"
+				},
+				"LOW": {
+					"default": "",
+					"type": "double"
+				},
+				"MINIMUM": {
+					"default": 1.0,
+					"type": "double"
+				},
+				"MINOPT": {
+					"default": "COUNT",
+					"type": "string"
+				},
+				"REPLACEMENT": {
+					"default": "CENTER",
+					"type": "string"
+				}
+			},
+			{
+				"FILTER": {
+					"default": "ALL",
+					"type": "string"
+				}
+			},
+			{
+				"HIS": {
+					"default": true,
+					"type": "boolean"
+				},
+				"HRS": {
+					"default": true,
+					"type": "boolean"
+				},
+				"LIS": {
+					"default": true,
+					"type": "boolean"
+				},
+				"LRS": {
+					"default": true,
+					"type": "boolean"
+				},
+				"NULL": {
+					"default": true,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "trim",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"BOTTOM": {
+					"default": 0,
+					"type": "integer"
+				},
+				"LEFT": {
+					"default": 0,
+					"type": "integer"
+				},
+				"RIGHT": {
+					"default": 0,
+					"type": "integer"
+				},
+				"TOP": {
+					"default": 0,
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "remrx",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"LDIM": {
+					"default": 9,
+					"type": "integer"
+				},
+				"SDIM": {
+					"default": 9,
+					"type": "integer"
+				}
+			},
+			{
+				"ACTION": {
+					"default": "BILINEAR",
+					"type": "string"
+				},
+				"RESVALID": {
+					"default": false,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "cropspecial",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"HIS": {
+					"default": false,
+					"type": "boolean"
+				},
+				"HRS": {
+					"default": false,
+					"type": "boolean"
+				},
+				"LIS": {
+					"default": false,
+					"type": "boolean"
+				},
+				"LRS": {
+					"default": false,
+					"type": "boolean"
+				},
+				"NULL": {
+					"default": true,
+					"type": "boolean"
+				}
+			}
+		]
+	},
+	{
+		"name": "table2cube",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"FIELD": {
+					"default": "",
+					"type": "string"
+				},
+				"NUMELEM": {
+					"default": "",
+					"type": "integer"
+				},
+				"NUMREC": {
+					"default": "",
+					"type": "integer"
+				},
+				"STARTELEM": {
+					"default": 1,
+					"type": "integer"
+				},
+				"STARTREC": {
+					"default": 1,
+					"type": "integer"
+				},
+				"TABLENAME": {
+					"default": "",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "stats",
+		"parameters": [
+			{
+				"APPEND": {
+					"default": true,
+					"type": "boolean"
+				},
+				"FORMAT": {
+					"default": "PVL",
+					"type": "string"
+				},
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"VALIDMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"VALIDMIN": {
+					"default": "",
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "spechighpass",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"BANDS": {
+					"default": "",
+					"type": "integer"
+				}
+			},
+			{
+				"HIGH": {
+					"default": "",
+					"type": "double"
+				},
+				"LOW": {
+					"default": "",
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "spicefit",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "interestcube",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"PVL": {
+					"default": "",
+					"type": "filename"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "segment",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"NL": {
+					"default": "",
+					"type": "integer"
+				},
+				"OVERLAP": {
+					"default": "",
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "cubediff",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"FROM2": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"TOLERANCE": {
+					"default": "",
+					"type": "double"
+				}
+			},
+			{
+				"COUNT": {
+					"default": 100,
+					"type": "integer"
+				},
+				"OUTPUTDIFFS": {
+					"default": false,
+					"type": "boolean"
+				},
+				"PRECISION": {
+					"default": 3,
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "footprintmerge",
+		"parameters": [
+			{
+				"FROMLIST": {
+					"default": "",
+					"type": "filename"
+				},
+				"MODE": {
+					"default": "BRIEF",
+					"type": "string"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			}
+		]
+	},
+	{
+		"name": "kuwahara",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"LINES": {
+					"default": 5,
+					"type": "integer"
+				},
+				"SAMPLES": {
+					"default": 5,
+					"type": "integer"
+				}
+			}
+		]
+	},
+	{
+		"name": "ratio",
+		"parameters": [
+			{
+				"DENOMINATOR": {
+					"default": "",
+					"type": "cube"
+				},
+				"NUMERATOR": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			}
+		]
+	},
+	{
+		"name": "specpix",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"HISMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"HISMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"HRSMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"HRSMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"LISMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"LISMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"LRSMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"LRSMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"NULLMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"NULLMIN": {
+					"default": "",
+					"type": "double"
+				}
+			}
+		]
+	},
+	{
+		"name": "map2cam",
+		"parameters": [
+			{
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"MATCH": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "cube"
+				}
+			},
+			{
+				"INTERP": {
+					"default": "CUBICCONVOLUTION",
+					"type": "string"
+				}
+			}
+		]
+	},
+	{
+		"name": "isis2std",
+		"parameters": [
+			{
+				"ALPHA": {
+					"default": "",
+					"type": "cube"
+				},
+				"BLUE": {
+					"default": "",
+					"type": "cube"
+				},
+				"FROM": {
+					"default": "",
+					"type": "cube"
+				},
+				"GREEN": {
+					"default": "",
+					"type": "cube"
+				},
+				"MODE": {
+					"default": "GRAYSCALE",
+					"type": "string"
+				},
+				"RED": {
+					"default": "",
+					"type": "cube"
+				},
+				"TO": {
+					"default": "",
+					"type": "filename"
+				}
+			},
+			{
+				"BITTYPE": {
+					"default": "8BIT",
+					"type": "string"
+				},
+				"COMPRESSION": {
+					"default": "NONE",
+					"type": "string"
+				},
+				"FORMAT": {
+					"default": "PNG",
+					"type": "string"
+				},
+				"QUALITY": {
+					"default": 100,
+					"type": "integer"
+				}
+			},
+			{
+				"AMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"AMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"BMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"BMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"GMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"GMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"MAXIMUM": {
+					"default": "",
+					"type": "double"
+				},
+				"MAXPERCENT": {
+					"default": 99.5,
+					"type": "double"
+				},
+				"MINIMUM": {
+					"default": "",
+					"type": "double"
+				},
+				"MINPERCENT": {
+					"default": 0.5,
+					"type": "double"
+				},
+				"RMAX": {
+					"default": "",
+					"type": "double"
+				},
+				"RMIN": {
+					"default": "",
+					"type": "double"
+				},
+				"STRETCH": {
+					"default": "LINEAR",
+					"type": "string"
+				}
+			}
+		]
+	}
+]

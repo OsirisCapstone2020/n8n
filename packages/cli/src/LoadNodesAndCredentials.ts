@@ -18,6 +18,7 @@ import {
 import * as glob from 'glob-promise';
 import * as path from 'path';
 import { promisify } from 'util';
+import { JsonHttpNode } from './JsonHttpNode';
 
 const fsAccessAsync = promisify(fsAccess);
 const fsReaddirAsync = promisify(fsReaddir);
@@ -160,12 +161,23 @@ class LoadNodesAndCredentialsClass {
 		let tempNode: INodeType;
 		let fullNodeName: string;
 
-		const tempModule = require(filePath);
-		try {
-			tempNode = new tempModule[nodeName]() as INodeType;
-		} catch (error) {
-			console.error(`Error loading node "${nodeName}" from: "${filePath}"`);
-			throw error;
+		if (filePath.endsWith('json')) {
+			try {
+				tempNode = JsonHttpNode.fromFile(filePath);
+			}
+			catch (e) {
+				console.error(`Error loading node "${nodeName}" from: "${filePath}"`);
+				throw e;
+			}
+		}
+		else {
+			const tempModule = require(filePath);
+			try {
+				tempNode = new tempModule[nodeName]() as INodeType;
+			} catch (error) {
+				console.error(`Error loading node "${nodeName}" from: "${filePath}"`);
+				throw error;
+			}
 		}
 
 		fullNodeName = packageName + '.' + tempNode.description.name;
