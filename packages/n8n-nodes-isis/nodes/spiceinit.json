@@ -1,0 +1,15 @@
+{
+	"name": "spiceinit",
+	"displayName": "SpiceInit",
+	"description": "",
+	"properties": [
+		{
+			"name": "web",
+			"displayName": "web",
+			"type": "boolean",
+			"default": false,
+			"required": true
+		}
+	],
+	"url": "http://127.0.0.1:8080"
+}

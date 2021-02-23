@@ -415,8 +415,8 @@ export interface IWorkflowExecutionDataProcessWithExecution extends IWorkflowExe
 export interface NodeJSONProperty {
 	name: string;
 	displayName: string;
-	type: "string" | "number";
-	default: string | number;
+	type: "string" | "number" | "boolean";
+	default: string | number | boolean;
 	required: boolean;
 }
 

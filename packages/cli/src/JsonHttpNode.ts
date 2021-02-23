@@ -46,7 +46,9 @@ export class JsonHttpNode implements INodeType {
 			description: nodeJson.description,
 			version: 1,
 			group: ['transform'],
-			defaults: {},
+			defaults: {
+				name: nodeJson.displayName,
+			},
 			inputs: ['main'],
 			outputs: ['main'],
 			properties: [
