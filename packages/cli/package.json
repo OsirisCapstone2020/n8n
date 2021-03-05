@@ -109,7 +109,7 @@
         "n8n-editor-ui": "~0.78.0",
         "n8n-nodes-base": "~0.105.0",
         "n8n-workflow": "~0.52.0",
-        "n8n-nodes-isis": "~0.1.0",
+        "n8n-nodes-isis": "0.1.0",
         "oauth-1.0a": "^2.2.6",
         "open": "^7.0.0",
         "pg": "^8.3.0",
