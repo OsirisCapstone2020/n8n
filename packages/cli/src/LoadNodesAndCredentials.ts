@@ -18,6 +18,7 @@ import {
 import * as glob from 'glob-promise';
 import * as path from 'path';
 import { promisify } from 'util';
+import { JsonHttpNode } from './JsonHttpNode';
 
 const fsAccessAsync = promisify(fsAccess);
 const fsReaddirAsync = promisify(fsReaddir);
@@ -33,6 +34,7 @@ class LoadNodesAndCredentialsClass {
 	} = {};
 
 	excludeNodes: string[] | undefined = undefined;
+	includeNodes: string[] | undefined = undefined;
 
 	nodeModulesPath = '';
 
@@ -63,6 +65,7 @@ class LoadNodesAndCredentialsClass {
 		}
 
 		this.excludeNodes = config.get('nodes.exclude');
+		this.includeNodes = config.get('nodes.include');
 
 		// Get all the installed packages which contain n8n nodes
 		const packages = await this.getN8nNodePackages();
@@ -158,12 +161,23 @@ class LoadNodesAndCredentialsClass {
 		let tempNode: INodeType;
 		let fullNodeName: string;
 
-		const tempModule = require(filePath);
-		try {
-			tempNode = new tempModule[nodeName]() as INodeType;
-		} catch (error) {
-			console.error(`Error loading node "${nodeName}" from: "${filePath}"`);
-			throw error;
+		if (filePath.endsWith('.json')) {
+			try {
+				tempNode = JsonHttpNode.fromFile(filePath);
+			}
+			catch (e) {
+				console.error(`Error loading node "${nodeName}" from: "${filePath}"`);
+				throw e;
+			}
+		}
+		else {
+			const tempModule = require(filePath);
+			try {
+				tempNode = new tempModule[nodeName]() as INodeType;
+			} catch (error) {
+				console.error(`Error loading node "${nodeName}" from: "${filePath}"`);
+				throw error;
+			}
 		}
 
 		fullNodeName = packageName + '.' + tempNode.description.name;
@@ -173,6 +187,10 @@ class LoadNodesAndCredentialsClass {
 			tempNode.description.icon.startsWith('file:')) {
 			// If a file icon gets used add the full path
 			tempNode.description.icon = 'file:' + path.join(path.dirname(filePath), tempNode.description.icon.substr(5));
+		}
+
+		if (this.includeNodes !== undefined && !this.includeNodes.includes(fullNodeName)) {
+			return;
 		}
 
 		// Check if the node should be skiped

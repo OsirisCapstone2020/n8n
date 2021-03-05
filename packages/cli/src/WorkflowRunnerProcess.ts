@@ -2,6 +2,7 @@
 import {
 	CredentialsOverwrites,
 	CredentialTypes,
+	Db,
 	ExternalHooks,
 	IWorkflowExecutionDataProcessWithExecution,
 	NodeTypes,
@@ -15,15 +16,20 @@ import {
 
 import {
 	IDataObject,
+	IExecuteData,
 	IExecutionError,
 	INodeType,
 	INodeTypeData,
 	IRun,
+	IRunExecutionData,
 	ITaskData,
 	IWorkflowExecuteHooks,
 	Workflow,
 	WorkflowHooks,
 } from 'n8n-workflow';
+
+import * as config from '../config';
+import { JsonHttpNode } from './JsonHttpNode';
 
 export class WorkflowRunnerProcess {
 	data: IWorkflowExecutionDataProcessWithExecution | undefined;
@@ -45,12 +51,21 @@ export class WorkflowRunnerProcess {
 			className = this.data.nodeTypeData[nodeTypeName].className;
 
 			filePath = this.data.nodeTypeData[nodeTypeName].sourcePath;
-			const tempModule = require(filePath);
+			if (filePath.endsWith('.json')) {
+				try {
+					tempNode = JsonHttpNode.fromFile(filePath);
+				} catch (error) {
+					throw new Error(`Error loading node "${nodeTypeName}" from: "${filePath}"`);
+				}
+			}
+			else {
+				const tempModule = require(filePath);
 
-			try {
-				tempNode = new tempModule[className]() as INodeType;
-			} catch (error) {
-				throw new Error(`Error loading node "${nodeTypeName}" from: "${filePath}"`);
+				try {
+					tempNode = new tempModule[className]() as INodeType;
+				} catch (error) {
+					throw new Error(`Error loading node "${nodeTypeName}" from: "${filePath}"`);
+				}
 			}
 
 			nodeTypesData[nodeTypeName] = {
@@ -73,6 +88,19 @@ export class WorkflowRunnerProcess {
 		// Load all external hooks
 		const externalHooks = ExternalHooks();
 		await externalHooks.init();
+
+		// This code has been split into 3 ifs just to make it easier to understand
+		// Can be made smaller but in the end it will make it impossible to read.
+		if (inputData.workflowData.settings !== undefined && inputData.workflowData.settings.saveExecutionProgress === true) {
+			// Workflow settings specifying it should save
+			await Db.init();
+		} else if (inputData.workflowData.settings !== undefined && inputData.workflowData.settings.saveExecutionProgress !== false && config.get('executions.saveExecutionProgress') as boolean) {
+			// Workflow settings not saying anything about saving but default settings says so
+			await Db.init();
+		} else if (inputData.workflowData.settings === undefined && config.get('executions.saveExecutionProgress') as boolean) {
+			// Workflow settings not saying anything about saving but default settings says so
+			await Db.init();
+		}
 
 		this.workflow = new Workflow({ id: this.data.workflowData.id as string | undefined, name: this.data.workflowData.name, nodes: this.data.workflowData!.nodes, connections: this.data.workflowData!.connections, active: this.data.workflowData!.active, nodeTypes, staticData: this.data.workflowData!.staticData, settings: this.data.workflowData!.settings});
 		const additionalData = await WorkflowExecuteAdditionalData.getBase(this.data.credentials);
@@ -134,8 +162,8 @@ export class WorkflowRunnerProcess {
 				},
 			],
 			nodeExecuteAfter: [
-				async (nodeName: string, data: ITaskData): Promise<void> => {
-					this.sendHookToParentProcess('nodeExecuteAfter', [nodeName, data]);
+				async (nodeName: string, data: ITaskData, executionData: IRunExecutionData): Promise<void> => {
+					this.sendHookToParentProcess('nodeExecuteAfter', [nodeName, data, executionData]);
 				},
 			],
 			workflowExecuteBefore: [
@@ -152,6 +180,9 @@ export class WorkflowRunnerProcess {
 
 		const preExecuteFunctions = WorkflowExecuteAdditionalData.hookFunctionsPreExecute();
 		for (const key of Object.keys(preExecuteFunctions)) {
+			if (hookFunctions[key] === undefined) {
+				hookFunctions[key] = [];
+			}
 			hookFunctions[key]!.push.apply(hookFunctions[key], preExecuteFunctions[key]);
 		}
 
