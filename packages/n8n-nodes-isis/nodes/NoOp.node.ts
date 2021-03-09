@@ -14,7 +14,7 @@ export class NoOp implements INodeType {
 		description: 'No operation',
 		defaults: {
 			name: 'NoOp',
-			color: '#449922',
+			color: '#449922'
 		},
 		inputs: ['main'],
 		outputs: ['main'],
