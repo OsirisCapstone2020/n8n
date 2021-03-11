@@ -1,0 +1,22 @@
+{
+    "name": "cam2map",
+    "displayName": "Cam2Map",
+    "description": "",
+    "properties": [
+        {
+            "name": "MAP",
+            "displayName":"map",
+            "type": "filename",
+            "default": "$ISISROOT/appdata/templates/maps/sinusoidal.map",
+            "required": true
+        },
+        {
+            "name": "MATCHMAP",
+            "displayName": "match map",
+            "type": "boolean",
+            "default": false,
+            "required": true
+        }
+    ],
+    "url": "http://127.0.0.1:8080"
+}
