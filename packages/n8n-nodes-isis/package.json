@@ -32,7 +32,11 @@
       "dist/nodes/SendToStorage.node.js",
       "dist/nodes/NoOp.node.js",
       "nodes/mroctx2isis.json",
-      "nodes/spiceinit.json"
+      "nodes/spiceinit.json",
+      "nodes/ctxcal.json",
+      "nodes/ctxevenodd.json",
+      "nodes/cam2map.json",
+      "nodes/isis2std.json"
     ]
   },
   "devDependencies": {
