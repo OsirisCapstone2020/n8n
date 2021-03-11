@@ -13,7 +13,6 @@ export class JsonHttpNode implements INodeType {
 		console.log("GOT HERE");
 		// const qParams = new URLSearchParams();
 		// const inputData = { ...this.getInputData() };
-		// const node = this.getNode();
 		// const url = this.getNodeParameter("url") as string;
 		//
 		// console.log(JSON.stringify(node));
@@ -23,7 +22,7 @@ export class JsonHttpNode implements INodeType {
 		// });
 
 		// const response: IDataObject = await this.helpers.request({
-		// 	url: node.url,
+		// 	url: url,
 		// 	qs: qParams.toString(),
 		// 	method: "POST",
 		// 	json: true,
