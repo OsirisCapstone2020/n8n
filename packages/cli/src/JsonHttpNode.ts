@@ -10,28 +10,31 @@ export class JsonHttpNode implements INodeType {
 	description: INodeTypeDescription;
 
 	async executeSingle(this: IExecuteSingleFunctions): Promise<INodeExecutionData> {
-		console.log("GOT HERE");
-		const qParams = new URLSearchParams();
-		const inputData = { ...this.getInputData() };
-		const url = this.getNodeParameter("url") as string;
-		
-		console.log(JSON.stringify(node));
+		const inputData = this.getInputData();
+		const node = this.getNode();
 
-		Object.keys(node.parameters).forEach((qKey) => {
-			qParams.append(qKey, JSON.stringify(this.getNodeParameter(qKey)));
-		});
+		const { url, ...args } = node.parameters;
+		const from = inputData.json['from'];
 
-		const response: IDataObject = await this.helpers.request({
-			url: url,
-			qs: qParams.toString(),
-			method: "POST",
+		const outputData = { ...inputData };
+		if (!outputData.json) {
+			outputData.json = {};
+		}
+
+		const apiResponse = await this.helpers.request({
+			method: 'POST',
+			uri: url,
 			json: true,
-			body: inputData.json,
+			body: { from, args },
 		});
-		
-		return Object.assign({}, inputData, { json: response });
 
-		return Object.assign({}, this.getInputData());
+		if (apiResponse.err) {
+			throw new Error(apiResponse.err);
+		}
+
+		outputData.json['from'] = apiResponse.to;
+
+		return outputData;
 	}
 
 	static fromFile(filePath: string): JsonHttpNode {

@@ -28,7 +28,6 @@
   "n8n": {
     "credentials": [],
     "nodes": [
-      "dist/nodes/PullInput.node.js",
       "dist/nodes/SendToStorage.node.js",
       "dist/nodes/NoOp.node.js",
       "nodes/mroctx2isis.json",
