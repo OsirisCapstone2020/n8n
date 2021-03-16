@@ -9,14 +9,7 @@
             "type": "filename",
             "default": "$ISISROOT/appdata/templates/maps/sinusoidal.map",
             "required": true
-        },
-        {
-            "name": "MATCHMAP",
-            "displayName": "match map",
-            "type": "boolean",
-            "default": false,
-            "required": true
         }
     ],
-    "url": "http://127.0.0.1:8080"
+    "url": "http://127.0.0.1:8080/cam2map"
 }
