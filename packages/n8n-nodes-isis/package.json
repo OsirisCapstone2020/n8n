@@ -35,7 +35,8 @@
       "nodes/ctxcal.json",
       "nodes/ctxevenodd.json",
       "nodes/cam2map.json",
-      "nodes/isis2std.json"
+      "nodes/isis2std.json",
+      "nodes/email.json"
     ]
   },
   "devDependencies": {

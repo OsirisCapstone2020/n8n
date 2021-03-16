@@ -1,0 +1,22 @@
+{
+	"name": "email",
+	"displayName": "Email Output",
+	"description": "",
+	"properties": [
+		{
+			"name": "recipient",
+			"displayName": "Recipient",
+			"type": "string",
+			"default": "",
+			"required": true
+		},
+		{
+			"name": "file_name",
+			"displayName": "File name",
+			"type": "string",
+			"default": "",
+			"required": true
+		}
+	],
+	"url": "http://127.0.0.1:8080/email"
+}
