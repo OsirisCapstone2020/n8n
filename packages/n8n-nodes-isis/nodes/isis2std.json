@@ -3,7 +3,33 @@
     "displayName": "isis2std",
     "description": "",
     "properties": [
-
+			{
+				"name": "file_type",
+				"displayName": "File Type",
+				"type": "options",
+				"options": [
+					{
+						"name": "JPEG",
+						"value": "jpeg"
+					},
+					{
+						"name": "TIF",
+						"value": "tif"
+					},
+					{
+						"name": "PNG",
+						"value": "png"
+					},
+					{
+						"name": "BMP",
+						"value": "bmp"
+					},
+					{
+						"name": "JPEG 2000",
+						"value": "jp2"
+					}
+				]
+			}
     ],
     "url": "http://127.0.0.1:8000/isis2std"
 }
