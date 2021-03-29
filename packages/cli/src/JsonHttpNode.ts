@@ -53,7 +53,7 @@ export class JsonHttpNode implements INodeType {
 				name: nodeJson.displayName,
 			},
 			inputs: ['main'],
-			outputs: ['main'],
+			outputs: nodeJson.outputs ? nodeJson.outputs : ['main'],
 			properties: [
 				{
 					name: "url",

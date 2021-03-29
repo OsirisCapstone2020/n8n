@@ -1,0 +1,7 @@
+{
+	"name": "cog",
+	"displayName": "COG",
+	"description": "Convert a TIFF to a Cloud-Optimized GeoTIFF",
+	"properties": [],
+	"url": "http://127.0.0.1:8080/cog"
+}
