@@ -44,6 +44,7 @@ export class JsonHttpNode implements INodeType {
 
 		node.description = {
 			name: nodeJson.name,
+			icon: nodeJson.icon ? nodeJson.icon : '',
 			displayName: nodeJson.displayName,
 			description: nodeJson.description,
 			version: 1,
@@ -52,7 +53,7 @@ export class JsonHttpNode implements INodeType {
 				name: nodeJson.displayName,
 			},
 			inputs: ['main'],
-			outputs: ['main'],
+			outputs: nodeJson.outputs ? nodeJson.outputs : ['main'],
 			properties: [
 				{
 					name: "url",

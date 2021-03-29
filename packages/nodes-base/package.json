@@ -31,7 +31,6 @@
     ],
     "nodes": [
       "dist/nodes/Cron.node.js",
-      "dist/nodes/EmailSend.node.js",
       "dist/nodes/If.node.js",
       "dist/nodes/Start.node.js"
     ]

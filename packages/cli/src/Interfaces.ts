@@ -424,6 +424,8 @@ export interface NodeJSON {
 	name: string;
 	displayName: string;
 	description: string;
+	icon?: string;
 	properties: NodeJSONProperty[];
+	outputs?: string[];
 	url: string;
 }
