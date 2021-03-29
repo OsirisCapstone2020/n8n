@@ -1,6 +1,7 @@
 {
 	"name": "email",
 	"displayName": "Email Output",
+	"icon": "fa:envelope",
 	"description": "",
 	"properties": [
 		{
