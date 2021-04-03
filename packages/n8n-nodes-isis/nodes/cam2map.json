@@ -2,6 +2,87 @@
     "name": "cam2map",
     "displayName": "Cam2Map",
     "description": "",
-    "properties": [],
+    "properties": [
+			{
+				"name": "projection",
+				"displayName": "Projection name",
+				"default": "",
+				"required": true,
+				"type": "options",
+				"options": [
+					{
+						"name": "Sinusoidal",
+						"value": ""
+					},
+					{
+						"name": "Mercator",
+						"value": "mercator"
+					},
+					{
+						"name": "Orthographic",
+						"value": "orthographic"
+					},
+					{
+						"name": "Polar stereographic",
+						"value": "polarstereographic"
+					},
+					{
+						"name": "Simple cylindrical",
+						"value": "simplecylindrical"
+					},
+					{
+						"name": "Equirectangular",
+						"value": "equirectangular"
+					},
+					{
+						"name": "Lambert Azimuthal Equal-Area",
+						"value": "lambertazimuthalequalarea"
+					},
+					{
+						"name": "Oblique cylindrical",
+						"value": "obliquecylindrical"
+					},
+					{
+						"name": "Point perspective",
+						"value": "pointperspective"
+					},
+					{
+						"name": "Robinson",
+						"value": "robinson"
+					}
+				]
+			},
+			{
+				"name": "extra_args",
+				"displayName": "Projection arguments",
+				"default": [],
+				"required": false,
+				"type": "fixedCollection",
+				"typeOptions": {
+					"multipleValues": true,
+					"multipleValueButtonText": "Add argument"
+				},
+				"options": [
+					{
+						"name": "args",
+						"displayName": "Arguments",
+						"values": [
+							{
+								"displayName": "Argument name",
+								"name": "arg_key",
+								"type": "string",
+								"default": null
+							},
+							{
+								"displayName": "Argument value",
+								"name": "arg_val",
+								"type": "string",
+								"default": null
+							}
+						]
+					}
+				]
+			}
+		],
     "url": "http://127.0.0.1:8080/cam2map"
 }
