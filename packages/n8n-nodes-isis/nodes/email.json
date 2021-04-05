@@ -10,13 +10,6 @@
 			"type": "string",
 			"default": "",
 			"required": true
-		},
-		{
-			"name": "file_name",
-			"displayName": "File name",
-			"type": "string",
-			"default": "",
-			"required": true
 		}
 	],
 	"outputs": [],
