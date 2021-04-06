@@ -5,6 +5,7 @@ import {
 } from 'n8n-workflow';
 import { NodeJSON } from './Interfaces';
 import * as fs from 'fs';
+import config = require('../config');
 
 export class JsonHttpNode implements INodeType {
 	description: INodeTypeDescription;
@@ -59,7 +60,7 @@ export class JsonHttpNode implements INodeType {
 					name: "url",
 					displayName: "",
 					type: "hidden",
-					default: nodeJson.url,
+					default: `${config.getProperties().osirisApiUrl}/${nodeJson.name}`,
 					required: true,
 				},
 				...nodeJson.properties,

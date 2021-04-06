@@ -4,7 +4,11 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 const config = convict({
-
+	osirisApiUrl: {
+		doc: 'URL to Osiris ISIS API',
+		default: 'http://127.0.0.1:8080',
+		env: 'OSIRIS_API',
+	},
 	database: {
 		type: {
 			doc: 'Type of database to use',
@@ -471,7 +475,7 @@ const config = convict({
 			doc: 'Disable production webhooks from main process. This helps ensures no http traffic load to main process when using webhook-specific processes.',
 		},
 		skipWebhoooksDeregistrationOnShutdown: {
-			/** 
+			/**
 			 * Longer explanation: n8n deregisters webhooks on shutdown / deactivation
 			 * and registers on startup / activation. If we skip
 			 * deactivation on shutdown, webhooks will remain active on 3rd party services.

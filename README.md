@@ -17,8 +17,12 @@ Build:
 $ npm run build
 ```
 
+Set the URL for the backend:
+```
+$ export OSIRIS_API=http://127.0.0.1:8080
+```
+
 Start:
 ```
 $ npm run start
 ```
-
