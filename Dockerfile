@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:12-buster
 
 COPY . /app
 RUN useradd -s /bin/bash -m n8n && \
