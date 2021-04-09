@@ -39,8 +39,12 @@ export class Start implements INodeType {
 	};
 
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
-		const inputUrls = this.getNodeParameter(Start.USER_PARAM_INPUT_FILE, 0);
+		const inputUrls = this.getNodeParameter(Start.USER_PARAM_INPUT_FILE, 0) as string[];
 		const outputData: INodeExecutionData[] = [];
+
+		if (inputUrls.length === 0) {
+			throw new Error('Specify one or more input files');
+		}
 
 		if (!process.env.OSIRIS_API) {
 			throw new Error('API URL is not set in OSIRIS_API!');
