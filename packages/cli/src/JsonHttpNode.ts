@@ -8,7 +8,7 @@ import * as fs from 'fs';
 import config = require('../config');
 
 export class JsonHttpNode implements INodeType {
-	private static readonly REQUEST_TIMEOUT = 3600;
+	private static readonly REQUEST_TIMEOUT_MILLIS = 3600000;
 
 	description: INodeTypeDescription;
 
@@ -29,7 +29,7 @@ export class JsonHttpNode implements INodeType {
 			uri: url,
 			json: true,
 			body: { from, args },
-			timeout: JsonHttpNode.REQUEST_TIMEOUT,
+			timeout: JsonHttpNode.REQUEST_TIMEOUT_MILLIS,
 		});
 
 		if (apiResponse.err) {
