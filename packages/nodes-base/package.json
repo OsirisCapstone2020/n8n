@@ -26,9 +26,7 @@
     "dist"
   ],
   "n8n": {
-    "credentials": [
-      "dist/credentials/Smtp.credentials.js"
-    ],
+    "credentials": [],
     "nodes": [
       "dist/nodes/Cron.node.js",
       "dist/nodes/If.node.js",

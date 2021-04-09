@@ -1,11 +1,9 @@
 import {
 	IExecuteFunctions,
-	IExecuteSingleFunctions,
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
 } from 'n8n-workflow';
-import config = require('../../cli/config');
 
 
 // Test file: http://pdsimage.wr.usgs.gov/Missions/Mars_Reconnaissance_Orbiter/CTX/mrox_0674/data/P22_009816_1745_XI_05S073W.IMG
@@ -44,6 +42,10 @@ export class Start implements INodeType {
 		const inputUrls = this.getNodeParameter(Start.USER_PARAM_INPUT_FILE, 0);
 		const outputData: INodeExecutionData[] = [];
 
+		if (!process.env.OSIRIS_API) {
+			throw new Error('API URL is not set in OSIRIS_API!');
+		}
+
 		for (const inputItem of this.getInputData()) {
 			const outputItem = { ...inputItem };
 			if (!outputItem.json) {
@@ -52,7 +54,7 @@ export class Start implements INodeType {
 
 			const apiResponse = await this.helpers.request({
 				method: 'POST',
-				uri: `${config.getProperties().osirisApiUrl}/start`,
+				uri: `${process.env.OSIRIS_API}/start`,
 				json: true,
 				body: {
 					from: inputUrls,
