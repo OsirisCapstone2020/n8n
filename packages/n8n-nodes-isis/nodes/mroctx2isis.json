@@ -2,6 +2,5 @@
 	"name": "mroctx2isis",
 	"displayName": "mroCtx2isis",
 	"description": "",
-	"properties": [],
-	"url": "http://127.0.0.1:8080/mroctx2isis"
+	"properties": []
 }

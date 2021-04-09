@@ -5,12 +5,12 @@ import {
 	INodeType,
 	INodeTypeDescription,
 } from 'n8n-workflow';
+import config = require('../../cli/config');
 
 
 // Test file: http://pdsimage.wr.usgs.gov/Missions/Mars_Reconnaissance_Orbiter/CTX/mrox_0674/data/P22_009816_1745_XI_05S073W.IMG
 export class Start implements INodeType {
 	private static readonly USER_PARAM_INPUT_FILE = 'inputURLs';
-	private static readonly API_URL = 'http://127.0.0.1:8080/start';
 
 	description: INodeTypeDescription = {
 		displayName: 'Start',
@@ -52,7 +52,7 @@ export class Start implements INodeType {
 
 			const apiResponse = await this.helpers.request({
 				method: 'POST',
-				uri: Start.API_URL,
+				uri: `${config.getProperties().osirisApiUrl}/start`,
 				json: true,
 				body: {
 					from: inputUrls,

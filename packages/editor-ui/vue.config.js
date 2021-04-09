@@ -21,10 +21,7 @@ module.exports = {
 		],
 		devServer: {
 			disableHostCheck: true,
-		},
-        resolve: {
-            symlinks: false
-        }
+		}
 	},
 	css: {
 		loaderOptions: {

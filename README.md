@@ -1,4 +1,4 @@
-# Fork of n8n for USGS Astro
+# Astrogeology Processing Pipeline Frontend
 **Dependencies:**
 - [NodeJS](https://nodejs.org) >= 14
 - [Docker](https://docs.docker.com/engine/install)
