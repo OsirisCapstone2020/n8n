@@ -30,7 +30,6 @@ export class JsonHttpNode implements INodeType {
 			json: true,
 			body: { from, args },
 			timeout: JsonHttpNode.REQUEST_TIMEOUT_MILLIS,
-			forever: true,
 		});
 
 		if (apiResponse.err) {
