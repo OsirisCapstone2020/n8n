@@ -47,7 +47,7 @@
         "@oclif/dev-cli": "^1.22.2",
         "@types/copyfiles": "^2.1.1",
         "@types/inquirer": "^6.5.0",
-        "@types/tmp": "^0.1.0",
+        "@types/tmp": "^0.2.0",
         "@types/vorpal": "^1.11.0",
         "tslint": "^6.1.2"
     },
@@ -64,7 +64,7 @@
         "oauth-1.0a": "^2.2.6",
         "replace-in-file": "^6.0.0",
         "request": "^2.88.2",
-        "tmp-promise": "^2.0.2",
+        "tmp-promise": "^3.0.2",
         "typescript": "~3.9.7"
     }
 }
